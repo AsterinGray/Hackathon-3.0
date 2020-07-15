@@ -16,6 +16,19 @@
 
                     {{ __('You are logged in!') }}
 
+                    @foreach($members as $member)
+                    <div>
+                        <p>Name : {{$member->name}}</p>
+                        <p>Email : {{$member->email}}</p>
+                        <p>phone_number : {{$member->phone_number}}</p>
+                        <p>line_id : {{$member->email}}</p>
+                        <p>git_id : {{$member->email}}</p>
+                        <p>place_of_birth : {{$member->email}}</p>
+                        <p>date_of_birth : {{$member->email}}</p>
+                        <img src="'storage/id_card/'.$member->id_card" width="100px" alt="">
+                    </div>
+                    @endforeach
+
                     @if($user->payment_image == NULL)
                     <form action="{{url('/payment/upload')}}" method="post" enctype="multipart/form-data">
                         @csrf

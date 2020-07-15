@@ -17,4 +17,8 @@ class Member extends Model
         'id_card',
         'team_id',
     ];
+
+    public function user(){
+        return $this->belongsto(User::class);
+    }
 }
