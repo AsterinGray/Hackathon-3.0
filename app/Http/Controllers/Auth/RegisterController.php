@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Auth;
 use App\Http\Controllers\Controller;
 use App\Providers\RouteServiceProvider;
 use App\User;
+use App\Member;
 use Illuminate\Foundation\Auth\RegistersUsers;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
@@ -52,6 +53,27 @@ class RegisterController extends Controller
         return Validator::make($data, [
             'name' => ['required', 'string', 'max:255', 'unique:users'],
             'password' => ['required', 'string', 'min:8', 'confirmed'],
+            'member1_name' => ['required'],
+            'member1_email' => ['required'],
+            'member1_phone_number' => ['required'],
+            'member1_line_id' => ['required'],
+            'member1_git_id' => ['required'],
+            'member1_place_of_birth' => ['required'],
+            'member1_date_of_birth' => ['required'],
+            'member2_name' => ['required'],
+            'member2_email' => ['required'],
+            'member2_phone_number' => ['required'],
+            'member2_line_id' => ['required'],
+            'member2_git_id' => ['required'],
+            'member2_place_of_birth' => ['required'],
+            'member2_date_of_birth' => ['required'],
+            'member3_name' => ['required'],
+            'member3_email' => ['required'],
+            'member3_phone_number' => ['required'],
+            'member3_line_id' => ['required'],
+            'member3_git_id' => ['required'],
+            'member3_place_of_birth' => ['required'],
+            'member3_date_of_birth' => ['required'],
         ]);
     }
 
@@ -63,9 +85,47 @@ class RegisterController extends Controller
      */
     protected function create(array $data)
     {
-        return User::create([
+        $user = User::create([
             'name' => $data['name'],
             'password' => Hash::make($data['password']),
         ]);
+
+        Member::create([
+            'name' => $data['member1_name'],
+            'email' => $data['member1_email'],
+            'phone_number' => $data['member1_phone_number'],
+            'line_id' => $data['member1_line_id'],
+            'git_id' => $data['member1_git_id'],
+            'place_of_birth' => $data['member1_place_of_birth'],
+            'date_of_birth' => $data['member1_date_of_birth'],
+            'id_card' => $data['member1_id_card'],
+            'team_id' => $user['id'],
+        ]);
+
+        Member::create([
+            'name' => $data['member2_name'],
+            'email' => $data['member2_email'],
+            'phone_number' => $data['member2_phone_number'],
+            'line_id' => $data['member2_line_id'],
+            'git_id' => $data['member2_git_id'],
+            'place_of_birth' => $data['member2_place_of_birth'],
+            'date_of_birth' => $data['member2_date_of_birth'],
+            'id_card' => $data['member2_id_card'],
+            'team_id' => $user['id'],
+        ]);
+
+        Member::create([
+            'name' => $data['member3_name'],
+            'email' => $data['member3_email'],
+            'phone_number' => $data['member3_phone_number'],
+            'line_id' => $data['member3_line_id'],
+            'git_id' => $data['member3_git_id'],
+            'place_of_birth' => $data['member3_place_of_birth'],
+            'date_of_birth' => $data['member3_date_of_birth'],
+            'id_card' => $data['member3_id_card'],
+            'team_id' => $user['id'],
+        ]);
+
+        return $user;
     }
 }

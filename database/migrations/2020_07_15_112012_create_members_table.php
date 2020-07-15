@@ -22,7 +22,7 @@ class CreateMembersTable extends Migration
             $table->string('git_id');
             $table->string('place_of_birth');
             $table->string('date_of_birth');
-            $table->string('id_card');
+            $table->string('id_card')->nullable();
             $table->unsignedBigInteger('team_id')->nullable();
             $table->timestamps();
             $table->foreign('team_id')->references('id')->on('users')->onDelete('SET NULL');
