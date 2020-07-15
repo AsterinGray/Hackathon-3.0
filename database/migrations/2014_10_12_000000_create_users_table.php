@@ -20,6 +20,7 @@ class CreateUsersTable extends Migration
             $table->string('password');
             $table->rememberToken();
             $table->string('payment_image')->nullable();
+            $table->integer('payment_status')->default(0);
             $table->integer('role')->default(0);
             $table->timestamps();
         });

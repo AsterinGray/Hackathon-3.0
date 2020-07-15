@@ -15,6 +15,40 @@
                     @endif
 
                     {{ __('You are logged in!') }}
+
+                    @if($user->payment_image == NULL)
+                    <form action="{{url('/payment/upload')}}" method="post" enctype="multipart/form-data">
+                        @csrf
+                        {{ method_field('PUT') }}
+                        <div class="form-group row">
+                            <label for="name" class="col-md-4 col-form-label text-md-right">Payment Image</label>
+
+                            <div class="col-md-6">
+                                <input id="payment_image" type="file" class="form-control @error('payment_image') is-invalid @enderror" name="payment_image" value=""  autofocus>
+
+                                @error('payment_image')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                @enderror
+                            </div>
+                        <button type="submit">Submit</button>
+                        </div>
+                    </form>
+                    @else
+                    <div>                    
+                        <img src="{{'storage/payment_image/'.$user->payment_image}}" width="100px" alt="">
+                        @if($user->payment_verified == 0)
+                        <label for="">Payment Verification on Progress</label>
+                        @elseif($user->payment_verified == 2)
+                        <label for="">Payment Failed. Please try again</label>
+                        @else
+                        <label for="">Payment Verified</label>
+                        @endif
+                    </div>
+                    @endif
+
+
                 </div>
             </div>
         </div>
