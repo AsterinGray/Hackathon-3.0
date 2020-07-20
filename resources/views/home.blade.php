@@ -25,7 +25,7 @@
                         <p>git_id : {{$member->email}}</p>
                         <p>place_of_birth : {{$member->email}}</p>
                         <p>date_of_birth : {{$member->email}}</p>
-                        <img src="'storage/id_card/'.$member->id_card" width="100px" alt="">
+                        <img src="{{asset('storage/id_card/'.$member->id_card)}}" width="100px" alt="">
                     </div>
                     @endforeach
 
