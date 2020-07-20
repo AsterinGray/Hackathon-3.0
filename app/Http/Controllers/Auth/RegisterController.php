@@ -50,6 +50,36 @@ class RegisterController extends Controller
      */
     protected function validator(array $data)
     {
+        if($data['member3_name']!=NULL){
+            return Validator::make($data, [
+                'name' => ['required', 'string', 'max:255', 'unique:users'],
+                'password' => ['required', 'string', 'min:8', 'confirmed'],
+                'member1_name' => ['required'],
+                'member1_email' => ['required'],
+                'member1_phone_number' => ['required'],
+                'member1_line_id' => ['required'],
+                'member1_git_id' => ['required'],
+                'member1_place_of_birth' => ['required'],
+                'member1_date_of_birth' => ['required'],
+                'member1_id_card' => ['required'],
+                'member2_name' => ['required'],
+                'member2_email' => ['required'],
+                'member2_phone_number' => ['required'],
+                'member2_line_id' => ['required'],
+                'member2_git_id' => ['required'],
+                'member2_place_of_birth' => ['required'],
+                'member2_date_of_birth' => ['required'],
+                'member2_id_card' => ['required'],
+                'member3_name' => ['required'],
+                'member3_email' => ['required'],
+                'member3_phone_number' => ['required'],
+                'member3_line_id' => ['required'],
+                'member3_git_id' => ['required'],
+                'member3_place_of_birth' => ['required'],
+                'member3_date_of_birth' => ['required'],
+                'member3_id_card' => ['required'],
+            ]);
+        }
         return Validator::make($data, [
             'name' => ['required', 'string', 'max:255', 'unique:users'],
             'password' => ['required', 'string', 'min:8', 'confirmed'],
@@ -69,14 +99,6 @@ class RegisterController extends Controller
             'member2_place_of_birth' => ['required'],
             'member2_date_of_birth' => ['required'],
             'member2_id_card' => ['required'],
-            'member3_name' => ['required'],
-            'member3_email' => ['required'],
-            'member3_phone_number' => ['required'],
-            'member3_line_id' => ['required'],
-            'member3_git_id' => ['required'],
-            'member3_place_of_birth' => ['required'],
-            'member3_date_of_birth' => ['required'],
-            'member3_id_card' => ['required'],
         ]);
     }
 
@@ -97,8 +119,10 @@ class RegisterController extends Controller
         $file2->move(public_path('storage/id_card'),$file_name2);
 
         $file3 = request()->file('member3_id_card');
-        $file_name3 = $data['name']."_".$data['member3_name'].".".$file3->getClientOriginalExtension();
-        $file3->move(public_path('storage/id_card'),$file_name3);
+        if($file3 != NULL){
+            $file_name3 = $data['name']."_".$data['member3_name'].".".$file3->getClientOriginalExtension();
+            $file3->move(public_path('storage/id_card'),$file_name3);
+        }
 
         $user = User::create([
             'name' => $data['name'],
@@ -129,18 +153,20 @@ class RegisterController extends Controller
             'team_id' => $user['id'],
         ]);
 
-        Member::create([
-            'name' => $data['member3_name'],
-            'email' => $data['member3_email'],
-            'phone_number' => $data['member3_phone_number'],
-            'line_id' => $data['member3_line_id'],
-            'git_id' => $data['member3_git_id'],
-            'place_of_birth' => $data['member3_place_of_birth'],
-            'date_of_birth' => $data['member3_date_of_birth'],
-            'id_card' => $file_name3,
-            'team_id' => $user['id'],
-        ]);
-
+        if($data['member3_name']!=NULL){
+            Member::create([
+                'name' => $data['member3_name'],
+                'email' => $data['member3_email'],
+                'phone_number' => $data['member3_phone_number'],
+                'line_id' => $data['member3_line_id'],
+                'git_id' => $data['member3_git_id'],
+                'place_of_birth' => $data['member3_place_of_birth'],
+                'date_of_birth' => $data['member3_date_of_birth'],
+                'id_card' => $file_name3,
+                'team_id' => $user['id'],
+            ]);
+        }
+        
         return $user;
     }
 }

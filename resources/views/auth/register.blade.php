@@ -289,7 +289,7 @@
                             <label for="name" class="col-md-4 col-form-label text-md-right">member3_name</label>
 
                             <div class="col-md-6">
-                                <input id="member3_name" type="text" class="form-control @error('member3_name') is-invalid @enderror" name="member3_name" value="{{ old('member3_name') }}" required autofocus>
+                                <input id="member3_name" type="text" class="form-control @error('member3_name') is-invalid @enderror" name="member3_name" value="{{ old('member3_name') }}" autofocus>
 
                                 @error('member3_name')
                                     <span class="invalid-feedback" role="alert">
@@ -303,7 +303,7 @@
                             <label for="name" class="col-md-4 col-form-label text-md-right">member3_email</label>
 
                             <div class="col-md-6">
-                                <input id="member3_email" type="email" class="form-control @error('member3_email') is-invalid @enderror" name="member3_email" value="{{ old('member3_email') }}" required autofocus>
+                                <input id="member3_email" type="email" class="form-control @error('member3_email') is-invalid @enderror" name="member3_email" value="{{ old('member3_email') }}"  autofocus>
 
                                 @error('member3_email')
                                     <span class="invalid-feedback" role="alert">
@@ -317,7 +317,7 @@
                             <label for="name" class="col-md-4 col-form-label text-md-right">member3_phone_number</label>
 
                             <div class="col-md-6">
-                                <input id="member3_phone_number" type="number" class="form-control @error('member3_phone_number') is-invalid @enderror" name="member3_phone_number" value="{{ old('member3_phone_number') }}" required autofocus>
+                                <input id="member3_phone_number" type="number" class="form-control @error('member3_phone_number') is-invalid @enderror" name="member3_phone_number" value="{{ old('member3_phone_number') }}"  autofocus>
 
                                 @error('member3_phone_number')
                                     <span class="invalid-feedback" role="alert">
@@ -331,7 +331,7 @@
                             <label for="name" class="col-md-4 col-form-label text-md-right">member3_line_id</label>
 
                             <div class="col-md-6">
-                                <input id="member3_line_id" type="text" class="form-control @error('member3_line_id') is-invalid @enderror" name="member3_line_id" value="{{ old('member3_line_id') }}" required autofocus>
+                                <input id="member3_line_id" type="text" class="form-control @error('member3_line_id') is-invalid @enderror" name="member3_line_id" value="{{ old('member3_line_id') }}"  autofocus>
 
                                 @error('member3_line_id')
                                     <span class="invalid-feedback" role="alert">
@@ -345,7 +345,7 @@
                             <label for="name" class="col-md-4 col-form-label text-md-right">member3_git_id</label>
 
                             <div class="col-md-6">
-                                <input id="member3_git_id" type="text" class="form-control @error('member3_git_id') is-invalid @enderror" name="member3_git_id" value="{{ old('member3_git_id') }}" required autofocus>
+                                <input id="member3_git_id" type="text" class="form-control @error('member3_git_id') is-invalid @enderror" name="member3_git_id" value="{{ old('member3_git_id') }}"  autofocus>
 
                                 @error('member3_git_id')
                                     <span class="invalid-feedback" role="alert">
@@ -359,7 +359,7 @@
                             <label for="name" class="col-md-4 col-form-label text-md-right">member3_place_of_birth</label>
 
                             <div class="col-md-6">
-                                <input id="member3_place_of_birth" type="text" class="form-control @error('member3_place_of_birth') is-invalid @enderror" name="member3_place_of_birth" value="{{ old('member3_place_of_birth') }}" required autofocus>
+                                <input id="member3_place_of_birth" type="text" class="form-control @error('member3_place_of_birth') is-invalid @enderror" name="member3_place_of_birth" value="{{ old('member3_place_of_birth') }}"  autofocus>
 
                                 @error('member3_place_of_birth')
                                     <span class="invalid-feedback" role="alert">
@@ -373,7 +373,7 @@
                             <label for="name" class="col-md-4 col-form-label text-md-right">member3_date_of_birth</label>
 
                             <div class="col-md-6">
-                                <input id="member3_date_of_birth" type="date" class="form-control @error('member3_date_of_birth') is-invalid @enderror" name="member3_date_of_birth" value="{{ old('member3_date_of_birth') }}" required autofocus>
+                                <input id="member3_date_of_birth" type="date" class="form-control @error('member3_date_of_birth') is-invalid @enderror" name="member3_date_of_birth" value="{{ old('member3_date_of_birth') }}"  autofocus>
 
                                 @error('member3_date_of_birth')
                                     <span class="invalid-feedback" role="alert">
