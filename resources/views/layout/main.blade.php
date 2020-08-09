@@ -53,14 +53,14 @@
             </li>
           </ul>
           <ul class="navbar-nav nav-right">
-          @if (Route::has('login'))
+          <!-- @if (Route::has('login'))
             @auth
             <li class="nav-item">
                 <a class="text-light nav-link" id="register" href="/home">Dashboard</a>
             </li>
             @else
             <li class="nav-item">
-                <a class="text-light nav-link" href="/login">Login</a>
+                <a class="text-light nav-link" href="/ login">Login</a>
             </li>
                 @if (Route::has('register'))
                 <li class="nav-item">
@@ -68,7 +68,13 @@
                 </li>
                 @endif
             @endauth
-          @endif
+          @endif -->
+            <li class="nav-item">
+                <a class="text-light nav-link" href="/ login">Login</a>
+            </li>
+            <li class="nav-item">
+                <a class="text-light nav-link" id="register" href="/register">Register</a>
+            </li>
           </ul>
         </div>
       </div>

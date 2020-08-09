@@ -10,13 +10,19 @@ body {
   font-family: "CircularStd";
   src: url("../assets/fonts/CircularStd-Medium.otf"); }
 
+#hamburger {
+  margin-right: auto;
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255,102,203, 0.5)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+  border-color: #e74c3c; }
+
 .nav {
   width: inherit;
   position: fixed;
   top: 0;
   background-color: #1d2134;
-  z-index: 3;
-  padding: 0 10rem; }
+  z-index: 5;
+  padding: 0 10vw;
+  transition: ease 1s; }
   .nav-img {
     width: 5.5rem; }
   .nav-link {
@@ -26,17 +32,17 @@ body {
     .nav-link.active,
     .nav-link :hover {
       border-bottom: 1.5px solid #e74c3c; }
-  .nav > button:focus {
-    outline: none; }
-  .nav-main {
-    display: flex;
-    justify-content: space-between; }
   .nav-hamburger {
     width: 2.5rem;
     height: .3rem;
     background-color: #e74c3c;
     margin: .4rem 0;
     transition: .5s ease-in-out; }
+  .nav > button:focus {
+    outline: none; }
+  .nav-main {
+    display: flex;
+    justify-content: space-between; }
 
 #register {
   padding: 0.2rem 1rem;
@@ -56,7 +62,8 @@ body {
   display: flex;
   justify-content: center;
   flex-direction: column;
-  padding: 5rem 10rem; }
+  padding: 0 10rem;
+  padding-top: 15vh; }
   .home-text {
     display: flex;
     justify-content: center;
@@ -103,6 +110,8 @@ body {
 .about {
   position: relative;
   padding: 10rem 5rem; }
+  .about-left {
+    z-index: 3; }
   .about-right {
     padding-left: 3rem; }
 
@@ -299,7 +308,7 @@ body {
 .timeline {
   display: flex;
   justify-content: center;
-  padding: 3rem 0;
+  padding: 3rem 0rem;
   flex-direction: column;
   position: relative;
   color: #e74c3c; }
@@ -308,8 +317,7 @@ body {
   .timeline > h1 {
     text-align: center; }
   .timeline-wrapper {
-    width: 95rem;
-    justify-content: center;
+    width: 100%;
     z-index: 2; }
   .timeline-icons > div {
     width: 100rem;
@@ -322,8 +330,9 @@ body {
   .timeline-path {
     color: white;
     position: absolute;
-    width: 65rem;
-    transform: translateY(-250%); }
+    width: 65%;
+    transform: translateY(-8rem);
+    margin: 10rem; }
     .timeline-path-line {
       display: flex;
       justify-content: center;
@@ -458,7 +467,7 @@ body {
   100% {
     background: radial-gradient(circle at center, #252a41 99%, #252a41 100%, #252a41 100%); } }
 
-@media only screen and (max-width: 1024px) {
+@media only screen and (max-width: 992px) {
   .nav,
   .home,
   .about,
@@ -467,6 +476,25 @@ body {
   .sponsor,
   .contact {
     padding: 1rem 3rem; }
+  .nav {
+    padding: 1rem;
+    position: relative; }
+    .nav-main {
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 90vh; }
+      .nav-main #register {
+        background-color: #e74c3c;
+        padding: 0 2rem; }
+    .nav-link {
+      text-align: center;
+      font-size: 2rem;
+      margin: .5rem; }
+      .nav-link.active {
+        border: none; }
+  .navbar-brand img {
+    width: 0; }
   .home-content {
     flex-direction: column;
     justify-content: center;
@@ -562,6 +590,10 @@ body {
           font-size: 1rem; }
   #why-active-image {
     margin: 1rem 0; }
+  .timeline-wrapper {
+    width: 100rem; }
+  .timeline-path {
+    width: 65rem; }
   .contact {
     padding-bottom: 3rem;
     justify-content: center;
@@ -586,6 +618,8 @@ body {
     font: 0.8rem CircularStd;
     justify-content: center;
     padding: 2rem 0; }
+  .contact {
+    flex-direction: column; }
   .socmed {
     flex-direction: column;
     justify-content: start;
@@ -598,26 +632,6 @@ body {
     display: none; } }
 
 @media only screen and (max-width: 768px) {
-  .nav {
-    padding: 1rem;
-    position: relative; }
-    .nav-main {
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      height: 90vh; }
-      .nav-main .nav-link {
-        font-size: 3rem;
-        margin: 1.5rem 0;
-        padding: 0;
-        text-align: center; }
-      .nav-main #register {
-        background-color: #e74c3c;
-        padding: 0 2rem; }
-      .nav-main .active {
-        border: none; }
-  .navbar-brand img {
-    width: 0; }
   .home {
     padding: 1rem; }
     .home-text > h1 {
@@ -626,7 +640,7 @@ body {
     .home-text p:nth-child(5) {
       font-size: 2rem; }
   .about {
-    padding: 0 1.5rem;
+    padding: 0 1rem;
     margin: 0; }
     .about h1 {
       margin-top: 2rem;
@@ -697,6 +711,11 @@ body {
           font-size: 1rem; }
   #why-active-image {
     margin: 1rem 0; }
+  -card {
+    width: 100%;
+    height: 200px;
+    top: 0;
+    margin-bottom: rem; }
   .faq {
     padding: 3rem 1rem; }
     .faq-question {
@@ -706,8 +725,6 @@ body {
     padding: 0 1rem; }
     .sponsor-img img {
       width: 15rem; }
-  .contact {
-    flex-direction: column; }
   .location {
     padding: 0;
     padding-bottom: 3rem; }

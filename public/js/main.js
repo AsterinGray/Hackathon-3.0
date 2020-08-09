@@ -6,6 +6,19 @@ $(".nav-link").click(function () {
   $(".navbar-collapse.show").removeClass("show");
 });
 
+//Navbar Hidden on Scroll
+let prevScrollpos = window.pageYOffset;
+window.onscroll = function() {
+    let currentScrollPos = window.pageYOffset;
+    if (prevScrollpos >= currentScrollPos) {
+        document.querySelector(".nav").style.top = "0";
+    } 
+    else {
+        document.querySelector(".nav").style.top = "-100px";
+    }
+    prevScrollpos = currentScrollPos;
+}
+
 //Hamburger
 const hamburger = (e) => {
   const navbarCollapse = $(e).next(".navbar-collapse");

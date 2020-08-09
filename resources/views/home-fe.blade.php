@@ -1,4 +1,4 @@
-@extends('layouts.main')
+@extends('layout.main')
 
 @section('css')
   <link rel="stylesheet" href="{{asset('assets/lib/bootstrap/css/slick.css')}}" />
@@ -9,7 +9,7 @@
   <section class="home container-fluid min-vh-100" id="home">
     <div class="home-content row">
       <div class="home-text col-lg-6 col-md-12">
-        <img src="assets/img/Hackathon-logo.png" id="hackathon-logo" alt="" />
+        <img src="{{asset('assets/img/Hackathon-logo.png')}}" id="hackathon-logo" alt="" />
         <h3>BNCC HACKTHON 3.0</h3>
         <h1>Transform ideas, <wbr>Code Your Solution</h1>
         <p>will be coming at</p>
@@ -18,7 +18,7 @@
           <p>Get your guide book here!!</p>
           <button>
             <a
-              href="assets/img/Hackathon-logo.png"
+              href="{{asset('assets/img/Hackathon-logo.png')}}"
               download="Hackathon-logo.png"
               >DOWNLOAD</a
             >
@@ -26,7 +26,7 @@
         </div>
       </div>
       <img
-        src="assets/img/home/1stSection_image-min.png"
+        src="{{asset('assets/img/home/1stSection_image-min.png')}}"
         class="col-lg-6 col-md-12"
         alt=""
       />
@@ -34,17 +34,17 @@
     <div class="home-more-info">
       <p>More Information</p>
       <a href="#about"
-        ><img src="assets/img/home/double-arrow.svg" alt=""
+        ><img src="{{asset('assets/img/home/double-arrow.svg')}}" alt=""
       /></a>
     </div>
   </section>
   <section class="about container-fluid row" id="about">
-    <img src="assets/img/about/Object1-min.png" id="object1" />
+    <img src="{{asset('assets/img/about/Object1-min.png')}}" id="object1" />
     <div class="about-left col-md-12 col-lg-6">
       <div class="center autoplay lazy">
         <div class="card">
           <img
-            src="assets/img/about/carousel/Hackathon-2018-1.jpg"
+            src="{{asset('assets/img/about/carousel/Hackathon-2018-1.jpg')}}"
             alt="Hackathon-2018-1"
             class="carousel-image"
           />
@@ -54,7 +54,7 @@
         </div>
         <div class="card">
           <img
-            src="assets/img/about/carousel/Hackathon-2018-2.jpg"
+            src="{{asset('assets/img/about/carousel/Hackathon-2018-2.jpg')}}"
             alt="Hackathon-2018-2"
             class="carousel-image"
           />
@@ -64,7 +64,7 @@
         </div>
         <div class="card">
           <img
-            src="assets/img/about/carousel/Hackathon-2018-3.jpg"
+            src="{{asset('assets/img/about/carousel/Hackathon-2018-3.jpg')}}"
             alt="Hackathon-2018-3"
             class="carousel-image"
           />
@@ -74,7 +74,7 @@
         </div>
         <div class="card">
           <img
-            src="assets/img/about/carousel/Hackathon-2019-1.jpg"
+            src="{{asset('assets/img/about/carousel/Hackathon-2019-1.jpg')}}"
             alt="Hackathon-2019-1"
             class="carousel-image"
           />
@@ -84,7 +84,7 @@
         </div>
         <div class="card">
           <img
-            src="assets/img/about/carousel/Hackathon-2019-2.jpg"
+            src="{{asset('assets/img/about/carousel/Hackathon-2019-2.jpg')}}"
             alt="Hackathon-2019-2"
             class="carousel-image"
           />
@@ -94,7 +94,7 @@
         </div>
         <div class="card">
           <img
-            src="assets/img/about/carousel/Hackathon-2019-3.jpg"
+            src="{{asset('assets/img/about/carousel/Hackathon-2019-3.jpg')}}"
             alt="Hackathon-2019-3"
             class="carousel-image"
           />
@@ -123,7 +123,7 @@
         <div class="d-flex align-items-center h-100">
           <img
             id="why-active-image" class="why-active-image"
-            src="assets/img/why/Icon_1.svg"
+            src="{{asset('assets/img/why/Icon_1.svg')}}"
             alt="Networking"
           />
           <div class="why-left-container">
@@ -139,7 +139,7 @@
         <div class="why-card card" onclick="replace(this)">
           <img
             class="why-right-img flex-column"
-            src="assets/img/why/Icon_2.svg"
+            src="{{asset('assets/img/why/Icon_2.svg')}}"
             alt="Mentoring"
           />
           <div class="why-card-content card-body">
@@ -156,7 +156,7 @@
         <div class="why-card card" onclick="replace(this)">
           <img
             class="why-right-img flex-column"
-            src="assets/img/why/Icon_3.svg"
+            src="{{asset('assets/img/why/Icon_3.svg')}}"
             alt="Seminar"
           />
           <div class="why-card-content card-body">
@@ -173,7 +173,7 @@
         <div class="why-card card" onclick="replace(this)">
           <img
             class="why-right-img flex-column"
-            src="assets/img/why/Icon_4.svg"
+            src="{{asset('assets/img/why/Icon_4.svg')}}"
             alt="Job Interview"
           />
           <div class="why-card-content card-body">
@@ -380,21 +380,21 @@
     </div>
   </section>
   <section class="timeline">
-    <img src="assets/img/timeline/Object2.png" alt="" id="object3" />
-    <img src="assets/img/timeline/Object3.png" alt="" id="object4" />
+    <img src="{{asset('assets/img/timeline/Object2.png')}}" alt="" id="object3" />
+    <img src="{{asset('assets/img/timeline/Object3.png')}}" alt="" id="object4" />
     <h1 class="my-5">Timeline</h1>
     <div
       class="timeline-wrapper d-flex row justify-content-center align-items-center flex-column my-5"
     >
       <div class="timeline-icons d-flex justify-content-around my-3 w-100">
         <div>
-          <img src="assets/img/timeline/open-registration.svg" alt="" />
+          <img src="{{asset('assets/img/timeline/open-registration.svg')}}" alt="" />
         </div>
         <div>
-          <img src="assets/img/timeline/close-registration.svg" alt="" />
+          <img src="{{asset('assets/img/timeline/close-registration.svg')}}" alt="" />
         </div>
         <div>
-          <img src="assets/img/timeline/technical-meeting.svg" alt="" />
+          <img src="{{asset('assets/img/timeline/technical-meeting.svg')}}" alt="" />
         </div>
         <div>
           <img src="assets/img/timeline/competition-day.svg" alt="" />
