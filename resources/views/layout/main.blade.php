@@ -69,11 +69,14 @@
                 @endif
             @endauth
           @endif -->
-            <li class="nav-item">
+            <!-- <li class="nav-item">
                 <a class="text-light nav-link" href="/ login">Login</a>
             </li>
             <li class="nav-item">
                 <a class="text-light nav-link" id="register" href="/register">Register</a>
+            </li> -->
+            <li class="nav-item">
+                <span class="text-light nav-link" id="register">Comming Soon</span>
             </li>
           </ul>
         </div>
