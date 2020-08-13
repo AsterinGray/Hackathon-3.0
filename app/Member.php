@@ -16,6 +16,7 @@ class Member extends Model
         'date_of_birth',
         'id_card',
         'team_id',
+        'cv',
     ];
 
     public function user(){

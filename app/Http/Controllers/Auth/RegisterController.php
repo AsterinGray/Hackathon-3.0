@@ -50,6 +50,7 @@ class RegisterController extends Controller
      */
     protected function validator(array $data)
     {
+        // dd($data);
         if($data['member3_name']!=NULL){
             return Validator::make($data, [
                 'name' => ['required', 'string', 'max:255', 'unique:users'],
@@ -62,6 +63,7 @@ class RegisterController extends Controller
                 'member1_place_of_birth' => ['required'],
                 'member1_date_of_birth' => ['required'],
                 'member1_id_card' => ['required'],
+                'member1_cv' => ['required'],
                 'member2_name' => ['required'],
                 'member2_email' => ['required'],
                 'member2_phone_number' => ['required'],
@@ -70,6 +72,7 @@ class RegisterController extends Controller
                 'member2_place_of_birth' => ['required'],
                 'member2_date_of_birth' => ['required'],
                 'member2_id_card' => ['required'],
+                'member2_cv' => ['required'],
                 'member3_name' => ['required'],
                 'member3_email' => ['required'],
                 'member3_phone_number' => ['required'],
@@ -78,6 +81,7 @@ class RegisterController extends Controller
                 'member3_place_of_birth' => ['required'],
                 'member3_date_of_birth' => ['required'],
                 'member3_id_card' => ['required'],
+                'member3_cv' => ['required'],
             ]);
         }
         return Validator::make($data, [
@@ -91,6 +95,7 @@ class RegisterController extends Controller
             'member1_place_of_birth' => ['required'],
             'member1_date_of_birth' => ['required'],
             'member1_id_card' => ['required'],
+            'member1_cv' => ['required'],
             'member2_name' => ['required'],
             'member2_email' => ['required'],
             'member2_phone_number' => ['required'],
@@ -99,6 +104,7 @@ class RegisterController extends Controller
             'member2_place_of_birth' => ['required'],
             'member2_date_of_birth' => ['required'],
             'member2_id_card' => ['required'],
+            'member2_cv' => ['required'],
         ]);
     }
 
@@ -124,9 +130,26 @@ class RegisterController extends Controller
             $file3->move(public_path('storage/id_card'),$file_name3);
         }
 
+        $cv1 = request()->file('member1_cv');
+        $cv_name1 = $data['name']."_".$data['member1_name'].".".$cv1->getClientOriginalExtension();
+        $cv1->move(public_path('storage/cv'),$cv_name1);
+
+        $cv2 = request()->file('member2_cv');
+        $cv_name2 = $data['name']."_".$data['member2_name'].".".$cv2->getClientOriginalExtension();
+        $cv2->move(public_path('storage/cv'),$cv_name2);
+
+        $cv3 = request()->file('member3_cv');
+        if($cv3 != NULL){
+            $cv_name3 = $data['name']."_".$data['member3_name'].".".$cv3->getClientOriginalExtension();
+            $cv3->move(public_path('storage/cv'),$cv_name3);
+        }
+
+        // dd($cv_name1);
+
         $user = User::create([
             'name' => $data['name'],
             'password' => Hash::make($data['password']),
+            'is_binusian' => $data['is_binusian'],
         ]);
 
         Member::create([
@@ -139,6 +162,7 @@ class RegisterController extends Controller
             'date_of_birth' => $data['member1_date_of_birth'],
             'id_card' => $file_name1,
             'team_id' => $user['id'],
+            'cv' => $cv_name1,
         ]);
 
         Member::create([
@@ -151,6 +175,7 @@ class RegisterController extends Controller
             'date_of_birth' => $data['member2_date_of_birth'],
             'id_card' => $file_name2,
             'team_id' => $user['id'],
+            'cv' => $cv_name2,
         ]);
 
         if($data['member3_name']!=NULL){
@@ -164,6 +189,7 @@ class RegisterController extends Controller
                 'date_of_birth' => $data['member3_date_of_birth'],
                 'id_card' => $file_name3,
                 'team_id' => $user['id'],
+                'cv' => $cv_name3,
             ]);
         }
         

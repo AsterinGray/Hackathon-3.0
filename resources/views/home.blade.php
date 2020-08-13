@@ -26,6 +26,7 @@
                         <p>place_of_birth : {{$member->email}}</p>
                         <p>date_of_birth : {{$member->email}}</p>
                         <img src="{{asset('storage/id_card/'.$member->id_card)}}" width="100px" alt="">
+                        <img src="{{asset('storage/cv/'.$member->cv)}}" width="100px" alt="">
                     </div>
                     @endforeach
 

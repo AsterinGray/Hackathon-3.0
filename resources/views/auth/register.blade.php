@@ -62,6 +62,19 @@
                         </div>
 
                         <div class="form-group row">
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="is_binusian" id="inlineRadio1" value="0" required>
+                                <label class="form-check-label" for="inlineRadio1">Public</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="is_binusian" id="inlineRadio2" value="1">
+                                <label class="form-check-label" for="inlineRadio2">Binusian</label>
+                            </div>
+                        </div>
+
+                        
+
+                        <div class="form-group row">
                             <label for="name" class="col-md-4 col-form-label text-md-right">member1_name</label>
 
                             <div class="col-md-6">
@@ -166,6 +179,20 @@
                                 <input id="member1_id_card" type="file" class="form-control @error('member1_id_card') is-invalid @enderror" name="member1_id_card" value="{{ old('member1_id_card') }}" autofocus>
 
                                 @error('member1_id_card')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                @enderror
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
+                            <label for="name" class="col-md-4 col-form-label text-md-right">member1_cv</label>
+
+                            <div class="col-md-6">
+                                <input id="member1_cv" type="file" class="form-control @error('member1_cv') is-invalid @enderror" name="member1_cv" value="{{ old('member1_cv') }}" autofocus>
+
+                                @error('member1_cv')
                                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
                                     </span>
@@ -286,6 +313,20 @@
                         </div>
 
                         <div class="form-group row">
+                            <label for="name" class="col-md-4 col-form-label text-md-right">member2_cv</label>
+
+                            <div class="col-md-6">
+                                <input id="member2_cv" type="file" class="form-control @error('member2_cv') is-invalid @enderror" name="member2_cv" value="{{ old('member2_cv') }}" autofocus>
+
+                                @error('member2_cv')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                @enderror
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
                             <label for="name" class="col-md-4 col-form-label text-md-right">member3_name</label>
 
                             <div class="col-md-6">
@@ -390,6 +431,20 @@
                                 <input id="member3_id_card" type="file" class="form-control @error('member3_id_card') is-invalid @enderror" name="member3_id_card" value="{{ old('member3_id_card') }}"  autofocus>
 
                                 @error('member3_id_card')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                @enderror
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
+                            <label for="name" class="col-md-4 col-form-label text-md-right">member3_cv</label>
+
+                            <div class="col-md-6">
+                                <input id="member3_cv" type="file" class="form-control @error('member3_cv') is-invalid @enderror" name="member3_cv" value="{{ old('member3_cv') }}" autofocus>
+
+                                @error('member3_cv')
                                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
                                     </span>
