@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Database\Seeder;
+use App\Member;
 
 class MemberSeeder extends Seeder
 {
@@ -11,6 +12,49 @@ class MemberSeeder extends Seeder
      */
     public function run()
     {
-        //
+        Member::create([
+            'name' => 'TestBinus1',
+            'email' => 'testing@bncc.net',
+            'phone_number' => '08123456789',
+            'line_id' => 'testing',
+            'git_id' => 'testing',
+            'place_of_birth' => 'Jakarta',
+            'date_of_birth' => '2000-01-01',
+            'team_id' => 2,
+        ]);
+
+        Member::create([
+            'name' => 'TestBinus2',
+            'email' => 'testing2@bncc.net',
+            'phone_number' => '08123456789',
+            'line_id' => 'testing',
+            'git_id' => 'testing',
+            'place_of_birth' => 'Jakarta',
+            'date_of_birth' => '2000-01-01',
+            'team_id' => 2,
+        ]);
+
+        Member::create([
+            'name' => 'TestBinus3',
+            'email' => 'testing3@bncc.net',
+            'phone_number' => '08123456789',
+            'line_id' => 'testing',
+            'git_id' => 'testing',
+            'place_of_birth' => 'Jakarta',
+            'date_of_birth' => '2000-01-01',
+            'team_id' => 3,
+        ]);
+
+        User::create([
+            'name' => 'TestBinus4',
+            'email' => 'testing4@bncc.net',
+            'phone_number' => '08123456789',
+            'line_id' => 'testing',
+            'git_id' => 'testing',
+            'place_of_birth' => 'Jakarta',
+            'date_of_birth' => '2000-01-01',
+            'team_id' => 3,
+        ]);
+
     }
 }

@@ -27,6 +27,10 @@ class HomeController extends Controller
     public function index()
     {
         $user = Auth::user();
+        if($user->role == 2)
+        {
+            return redirect('/admin');
+        }
         $members = Member::where('team_id',$user->id)->get();
         return view('home',compact('user','members'));
     }
