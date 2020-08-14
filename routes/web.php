@@ -24,3 +24,11 @@ Route::get('/', function () {
 Route::any('/register', function () {
     return view('register-fe');
 });
+
+Route::get('/user',function(){
+    return view('user-dashboard');
+});
+
+Route::get('/admin',function(){
+    return view('admin-panel');
+});

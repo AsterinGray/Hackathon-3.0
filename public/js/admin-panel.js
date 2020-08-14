@@ -30,7 +30,7 @@ function switchToggle2(a){
         alamatIndex=0;
     else
         alamatIndex=1;
-    window.location.href="/home";
+    window.location.href="admin-panel.html";
 
 }
 
@@ -40,9 +40,48 @@ function editGroup(){
 function viewGroup(){
     window.location.href="admin-panel-view.html"
 }
-$("#navbar").mouseenter(function(){
-    $(".navbar-caption").css({"display":"flex"});    
-})
-$("#navbar").mouseleave(function(){
-    $(".navbar-caption").css({"display":"none"});
+
+$('#staticBackdrop').on('shown.bs.modal', function () {
+    $('#myInput').trigger('focus');
+  })
+
+  $("#hamburger").click(function(){
+    if ( window.matchMedia("(max-width: 1024px)").matches){
+        if ($(this).attr("aria-expanded")=="false"){
+            $(this).attr("aria-expanded","true");
+            $(".navbar-caption").css({"display":"flex"});
+            $(".navbar-content").css({
+                "height":"75px",
+                "visibility":"visible"
+            });
+            $(".navbar-content-c").css({
+                "height":"300px"
+            });
+        }
+        else{
+            $(this).attr("aria-expanded","false");
+            $(".navbar-caption").css({"display":"none"});
+            $(".navbar-content").css({
+                "height":"0px",
+                "visibility":"hidden"
+            });
+            $(".navbar-content-c").css({
+                "height":"0px"
+            });
+    }}
+    else{
+        if ($(this).attr("aria-expanded")=="false"){
+            $(this).attr("aria-expanded","true");
+            $(".navbar-caption").css({"display":"flex"});
+            $(".navbar-caption-2").css({"display":"flex"});
+        }
+        else{
+            $(this).attr("aria-expanded","false");
+            $(".navbar-caption").css({"display":"none"});
+            $(".navbar-caption-2").css({"display":"none"});
+            
+    }
+    }
+
+        
 })
