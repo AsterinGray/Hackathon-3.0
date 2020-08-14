@@ -20,3 +20,7 @@ Route::get('/laravel', function () {
 Route::get('/', function () {
     return view('home-fe');
 });
+
+Route::any('/register', function () {
+    return view('register-fe');
+});
