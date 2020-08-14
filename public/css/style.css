@@ -344,13 +344,15 @@ body {
     position: absolute;
     width: 65%;
     transform: translateY(-8rem);
-    margin: 10rem; }
+    margin: 10rem;
+    display: none; }
     .timeline-path-line {
       display: flex;
       justify-content: center;
       flex-direction: column;
       align-items: center;
-      width: 20%; }
+      width: 20%;
+      display: none; }
   .timeline-line {
     width: 75%;
     height: 5px;
@@ -482,8 +484,12 @@ body {
     background: radial-gradient(circle at center, #252a41 99%, #252a41 100%, #252a41 100%); } }
 
 @media only screen and (max-width: 1024px) {
-  .home, .about, .why, .faq, .contact, .foot, .socmed {
+  .about, .why, .faq, .contact, .foot, .socmed {
     padding: 3rem 1rem; }
+  .home {
+    padding: 0; }
+    .home-text {
+      padding: 0; }
   .nav {
     padding: 0 1rem; }
   .socmed {
@@ -627,7 +633,7 @@ body {
   #why-active-image {
     margin: 1rem 0; }
   .timeline-wrapper {
-    width: 100rem; }
+    width: 80rem; }
   .timeline-path {
     width: 65rem; }
   .contact {

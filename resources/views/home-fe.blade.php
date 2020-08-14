@@ -9,7 +9,7 @@
   <section class="home container-fluid min-vh-100" id="home">
       <div class="home-content row">
         <div class="home-text col-lg-6 col-md-12">
-          <img src="{{asset('assets/img/Hackathon-logo.png')}}" id="hackathon-logo" alt="" />
+          <img src="{{asset('assets/img/Hackathon-logo.png')}}" id="hackathon-logo" alt="Technoscape Hackathon Logo" />
           <h3>BNCC HACKTHON 3.0</h3>
           <h1>Transform ideas, <wbr>Code Your Solution</h1>
           <p>will be coming at</p>
@@ -28,14 +28,14 @@
         <img
           src="{{asset('assets/img/home/1stSection_image-min.png')}}"
           class="col-lg-6 col-md-12"
-          alt=""
+          alt="Laptop Coding Illustration"
         />
       </div>
       <div class="home-more-info">
         <p>More Information</p>
-        <a href="#about"
-          ><img src="{{asset('assets/img/home/double-arrow.svg')}}" alt=""
-        /></a>
+        <a href="#about">
+          <img src="{{asset('assets/img/home/double-arrow.svg')}}" alt="arrow icon">
+        </a>
       </div>
     </section>
     <section class="about container-fluid row" id="about">
@@ -350,38 +350,38 @@
       </div>
     </section>
     <section class="timeline">
-      <img src="{{asset('assets/img/timeline/Object2.png')}}" alt="" id="object3" />
-      <img src="{{asset('assets/img/timeline/Object3.png')}}" alt="" id="object4" />
+      <img src="{{asset('assets/img/timeline/Object2.png')}}" alt="Decoration" id="object3" />
+      <img src="{{asset('assets/img/timeline/Object3.png')}}" alt="Decoration" id="object4" />
       <h1 class="my-5">Timeline</h1>
       <div
         class="timeline-wrapper d-flex row justify-content-center align-items-center flex-column my-5"
       >
         <div class="timeline-icons d-flex justify-content-around my-3 w-100">
           <div>
-            <img src="{{asset('assets/img/timeline/open-registration.svg')}}" alt="" />
+            <img src="{{asset('assets/img/timeline/open-registration.svg')}}" alt="Open Registration Icon" />
           </div>
           <div>
-            <img src="{{asset('assets/img/timeline/close-registration.svg')}}" alt="" />
+            <img src="{{asset('assets/img/timeline/close-registration.svg')}}" alt="Close Registration Icon" />
           </div>
           <div>
-            <img src="{{asset('assets/img/timeline/technical-meeting.svg')}}" alt="" />
+            <img src="{{asset('assets/img/timeline/technical-meeting.svg')}}" alt="Technical Meeting Icon" />
           </div>
           <div>
-            <img src="{{asset('assets/img/timeline/competition-day.svg')}}" alt="" />
+            <img src="{{asset('assets/img/timeline/competition-day.svg')}}" alt="Competition Day Icon" />
           </div>
         </div>
         <div class="timeline-path d-flex row justify-content-between">
           <div class="timeline-path-line">
             <span>30 days</span>
-            <img src="{{asset('assets/img/timeline/path.svg')}}" alt="" />
+            <img src="{{asset('assets/img/timeline/path.svg')}}" alt="Path" />
           </div>
           <div class="timeline-path-line">
             <span>2 days</span>
-            <img src="{{asset('assets/img/timeline/path.svg')}}" alt="" />
+            <img src="{{asset('assets/img/timeline/path.svg')}}" alt="Path" />
           </div>
           <div class="timeline-path-line">
             <span>5 days</span>
-            <img src="{{asset('assets/img/timeline/path.svg')}}" alt="" />
+            <img src="{{asset('assets/img/timeline/path.svg')}}" alt="Path" />
           </div>
         </div>
         <div class="timeline-line"></div>
@@ -394,19 +394,19 @@
         <div class="timeline-contents d-flex justify-content-around w-100 my-3">
           <div class="timeline-content">
             <span>Open Registration</span>
-            <span>8 May 2020</span>
+            <span>24 Agustus 2020</span>
           </div>
           <div class="timeline-content">
             <span>Close Registration</span>
-            <span>8 June 2020</span>
+            <span>1 October 2020</span>
           </div>
           <div class="timeline-content">
             <span>Technical Meeting</span>
-            <span>10 June 2020</span>
+            <span>Coming Soon</span>
           </div>
           <div class="timeline-content">
             <span>Competition Day</span>
-            <span>15-16 June 2020</span>
+            <span>Coming Soon</span>
           </div>
         </div>
       </div>
@@ -484,7 +484,7 @@
       </div>
       <div class="contact-box col-lg-5 col-md-12">
         <h2>Contact</h2>
-        <form action="https://formspree.io/xdolqbda" method="POST">
+        <form action="https://formspree.io/mwkrzyok" method="POST">
           <div class="form-group">
             <input
               type="text"
@@ -532,33 +532,33 @@
     <footer class="footer vh-30 d-flex flex-column">
         <div class="socmed py-3">
             <a href="http://line.me/ti/p/~@joy0117j" target="_blank" class="socmed-item">
-                <img src="{{asset('assets/img/footer/line.svg')}}" alt="">
+                <img src="{{asset('assets/img/footer/line.svg')}}" alt="Line Icon">
                 <span>@joy0117</span>
             </a>
-            <a href="mailto:technoevent@bncc.net" target="_blank" class="socmed-item">
-                <img src="{{asset('assets/img/footer/mail.svg')}}" alt="">
-                <span>technoevent@bncc.net</span>
+            <a href="mailto:technoscape@bncc.net" target="_blank" class="socmed-item">
+                <img src="{{asset('assets/img/footer/mail.svg')}}" alt="E-Mail Icon">
+                <span>technoscape@bncc.net</span>
             <a href="https://www.facebook.com/bina.nusantara.computer.club/" target="_blank" class="socmed-item">
-                <img src="{{asset('assets/img/footer/facebook.svg')}}" alt="">
+                <img src="{{asset('assets/img/footer/facebook.svg')}}" alt="Facebook Icon">
                 <span>Bina Nusantara Computer Club</span>
             </a>
             <a href="https://www.instagram.com/technoscapebncc/" target="_blank" class="socmed-item">
-                <img src="{{asset('assets/img/footer/instagram.svg')}}" alt="">
-                <span>technoeventbncc</span>
+                <img src="{{asset('assets/img/footer/instagram.svg')}}" alt="Instagram Icon">
+                <span>technoscape</span>
             </a>
         </div>
         <div class="foot vh-20 d-flex align-items-center justify-content-between">
             <span class="foot-item">
                 <span>Powered By</span>
                 <a href="http://binus.ac.id/" target="_blank">
-                  <img src="{{asset('assets/img/footer/BINUS_LOGO.png')}}" alt="">
+                  <img src="{{asset('assets/img/footer/BINUS_LOGO.png')}}" alt="BINUS Logo">
                 </a>
             </span>
             <span class="foot-copyright">&copy; 2020 Bina Nusantara Computer Club, All right Reserved</span>
             <span class="foot-item">
                 <span>Organized By</span>
                 <a href="https://bncc.net/" target="_blank">
-                  <img id="bncc-logo" src="{{asset('assets/img/footer/BNCC_LOGO.png')}}" alt="">
+                  <img id="bncc-logo" src="{{asset('assets/img/footer/BNCC_LOGO.png')}}" alt="BNCC Logo">
                 </a>
             </span>
         </div>
