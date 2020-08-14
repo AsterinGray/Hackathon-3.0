@@ -47,7 +47,8 @@ body {
 #register {
   padding: 0.2rem 1rem;
   border-radius: 50px;
-  border: 2px solid #e74c3c; }
+  border: 2px solid #e74c3c;
+  text-align: center; }
   #register:hover {
     background-color: #e74c3c; }
 
@@ -484,6 +485,9 @@ body {
 @media only screen and (max-width: 1024px) {
   .home, .about, .why, .faq, .contact, .foot, .socmed {
     padding: 3rem 1rem; }
+  .nav{
+    padding: 0 1rem;
+  }
   .socmed {
     flex-direction: column;
     justify-content: start;
