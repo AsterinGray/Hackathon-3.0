@@ -484,12 +484,13 @@
       </div>
       <div class="contact-box col-lg-5 col-md-12">
         <h2>Contact</h2>
-        <form>
+        <form action="https://formspree.io/xdolqbda" method="POST">
           <div class="form-group">
             <input
               type="text"
               class="form-control"
               placeholder="Name"
+              name="name"
               required
             />
           </div>
@@ -500,6 +501,7 @@
               id="exampleInputEmail1"
               aria-describedby="emailHelp"
               placeholder="Email"
+              name="email"
               required
             />
           </div>
@@ -508,6 +510,7 @@
               type="text"
               class="form-control"
               placeholder="Subject"
+              name="subject"
               required
             />
           </div>
@@ -516,6 +519,7 @@
               type="text"
               class="form-control"
               placeholder="Your Message"
+              name="message"
               required
             />
           </div>
