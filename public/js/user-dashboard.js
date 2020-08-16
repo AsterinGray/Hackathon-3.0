@@ -495,11 +495,11 @@ if ( window.matchMedia("(max-width: 1024px)").matches){
 
 const expandForm = (e) => {
 const addMember = $(e).closest(".add-member");
-if(addMember.height() == 40){
-  $(e).children(".plus").css({ "transform": "rotate(0deg)" });
-  addMember.css({ "height": "100%", "background-color": "#2C3044" })
-} else {
-  addMember.css({ "height": "5rem", "background-color": "#E74C3C" })
-  $(e).children(".plus").css({ "transform": "rotate(90deg)" });
-}
+  if(addMember.height() == 40){
+    $(e).children(".plus").css({ "transform": "rotate(0deg)" });
+    addMember.css({ "height": "100%", "background-color": "#2C3044" })
+  } else {
+    addMember.css({ "height": "5rem", "background-color": "#E74C3C" })
+    $(e).children(".plus").css({ "transform": "rotate(90deg)" });
+  }
 }

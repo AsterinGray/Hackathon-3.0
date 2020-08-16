@@ -145,109 +145,53 @@
                                 <button type="button" class="editgroup-view" data-toggle="modal" data-target="#exampleModalCenter" data-whatever="assets/img/admin-panel/CV-CROP.jpg">View CV</button>
                             </div>
                         </div>
-                        <div class="editgroup-col">
-                            <header>Member 1</header>
-                            <hr class="hr3">
-                            <div class="editgroup-info">
-                                <div class="editgroup-info-left">
-                                    <div class="editgroup-info-c">
-                                        <div>Name</div>
-                                        <div class="editgroup-info-input" id="editgroup-info-name">Member1_Name</div>
-                                    </div>
-                                    <div class="editgroup-info-c">
-                                        <div>Address</div>
-                                        <div class="editgroup-info-input" id="editgroup-info-address">Jalan Palmerah Barat 10 RT 02/RW 05, Palmerah, Kemanggisan, Jakarta Barat</div>
-                                    </div>
-                                    <div class="editgroup-info-c">
-                                        <div>Email</div>
-                                        <div class="editgroup-info-input" id="editgroup-info-email">email@gmail.com</div>
-                                    </div>
-                                    <div class="editgroup-info-c">
-                                        <div>Birth Place</div>
-                                        <div class="editgroup-info-input" id="editgroup-info-birthplace">email@gmail.com</div>
-                                    </div>
+                        <div class="editgroup-col add-member">
+                            <div class="add-member-head">
+                                <header>Add Member</header>
+                                <div class="cir" onclick="expandForm(this)">
+                                    <div class="min"></div>
+                                    <div class="plus"></div>
                                 </div>
-                                <div class="editgroup-info-right">
-                                    <div class="editgroup-info-c">
-                                        <div>Whatsapp Number</div>
-                                        <div class="editgroup-info-input" id="editgroup-info-number">0812 3423 7878</div>
-                                    </div>
-                                    <div class="editgroup-info-c">
-                                        <div>Line_ID</div>
-                                        <div class="editgroup-info-input" id="editgroup-info-line">Line_id</div>
-                                    </div>
-                                    <div class="editgroup-info-c">
-                                        <div>GitLab_ID</div>
-                                        <div class="editgroup-info-input" id="editgroup-info-gitlab">GitLab ID</div>
-                                    </div>
-                                    <div class="editgroup-info-c">
-                                        <div>Birth Date</div>
-                                        <div class="editgroup-info-input" id="editgroup-info-birthdate">11 Juli 2001</div>
-                                    </div>
-                                </div>
-            
                             </div>
-                            <hr class="hr3">
-                            <div class="editgroup-cv-c">
-                                <div class="editgroup-cv-left">
-                                    <img src="{{asset('assets/img/admin-panel/folder_red.png')}}">
-                                    <span>|</span>
-                                    <div class="editgroup-cv">Your CV</div>
-                                </div>
-                                <button type="button" class="editgroup-view" data-toggle="modal" data-target="#exampleModalCenter" data-whatever="assets/img/admin-panel/CV-CROP.jpg">View CV</button>
-                            </div>
-                        </div>
-                        <div class="editgroup-col">
-                            <header>Member 2</header>
-                            <hr class="hr3">
-                            <div class="editgroup-info">
-                                <div class="editgroup-info-left">
-                                    <div class="editgroup-info-c">
-                                        <div>Name</div>
-                                        <div class="editgroup-info-input" id="editgroup-info-name">Member2_Name</div>
-                                    </div>
-                                    <div class="editgroup-info-c">
-                                        <div>Address</div>
-                                        <div class="editgroup-info-input" id="editgroup-info-address">Jalan Palmerah Barat 10 RT 02/RW 05, Palmerah, Kemanggisan, Jakarta Barat</div>
-                                    </div>
-                                    <div class="editgroup-info-c">
-                                        <div>Email</div>
-                                        <div class="editgroup-info-input" id="editgroup-info-email">email@gmail.com</div>
-                                    </div>
-                                    <div class="editgroup-info-c">
-                                        <div>Birth Place</div>
-                                        <div class="editgroup-info-input" id="editgroup-info-birthplace">email@gmail.com</div>
-                                    </div>
-                                </div>
-                                <div class="editgroup-info-right">
-                                    <div class="editgroup-info-c">
-                                        <div>Whatsapp Number</div>
-                                        <div class="editgroup-info-input" id="editgroup-info-number">0812 3423 7878</div>
-                                    </div>
-                                    <div class="editgroup-info-c">
-                                        <div>Line_ID</div>
-                                        <div class="editgroup-info-input" id="editgroup-info-line">Line_id</div>
-                                    </div>
-                                    <div class="editgroup-info-c">
-                                        <div>GitLab_ID</div>
-                                        <div class="editgroup-info-input" id="editgroup-info-gitlab">GitLab ID</div>
-                                    </div>
-                                    <div class="editgroup-info-c">
-                                        <div>Birth Date</div>
-                                        <div class="editgroup-info-input" id="editgroup-info-birthdate">11 Juli 2001</div>
-                                    </div>
-                                </div>
-            
-                            </div>
-                            <hr class="hr3">
-                            <div class="editgroup-cv-c">
-                                <div class="editgroup-cv-left">
-                                    <img src="{{asset('assets/img/admin-panel/folder_red.png')}}">
-                                    <span>|</span>
-                                    <div class="editgroup-cv">Your CV</div>
-                                </div>
-                                <button type="button" class="editgroup-view" data-toggle="modal" data-target="#exampleModalCenter" data-whatever="assets/img/admin-panel/CV-CROP.jpg">View CV</button>
-                            </div>
+                            <form action="">
+                                <input type="text" class="form-control my-2" placeholder="Full Name" required/>
+                                <input type="email" class="form-control my-2" placeholder="Email" onchange="validateEmail(this)"required/>
+                                <p class="invalid"></p>
+                                <input type="number" class="form-control my-2" placeholder="Whatsapp Number" onchange="validatePhone(this)" required/>
+                                <p class="invalid"></p>
+                                <input
+                                type="text"
+                                class="form-control my-2"
+                                placeholder="LINE ID"
+                                required
+                                />
+                                <input
+                                type="text"
+                                class="form-control my-2"
+                                placeholder="Github/Gitlab ID"
+                                required
+                                />
+                                <input
+                                type="text"
+                                class="form-control my-2"
+                                placeholder="Birth Place"
+                                required
+                                />
+                                <input
+                                type="date"
+                                class="form-control my-2 inp-date"
+                                placeholder="DD/MM/YYYY"
+                                required
+                                />
+                                <label for="idcard-leader" class="form-control inp-file">Upload ID Card</label>
+                                <p class="invalid"></p>
+                                <input type="file" id="idcard-leader" class="inp-file" onchange="changeFile(this)" />
+
+                                <label for="cv-leader" class="form-control inp-file">Upload CV</label>
+                                <p class="invalid"></p>
+                                <input type="file" id="cv-leader" class="inp-file" onchange="changeFile(this)" />
+                                <button type="submit">SUBMIT</button>
+                            </form>
                         </div>
                         <div class="editgroup-col flex-row">
                             <div class="editgroup-contact-content">
@@ -380,20 +324,6 @@
                                 <div><img src="{{asset('assets/img/timeline/close-registration.svg')}}" alt=""></div>
                                 <div><img src="{{asset('assets/img/timeline/technical-meeting.svg')}}" alt=""></div>
                                 <div><img src="{{asset('assets/img/timeline/competition-day.svg')}}" alt=""></div>
-                            </div>
-                            <div class="timeline-path d-flex row justify-content-between">
-                                <div class="timeline-path-line">
-                                    <span>30 days</span>
-                                    <img src="{{asset('assets/img/timeline/path.svg')}}" alt="">
-                                </div>
-                                <div class="timeline-path-line">
-                                    <span>2 days</span>
-                                    <img src="{{asset('assets/img/timeline/path.svg')}}" alt="">
-                                </div>
-                                <div class="timeline-path-line">
-                                    <span>5 days</span>
-                                    <img src="{{asset('assets/img/timeline/path.svg')}}" alt="">
-                                </div>
                             </div>
                             <div class="timeline-line"></div>
                             <div class="timeline-dot row d-flex justify-content-between">

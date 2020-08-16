@@ -21,8 +21,12 @@ Route::get('/', function () {
     return view('home-fe');
 });
 
-Route::any('/register', function () {
+Route::get('/register', function () {
     return view('register-fe');
+});
+
+Route::get('/login', function () {
+    return view('login-fe');
 });
 
 Route::get('/user',function(){
