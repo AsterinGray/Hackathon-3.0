@@ -21,7 +21,7 @@ class MemberSeeder extends Seeder
             'git_id' => 'testing',
             'place_of_birth' => 'Jakarta',
             'date_of_birth' => '2000-01-01',
-            'team_id' => 2,
+            'user_id' => 2,
         ]);
 
         Member::create([
@@ -32,7 +32,7 @@ class MemberSeeder extends Seeder
             'git_id' => 'testing',
             'place_of_birth' => 'Jakarta',
             'date_of_birth' => '2000-01-01',
-            'team_id' => 2,
+            'user_id' => 2,
         ]);
 
         Member::create([
@@ -43,7 +43,7 @@ class MemberSeeder extends Seeder
             'git_id' => 'testing',
             'place_of_birth' => 'Jakarta',
             'date_of_birth' => '2000-01-01',
-            'team_id' => 3,
+            'user_id' => 3,
         ]);
 
         Member::create([
@@ -54,7 +54,7 @@ class MemberSeeder extends Seeder
             'git_id' => 'testing',
             'place_of_birth' => 'Jakarta',
             'date_of_birth' => '2000-01-01',
-            'team_id' => 3,
+            'user_id' => 3,
         ]);
 
     }

@@ -11,7 +11,7 @@
 
                 @foreach($data as $data)
                     <div>
-                        <p>Name : {{$data->name}}</p>
+                        <input type="text" name="member"> Name : {{$data->name}}</p>
                         <p>email : {{$data->email}}</p>
                         <p>phone_number : {{$data->phone_number}}</p>
                         <p>line_id : {{$data->line_id}}</p>

@@ -20,11 +20,12 @@ class AdminController extends Controller
 
     public function view(Request $request, User $user)
     {
-        $data = $user;
+        $data = User::find($user->id)->member;
+        // dd($data);
         return view('admin_view',compact('data'));
     }
 
-    public function admin_edit(Request $request, User $user)
+    public function edit(Request $request, User $user)
     {
         $data = $user;
         return view('admin_edit',compact('data'));

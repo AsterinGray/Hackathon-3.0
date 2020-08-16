@@ -24,9 +24,9 @@ class CreateMembersTable extends Migration
             $table->string('date_of_birth');
             $table->string('id_card')->nullable();
             $table->string('cv')->nullable();
-            $table->unsignedBigInteger('team_id')->nullable();
+            $table->unsignedBigInteger('user_id')->nullable();
             $table->timestamps();
-            $table->foreign('team_id')->references('id')->on('users')->onDelete('SET NULL');
+            $table->foreign('user_id')->references('id')->on('users')->onDelete('SET NULL');
         });
     }
 
