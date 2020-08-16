@@ -17,4 +17,22 @@ class AdminController extends Controller
         $users = User::all();
         return view('admin', compact('users'));
     }
+
+    public function view(Request $request, User $user)
+    {
+        $data = $user;
+        return view('admin_view',compact('data'));
+    }
+
+    public function admin_edit(Request $request, User $user)
+    {
+        $data = $user;
+        return view('admin_edit',compact('data'));
+    }
+    
+    public function delete(Request $request, User $user)
+    {
+        $user->delete();
+        return redirect('/home');
+    }
 }

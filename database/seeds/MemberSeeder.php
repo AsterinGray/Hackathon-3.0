@@ -2,6 +2,7 @@
 
 use Illuminate\Database\Seeder;
 use App\Member;
+use App\User;
 
 class MemberSeeder extends Seeder
 {
@@ -45,7 +46,7 @@ class MemberSeeder extends Seeder
             'team_id' => 3,
         ]);
 
-        User::create([
+        Member::create([
             'name' => 'TestBinus4',
             'email' => 'testing4@bncc.net',
             'phone_number' => '08123456789',

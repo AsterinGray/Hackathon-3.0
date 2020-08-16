@@ -32,7 +32,9 @@ class HomeController extends Controller
             return redirect('/admin');
         }
         $members = Member::where('team_id',$user->id)->get();
-        return view('home',compact('user','members'));
+        $membersCount = Member::where('team_id',$user->id)->count();
+        // dd($membersCount);
+        return view('home',compact('user','members','membersCount'));
     }
 
     public function submitPayment(Request $request){
@@ -41,6 +43,19 @@ class HomeController extends Controller
         $file_name = $user->name.".".$file->getClientOriginalExtension();
         $file->move(public_path('storage/payment_image'),$file_name);
         $user->update(['payment_image' => $file_name]);
+        return redirect('/home');
+    }
+
+    public function add(Request $request){
+        
+        $user = Auth::user();
+        $membersCount = Member::where('team_id',$user->id)->count();
+        if($membersCount < 4){
+            $data = $request->all();
+            $data['team_id'] = $user->id;
+            // dd($data);
+            Member::create($data);
+        }
         return redirect('/home');
     }
 
