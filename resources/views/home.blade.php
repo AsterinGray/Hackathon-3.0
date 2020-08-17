@@ -377,10 +377,10 @@
                             </div>
                         </div>
                         <div class="payment-2">
-                            <div class="payment-left">a
+                            <div class="payment-left">
                                 <h4>Upload Payment Receipt</h4>
                                 <div class="flex-col d-flex ">
-                                    <img class="payment-time" src="{{asset('assets/img/user-dashboard/time-left.png')}}">
+                                    <img class="payment-time" src="{{asset('assets/img/user-dashboard/time-left-w.png')}}">
                                     <div class="payment-time-content" id="countdown">
                                         23:59:45 left
                                     </div>
@@ -413,18 +413,15 @@
                             </div>
                             @else
                             <div class="payment-right" id="payment-form">
-                                <form id="payment-form" action="{{url('/payment/upload')}}" method="post" enctype="multipart/form-data">
-                                @csrf
-                                {{ method_field('PUT') }}
                                 <div class="payment-button-left d-flex flex-column align-items-center justify-content-center mr-3">
-                                    <button type="view">View File</button>
+                                    <button type="button" data-toggle="modal" data-target="#exampleModalCenter" data-whatever="{{asset('storage/payment_image/'.$user->payment_image)}}">View File</button>
                                 </div>
                                 <div class="d-flex flex-column">
                                     <div>
                                     Status: 
                                     <span id="file-status">
                                         @if($user->payment_verified == 0)
-                                        Verification on Progress
+                                        Verification on progress
                                         @elseif($user->payment_verified == 2)
                                         Rejected
                                         @else
@@ -436,7 +433,6 @@
                                        
                                     </p>
                                 </div>
-                                </form>
                             </div>
                             @endif
                         </div>
