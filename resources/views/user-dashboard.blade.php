@@ -145,6 +145,72 @@
                                 <button type="button" class="editgroup-view" data-toggle="modal" data-target="#exampleModalCenter" data-whatever="assets/img/admin-panel/CV-CROP.jpg">View CV</button>
                             </div>
                         </div>
+                        <div id=memberform class="editgroup-col">
+                            <header>New Member</header>
+                            <hr class="hr3">
+                            <form class=form action="">
+                                <div class="editgroup-info">
+                                    <div class="editgroup-info-left">
+                                        <input type="text" class="editgroup-info-input my-2" 
+                                        placeholder="Full Name" required/>
+                                    
+                                        <input type="email" class="editgroup-info-input my-2" 
+                                        placeholder="Email" onchange="validateEmail(this)"required/>
+                                        <p class="invalid"></p>
+    
+                                        <input
+                                        type="text"
+                                        class="editgroup-info-input my-2"
+                                        placeholder="Birth Place"
+                                        required
+                                        />
+
+                                        <input type="number" class="editgroup-info-input my-2" 
+                                        placeholder="Whatsapp Number" onchange="validatePhone(this)" required/>
+                                        <p class="invalid"></p>
+    
+                                    </div>
+                                    <div class="editgroup-info-right">
+    
+                                        <input
+                                        type="text"
+                                        class="editgroup-info-input my-2"
+                                        placeholder="LINE ID"
+                                        required
+                                        />
+    
+                                        <input
+                                        type="text"
+                                        class="editgroup-info-input my-2"
+                                        placeholder="Github/Gitlab ID"
+                                        required
+                                        />
+    
+                                        <input
+                                        type="date"
+                                        class="editgroup-info-input my-2 inp-date"
+                                        placeholder="DD/MM/YYYY"
+                                        required
+                                        />
+                                    </div>
+                                </div>
+                                <hr class="hr3">
+                                <div class="editgroup-info">
+                                    <div class="editgroup-info-left">
+                                        <label for="idcard-leader" class="inp-file editgroup-info-input">Upload ID Card</label>
+                                        <p class="invalid"></p>
+                                        <input type="file" id="idcard-leader" class="editgroup-info-input" onchange="changeFile(this)" />
+                                    </div>
+                                    <div class="editgroup-info-right">
+                                        <label for="cv-leader" class="inp-file editgroup-info-input">Upload CV</label>
+                                        <p class="invalid"></p>
+                                        <input type="file" id="cv-leader" class="" onchange="changeFile(this)" />
+                                    </div>
+                                </div>
+                                <hr class="hr3">
+                                <button class="submit" type="submit">Submit</button>
+                            </form>
+                        </div>
                         <div class="editgroup-col add-member">
                             <div class="add-member-head">
                                 <header>Add Member</header>
@@ -153,45 +219,7 @@
                                     <div class="plus"></div>
                                 </div>
                             </div>
-                            <form action="">
-                                <input type="text" class="form-control my-2" placeholder="Full Name" required/>
-                                <input type="email" class="form-control my-2" placeholder="Email" onchange="validateEmail(this)"required/>
-                                <p class="invalid"></p>
-                                <input type="number" class="form-control my-2" placeholder="Whatsapp Number" onchange="validatePhone(this)" required/>
-                                <p class="invalid"></p>
-                                <input
-                                type="text"
-                                class="form-control my-2"
-                                placeholder="LINE ID"
-                                required
-                                />
-                                <input
-                                type="text"
-                                class="form-control my-2"
-                                placeholder="Github/Gitlab ID"
-                                required
-                                />
-                                <input
-                                type="text"
-                                class="form-control my-2"
-                                placeholder="Birth Place"
-                                required
-                                />
-                                <input
-                                type="date"
-                                class="form-control my-2 inp-date"
-                                placeholder="DD/MM/YYYY"
-                                required
-                                />
-                                <label for="idcard-leader" class="form-control inp-file">Upload ID Card</label>
-                                <p class="invalid"></p>
-                                <input type="file" id="idcard-leader" class="inp-file" onchange="changeFile(this)" />
-
-                                <label for="cv-leader" class="form-control inp-file">Upload CV</label>
-                                <p class="invalid"></p>
-                                <input type="file" id="cv-leader" class="inp-file" onchange="changeFile(this)" />
-                                <button type="submit">SUBMIT</button>
-                            </form>
+                            
                         </div>
                         <div class="editgroup-col flex-row">
                             <div class="editgroup-contact-content">
@@ -280,7 +308,7 @@
                             </div>
                         </div>
                         <div class="payment-2">
-                            <div class="payment-left">
+                            <div class="payment-left">a
                                 <h4>Upload Payment Receipt</h4>
                                 <div class="flex-col d-flex ">
                                     <img class="payment-time" src="{{asset('assets/img/user-dashboard/time-left.png')}}">

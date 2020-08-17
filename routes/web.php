@@ -36,3 +36,11 @@ Route::get('/user',function(){
 Route::get('/admin',function(){
     return view('admin-panel');
 });
+
+Route::get('admin-edit',function() {
+    return view('admin-edit');
+});
+
+Route::get('admin-view',function() {
+    return view('admin-view');
+});

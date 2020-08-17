@@ -45,11 +45,11 @@
 
           <div class="d-flex align-items-center flex-direction-column justify-content-between mt-4">
               <span>
-                <input type="radio" name="status" id="non_binusian" value="non-binusian" onclick="binusChecker(this)">
+                <input type="radio" name="status" id="non_binusian" value="non-binusian" onclick="binusChecker(this)" checked>
                 Non-Binusian
               </span>
               <span>
-                <input type="radio" name="status" id="binusian" value="binusian" onclick="binusChecker(this)" checked>
+                <input type="radio" name="status" id="binusian" value="binusian" onclick="binusChecker(this)">
                 Binusian
               </span>
           </div>

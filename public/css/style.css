@@ -6,6 +6,16 @@ body {
   scroll-behavior: smooth;
   background-color: #1d2134; }
 
+::-webkit-scrollbar {
+  width: 10px; }
+
+::-webkit-scrollbar-thumb {
+  background-color: #e74c3c;
+  border-radius: 10px; }
+
+::-webkit-scrollbar-track {
+  background-color: #252a41; }
+
 @font-face {
   font-family: "CircularStd";
   src: url("../assets/fonts/CircularStd-Medium.otf"); }
@@ -64,6 +74,8 @@ body {
   flex-direction: column;
   padding: 0 10vw;
   padding-top: 10vh; }
+  .home img {
+    width: 50%; }
   .home-text {
     display: flex;
     justify-content: center;
