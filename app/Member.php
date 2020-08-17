@@ -15,7 +15,7 @@ class Member extends Model
         'place_of_birth',
         'date_of_birth',
         'id_card',
-        'team_id',
+        'user_id',
         'cv',
     ];
 

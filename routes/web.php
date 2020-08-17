@@ -49,7 +49,7 @@ Route::get('admin-view',function() {
 
 */
 
-Route::get('/laravel', function () {
+Route::get('/', function () {
     return view('welcome');
 });
 

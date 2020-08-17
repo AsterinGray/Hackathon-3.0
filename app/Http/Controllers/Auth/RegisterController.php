@@ -97,7 +97,7 @@ class RegisterController extends Controller
             'place_of_birth' => $data['member1_place_of_birth'],
             'date_of_birth' => $data['member1_date_of_birth'],
             'id_card' => $file_name1,
-            'team_id' => $user['id'],
+            'user_id' => $user['id'],
             'cv' => $cv_name1,
         ]);
         

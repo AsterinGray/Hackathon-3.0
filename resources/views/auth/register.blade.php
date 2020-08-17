@@ -1,202 +1,174 @@
-@extends('layouts.app')
+@extends('layout.main')
+
+@section('css')
+    <link rel="stylesheet" href="{{asset('css/login-regis.css')}}" />
+@endsection
 
 @section('content')
-<div class="container">
-    <div class="row justify-content-center">
-        <div class="col-md-8">
-            <div class="card">
-                <div class="card-header">{{ __('Register') }}</div>
+  <section
+      class="home container-fluid min-vh-100 d-flex flex-column justify-content-center align-items-center py-5"
+      id="home"
+    >
+      <form class="regis col-lg-8 col-md-12" method="POST" action="{{ route('register') }}" enctype="multipart/form-data">
+      @csrf
+        <h1>REGISTER</h1>
+        <div class="regis-group col-lg-8 col-md-10">
+          <h2>Group</h2>
+          <input
+            id="groupName"
+            type="text"
+            class="form-control my-2 @error('name') is-invalid @enderror"
+            placeholder="Group Name"
+            name="name" 
+            value="{{ old('name') }}"
+            onchange="validateName(this)"
+            required
+            autocomplete="name" 
+            autofocus
+          />
+            @error('name')
+                <p class="invalid">{{ $message }}</p>
+            @enderror
+          <input
+            type="password"
+            id="password"
+            class="form-control my-2 @error('password') is-invalid @enderror"
+            placeholder="Password"
+            name="password"
+            onchange="validatePass()"
+            required
+            minlength="8"
+            autocomplete="new-password"
+          />
+          <p class="invalid" id="pass-feedback"></p>
+            @error('password')
+                <p class="invalid">{{ $message }}</p>
+            @enderror
+          <input
+            type="password"
+            id="confirm-password"
+            class="form-control my-2"
+            placeholder="Confirm Password"
+            name="password_confirmation"
+            onchange="validateConfirmPass()"
+            required
+            minlength="8"
+            autocomplete="new-password"
+          />
+          <p class="invalid" id="confirm-feedback"></p>
 
-                <div class="card-body">
-                    <form method="POST" action="{{ route('register') }}" enctype="multipart/form-data">
-                        @csrf
-
-                        <div class="form-group row">
-                            <label for="name" class="col-md-4 col-form-label text-md-right">{{ __('Name') }}</label>
-
-                            <div class="col-md-6">
-                                <input id="name" type="text" class="form-control @error('name') is-invalid @enderror" name="name" value="{{ old('name') }}" required autocomplete="name" autofocus>
-
-                                @error('name')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror
-                            </div>
-                        </div>
-
-                        <div class="form-group row">
-                            <label for="password" class="col-md-4 col-form-label text-md-right">{{ __('Password') }}</label>
-
-                            <div class="col-md-6">
-                                <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="new-password">
-
-                                @error('password')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror
-                            </div>
-                        </div>
-
-                        <div class="form-group row">
-                            <label for="password-confirm" class="col-md-4 col-form-label text-md-right">{{ __('Confirm Password') }}</label>
-
-                            <div class="col-md-6">
-                                <input id="password-confirm" type="password" class="form-control" name="password_confirmation" required autocomplete="new-password">
-                            </div>
-                        </div>
-
-                        <div class="form-group row">
-                            <div class="form-check form-check-inline">
-                                <input class="form-check-input" type="radio" name="is_binusian" id="inlineRadio1" value="0" required>
-                                <label class="form-check-label" for="inlineRadio1">Public</label>
-                            </div>
-                            <div class="form-check form-check-inline">
-                                <input class="form-check-input" type="radio" name="is_binusian" id="inlineRadio2" value="1">
-                                <label class="form-check-label" for="inlineRadio2">Binusian</label>
-                            </div>
-                        </div>
-
-                        
-
-                        <div class="form-group row">
-                            <label for="name" class="col-md-4 col-form-label text-md-right">member1_name</label>
-
-                            <div class="col-md-6">
-                                <input id="member1_name" type="text" class="form-control @error('member1_name') is-invalid @enderror" name="member1_name" value="{{ old('member1_name') }}" required autofocus>
-
-                                @error('member1_name')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror
-                            </div>
-                        </div>
-
-                        <div class="form-group row">
-                            <label for="name" class="col-md-4 col-form-label text-md-right">member1_email</label>
-
-                            <div class="col-md-6">
-                                <input id="member1_email" type="email" class="form-control @error('member1_email') is-invalid @enderror" name="member1_email" value="{{ old('member1_email') }}" required autofocus>
-
-                                @error('member1_email')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror
-                            </div>
-                        </div>
-
-                        <div class="form-group row">
-                            <label for="name" class="col-md-4 col-form-label text-md-right">member1_phone_number</label>
-
-                            <div class="col-md-6">
-                                <input id="member1_phone_number" type="number" class="form-control @error('member1_phone_number') is-invalid @enderror" name="member1_phone_number" value="{{ old('member1_phone_number') }}" required autofocus>
-
-                                @error('member1_phone_number')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror
-                            </div>
-                        </div>
-
-                        <div class="form-group row">
-                            <label for="name" class="col-md-4 col-form-label text-md-right">member1_line_id</label>
-
-                            <div class="col-md-6">
-                                <input id="member1_line_id" type="text" class="form-control @error('member1_line_id') is-invalid @enderror" name="member1_line_id" value="{{ old('member1_line_id') }}" required autofocus>
-
-                                @error('member1_line_id')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror
-                            </div>
-                        </div>
-
-                        <div class="form-group row">
-                            <label for="name" class="col-md-4 col-form-label text-md-right">member1_git_id</label>
-
-                            <div class="col-md-6">
-                                <input id="member1_git_id" type="text" class="form-control @error('member1_git_id') is-invalid @enderror" name="member1_git_id" value="{{ old('member1_git_id') }}" required autofocus>
-
-                                @error('member1_git_id')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror
-                            </div>
-                        </div>
-
-                        <div class="form-group row">
-                            <label for="name" class="col-md-4 col-form-label text-md-right">member1_place_of_birth</label>
-
-                            <div class="col-md-6">
-                                <input id="member1_place_of_birth" type="text" class="form-control @error('member1_place_of_birth') is-invalid @enderror" name="member1_place_of_birth" value="{{ old('member1_place_of_birth') }}" required autofocus>
-
-                                @error('member1_place_of_birth')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror
-                            </div>
-                        </div>
-
-                        <div class="form-group row">
-                            <label for="name" class="col-md-4 col-form-label text-md-right">member1_date_of_birth</label>
-
-                            <div class="col-md-6">
-                                <input id="member1_date_of_birth" type="date" class="form-control @error('member1_date_of_birth') is-invalid @enderror" name="member1_date_of_birth" value="{{ old('member1_date_of_birth') }}" required autofocus>
-
-                                @error('member1_date_of_birth')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror
-                            </div>
-                        </div>
-
-                        <div class="form-group row">
-                            <label for="name" class="col-md-4 col-form-label text-md-right">member1_id_card</label>
-
-                            <div class="col-md-6">
-                                <input id="member1_id_card" type="file" class="form-control @error('member1_id_card') is-invalid @enderror" name="member1_id_card" value="{{ old('member1_id_card') }}" autofocus>
-
-                                @error('member1_id_card')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror
-                            </div>
-                        </div>
-
-                        <div class="form-group row">
-                            <label for="name" class="col-md-4 col-form-label text-md-right">member1_cv</label>
-
-                            <div class="col-md-6">
-                                <input id="member1_cv" type="file" class="form-control @error('member1_cv') is-invalid @enderror" name="member1_cv" value="{{ old('member1_cv') }}" autofocus>
-
-                                @error('member1_cv')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror
-                            </div>
-                        </div>
-
-                        <div class="form-group row mb-0">
-                            <div class="col-md-6 offset-md-4">
-                                <button type="submit" class="btn btn-primary">
-                                    {{ __('Register') }}
-                                </button>
-                            </div>
-                        </div>
-                    </form>
-                </div>
-            </div>
+          <div class="d-flex align-items-center flex-direction-column justify-content-between mt-4">
+              <span>
+                <input type="radio" name="is_binusian" id="non_binusian" name="is_binusian" value="0" onclick="binusChecker(this)" checked required>
+                Non-Binusian
+              </span>
+              <span>
+                <input type="radio" name="is_binusian" id="binusian" value="1" onclick="binusChecker(this)">
+                Binusian
+              </span>
+          </div>
         </div>
-    </div>
-</div>
+        <hr />
+        <div class="regis-team col-lg-8 col-md-10">
+            <h2>Leader</h2>
+            <input
+              type="text"
+              class="form-control my-2 @error('member1_name') is-invalid @enderror"
+              placeholder="Full Name"
+              name="member1_name"
+              value="{{ old('member1_name') }}"
+              required
+            />
+            @error('member1_name')
+                <p class="invalid">{{ $message }}</p>
+            @enderror
+            <input
+              type="email"
+              class="form-control my-2 @error('member1_email') is-invalid @enderror"
+              placeholder="Email"
+              name="member1_email" 
+              value="{{ old('member1_email') }}"
+              onchange="validateEmail(this)"
+              required
+            />
+            @error('member1_email')
+                <p class="invalid">{{ $message }}</p>
+            @enderror
+            <input
+              type="number"
+              class="form-control my-2 @error('member1_phone_number') is-invalid @enderror"
+              placeholder="Whatsapp Number"
+              name="member1_phone_number" 
+              value="{{ old('member1_phone_number') }}"
+              onchange="validatePhone(this)"
+              required
+            />
+            @error('member1_phone_number')
+                <p class="invalid">{{ $message }}</p>
+            @enderror
+            <input
+              type="text"
+              class="form-control my-2 @error('member1_line_id') is-invalid @enderror"
+              placeholder="LINE ID"
+              name="member1_line_id" 
+              value="{{ old('member1_line_id') }}"
+              required
+            />
+            @error('member1_line_id')
+                <p class="invalid">{{ $message }}</p>
+            @enderror
+            <input
+              type="text"
+              class="form-control my-2 @error('member1_git_id') is-invalid @enderror"
+              placeholder="Github/Gitlab ID"
+              name="member1_git_id" 
+              value="{{ old('member1_git_id') }}"
+              required
+            />
+            @error('member1_git_id')
+                <p class="invalid">{{ $message }}</p>
+            @enderror
+            <input
+              type="text"
+              class="form-control my-2 @error('member1_place_of_birth') is-invalid @enderror"
+              placeholder="Birth Place"
+              name="member1_place_of_birth" 
+              value="{{ old('member1_place_of_birth') }}"
+              required
+            />
+            @error('member1_place_of_birth')
+                <p class="invalid">{{ $message }}</p>
+            @enderror
+            <input
+              type="date"
+              class="form-control my-2 inp-date @error('member1_date_of_birth') is-invalid @enderror"
+              placeholder="DD/MM/YYYY"
+              name="member1_date_of_birth" 
+              value="{{ old('member1_date_of_birth') }}"
+              required
+            />
+            @error('member1_date_of_birth')
+                <p class="invalid">{{ $message }}</p>
+            @enderror
+            <label for="idcard-leader" class="form-control inp-file">Upload ID Card</label>
+            <p class="invalid"></p>
+            <input type="file" id="idcard-leader" class="inp-file @error('member1_id_card') is-invalid @enderror" name="member1_id_card" value="{{ old('member1_id_card') }}" onchange="changeFile(this)" />
+            @error('member1_id_card')
+                <p class="invalid">{{ $message }}</p>
+            @enderror
+            <label for="cv-leader" class="form-control inp-file">Upload CV</label>
+            <p class="invalid"></p>
+            <input type="file" id="cv-leader" class="inp-file @error('member1_cv') is-invalid @enderror" name="member1_cv" value="{{ old('member1_cv') }}" onchange="changeFile(this)" />
+            @error('member1_cv')
+                <p class="invalid">{{ $message }}</p>
+            @enderror
+        <div class="regis-submit">
+          <button type="submit" class="align-self-center">SUBMIT</button>
+        </div>
+      </form>
+    </section>
+@endsection
+
+@section('script')
+  <script src="{{asset('js/regis.js')}}"></script>
 @endsection

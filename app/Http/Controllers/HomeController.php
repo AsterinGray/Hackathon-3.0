@@ -31,8 +31,8 @@ class HomeController extends Controller
         {
             return redirect('/admin');
         }
-        $members = Member::where('team_id',$user->id)->get();
-        $membersCount = Member::where('team_id',$user->id)->count();
+        $members = Member::where('user_id',$user->id)->get();
+        $membersCount = Member::where('user_id',$user->id)->count();
         // dd($membersCount);
         return view('home',compact('user','members','membersCount'));
     }
@@ -49,10 +49,10 @@ class HomeController extends Controller
     public function add(Request $request){
         
         $user = Auth::user();
-        $membersCount = Member::where('team_id',$user->id)->count();
+        $membersCount = Member::where('user_id',$user->id)->count();
         if($membersCount < 4){
             $data = $request->all();
-            $data['team_id'] = $user->id;
+            $data['user_id'] = $user->id;
             // dd($data);
             Member::create($data);
         }
