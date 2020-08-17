@@ -13,7 +13,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
+Route::get('/laravel', function () {
     return view('welcome');
 });
 
@@ -33,4 +33,3 @@ Route::middleware('admin')->group(function(){
     Route::get('/view/{user}','AdminController@view')->name('admin.view');
     Route::delete('/delete/{user}','AdminController@delete')->name('admin.delete');
 });
-
