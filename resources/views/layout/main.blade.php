@@ -56,7 +56,7 @@
             </li>
           </ul>
           <ul class="navbar-nav nav-right">
-          <!-- @if (Route::has('login'))
+          @if (Route::has('login'))
             @auth
             <li class="nav-item">
                 <a class="text-light nav-link" id="register" href="/home">Dashboard</a>
@@ -71,16 +71,16 @@
                 </li>
                 @endif
             @endauth
-          @endif -->
+          @endif
             <!-- <li class="nav-item">
                 <a class="text-light nav-link" href="/ login">Login</a>
             </li>
             <li class="nav-item">
                 <a class="text-light nav-link" id="register" href="/register">Register</a>
             </li> -->
-            <li class="nav-item">
+            <!-- <li class="nav-item">
                 <span class="text-light nav-link" id="register">Coming Soon</span>
-            </li>
+            </li> -->
           </ul>
         </div>
       </div>
