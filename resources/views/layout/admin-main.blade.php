@@ -82,7 +82,7 @@
                         participant
                     </div>
                 </div>
-                <button class="navbar-content">
+                <button class="navbar-content" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
                     <div class=navbar-icon-c>
                         <img class=navbar-icon src="{{asset('assets/img/admin-panel/logout.png')}}">
                     </div>
@@ -90,6 +90,9 @@
                         logout
                     </div>
                 </button>
+                <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                    @csrf
+                </form>
             </div>
         </section>
         <section id=content>
