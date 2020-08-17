@@ -51,9 +51,21 @@ class HomeController extends Controller
         $user = Auth::user();
         $membersCount = Member::where('user_id',$user->id)->count();
         if($membersCount < 4){
+            
             $data = $request->all();
+            // dd($data);
             $data['user_id'] = $user->id;
             // dd($data);
+            $file1 = request()->file('id_card');
+            $file_name1 = $user['name']."_".$data['name'].".".$file1->getClientOriginalExtension();
+            $file1->move(public_path('storage/id_card'),$file_name1);
+
+            $cv1 = request()->file('cv');
+            $cv_name1 = $user['name']."_".$data['name'].".".$cv1->getClientOriginalExtension();
+            $cv1->move(public_path('storage/cv'),$cv_name1);
+
+            $data['id_card'] = $file_name1;
+            $data['cv'] = $cv_name1;
             Member::create($data);
         }
         return redirect('/home');

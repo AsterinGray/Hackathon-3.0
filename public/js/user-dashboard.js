@@ -11,7 +11,7 @@ $('#exampleModalCenter').on('show.bs.modal', function (event) {
   modal.find('#display-image').attr('src', recipient)
 })
 
-var countDownDate = new Date("Jun 22, 2020 16:10:00").getTime();
+var countDownDate = new Date("Sep 22, 2020 16:10:00").getTime();
 var x = setInterval(function () {
   var now = new Date().getTime();
   var distance = countDownDate - now;

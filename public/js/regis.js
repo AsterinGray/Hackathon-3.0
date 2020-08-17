@@ -1,6 +1,6 @@
 //Binusian & Non-Binusian Checker
 const binusChecker = (e) => {
-  if ($(e).attr("id") == "binusian") {
+  if($(e).attr("id") == "binusian"){
     $("label[for='idcard-leader'").text("Upload Flazz Card")
   } else {
     $("label[for='idcard-leader'").text("Upload ID Card")
@@ -23,7 +23,7 @@ const validateName = (e) => {
 const validateConfirmPass = () => {
   if ($("#password").val() === $("#confirm-password").val()) {
     $("#confirm-password")[0].setCustomValidity("");
-    $("#confirm-password").next(".invalid-feedback").text("");
+    $("#confirm-password").next(".invalid").text("");
   } else {
     $("#confirm-password")[0].setCustomValidity("Passowrd must match");
     $("#confirm-feedback").text("Password doesn't match");

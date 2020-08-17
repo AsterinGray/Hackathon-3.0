@@ -31,9 +31,7 @@ Route::get('/login', function () {
     return view('login-fe');
 });
 
-Route::get('/user',function(){
-    return view('user-dashboard');
-});
+
 
 Route::get('/admin',function(){
     return view('admin-panel');
@@ -54,6 +52,10 @@ Route::get('/', function () {
 });
 
 Auth::routes();
+
+Route::get('/user',function(){
+    return view('user-dashboard');
+});
 
 Route::middleware('auth')->group(function(){
     Route::get('/home', 'HomeController@index')->name('home');

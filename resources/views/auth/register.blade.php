@@ -26,6 +26,7 @@
             autocomplete="name" 
             autofocus
           />
+          <p class="invalid"></p>
             @error('name')
                 <p class="invalid">{{ $message }}</p>
             @enderror
@@ -91,6 +92,7 @@
               onchange="validateEmail(this)"
               required
             />
+            <p class="invalid"></p>
             @error('member1_email')
                 <p class="invalid">{{ $message }}</p>
             @enderror
@@ -103,6 +105,7 @@
               onchange="validatePhone(this)"
               required
             />
+            <p class="invalid"></p>
             @error('member1_phone_number')
                 <p class="invalid">{{ $message }}</p>
             @enderror
