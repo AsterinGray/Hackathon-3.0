@@ -29,6 +29,7 @@ Route::middleware('auth')->group(function(){
 Route::middleware('admin')->group(function(){
     Route::get('/admin','AdminController@index')->name('admin');
     Route::get('/edit/{user}','AdminController@edit')->name('admin.edit');
+    Route::put('/update/{member}','AdminController@update')->name('admin.update');
     Route::get('/view/{user}','AdminController@view')->name('admin.view');
     Route::delete('/delete/{user}','AdminController@delete')->name('admin.delete');
 });

@@ -32,10 +32,14 @@
                                 @csrf
                                 <button type="submit" class="participant-view">View Data</button>
                             </form>
+                            <form action="{{route('admin.edit',$team)}}" method="get">
+                                @csrf
+                                <button type="submit" class="participant-view">Edit Data</button>
+                            </form>
                             <form action="{{route('admin.delete',$team)}}" method="post">
                                 @csrf
                                 {{ method_field('DELETE') }}
-                                <button type="submit" class="participant-delete" style="background:none;border:none;">x</button>
+                                <button type="submit" class="participant-delete">x</button>
                             </form>
                         </div>
                         @endif

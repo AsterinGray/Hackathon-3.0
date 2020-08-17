@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\User;
+use App\Member;
 
 class AdminController extends Controller
 {
@@ -27,8 +28,15 @@ class AdminController extends Controller
 
     public function edit(Request $request, User $user)
     {
-        $data = $user;
+        $data = User::find($user->id)->member;
         return view('admin_edit',compact('data'));
+    }
+
+    public function update(Request $request, Member $member)
+    {
+        $data = $request->all();
+        $member->update($data);
+        return redirect('/home');
     }
     
     public function delete(Request $request, User $user)
