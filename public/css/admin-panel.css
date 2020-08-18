@@ -375,7 +375,7 @@ form {
   font-size: 3rem;
   margin-top: -6px; }
 
-#payment, #participant {
+#payment, #participant, #identity {
   display: none;
   opacity: 0;
   transition: opacity 1s ease-in-out; }
