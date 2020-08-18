@@ -34,13 +34,6 @@ function switchToggle2(a) {
 
 }
 
-function editGroup() {
-    window.location.href = "/admin-edit"
-}
-function viewGroup() {
-    window.location.href = "/admin-view"
-}
-
 $('#staticBackdrop').on('shown.bs.modal', function () {
     $('#myInput').trigger('focus');
 })
@@ -129,3 +122,30 @@ $(window).resize(function () {
 
     }
 });
+
+$('#staticBackdrop').on('shown.bs.modal', function(event) {
+    var button = $(event.relatedTarget)
+    var payment_id = button.data('paymentid')
+    var payment_name = button.data('paymentname')
+    var modal = $(this)
+    modal.find('.modal-body #payment_id').val(payment_id);
+    modal.find('.modal-body #groupName').html(payment_name);
+  })
+
+  $('#delete').on('shown.bs.modal', function(event) {
+    var button = $(event.relatedTarget)
+    var delete_id = button.data('deleteid')
+    var delete_name = button.data('deletename')
+    var modal = $(this)
+    modal.find('.modal-body #delete_id').val(delete_id);
+    modal.find('.modal-body #groupName').html(delete_name);
+  })
+
+  $('#identity-modal').on('shown.bs.modal', function(event) {
+    var button = $(event.relatedTarget)
+    var identity_id = button.data('identityid')
+    var identity_name = button.data('identityname')
+    var modal = $(this)
+    modal.find('.modal-body #identity_id').val(identity_id);
+    modal.find('.modal-body #groupName').html(delete_name);
+  })
