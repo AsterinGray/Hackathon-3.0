@@ -36,12 +36,36 @@ class AdminController extends Controller
     {
         $data = $request->all();
         $member->update($data);
-        return redirect('/home');
+        return redirect()->back();
     }
     
-    public function delete(Request $request, User $user)
+    public function delete(Request $request)
     {
+        $user = User::findOrFail($request->delete_id);
         $user->delete();
-        return redirect('/home');
+        return redirect()->back();
+    }
+
+    public function setBinusian(Request $request)
+    {
+        $user = User::findOrFail($request->identity_id);
+        $user->role = 1;
+        $user->save();
+        return redirect()->back();
+    }
+
+    public function setPayment(Request $request)
+    {
+        $user = User::findOrFail($request->payment_id);
+        switch($request->input('action')){
+            case 'approve':
+                $user->payment_status = 1;
+            break;
+            case 'reject':
+                $user->payment_status = 2;
+            break;
+        }
+        $user->save();
+        return redirect()->back();
     }
 }
