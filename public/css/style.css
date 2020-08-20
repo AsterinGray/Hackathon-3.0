@@ -76,7 +76,7 @@ body {
   padding-top: 10vh; }
   .home img {
     width: 50%;
-    max-height: 50vh; }
+    max-height: 20vh; }
   .home-text {
     display: flex;
     justify-content: center;
