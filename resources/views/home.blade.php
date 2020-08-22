@@ -420,9 +420,9 @@
                                     <div>
                                     Status: 
                                     <span id="file-status">
-                                        @if($user->payment_verified == 0)
+                                        @if($user->payment_status == 0)
                                         Verification on progress
-                                        @elseif($user->payment_verified == 2)
+                                        @elseif($user->payment_status == 2)
                                         Rejected
                                         @else
                                         Verified
