@@ -19,11 +19,19 @@ var x = setInterval(function () {
   var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
   var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
   var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+  const variabel =  document.getElementById("countdown");
   document.getElementById("countdown").innerHTML = hours + ":"
     + minutes + ":" + seconds + " left";
   if (distance < 0) {
     clearInterval(x);
-    document.getElementById("countdown").innerHTML = "EXPIRED";
+    variabel.style = "display:none";
+    $(".price").html("Rp100.000");
+    $(".price").css({
+      "margin":"0",
+      "margin-top":"8px"
+    });
+    $(".payment-left").children("h4").html('Non-Binusian');
+    $(".payment-time").css("display","none");
   }
 }, 1000);
 

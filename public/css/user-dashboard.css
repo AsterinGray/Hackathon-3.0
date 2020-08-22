@@ -437,7 +437,8 @@ h1 {
     .payment-left h4 {
       color: #E74C3C;
       font-size: 1.2em;
-      font-weight: bold; }
+      font-weight: bold;
+      margin: 0; }
   .payment-right {
     justify-content: center;
     align-items: center;
@@ -622,6 +623,11 @@ input[type="file"] {
     background: radial-gradient(circle at center, #E74C3C 50%, #2C3044 74%, #E74C3C 100%); }
   100% {
     background: radial-gradient(circle at center, #E74C3C 99%, #E74C3C 100%, #E74C3C 100%); } }
+
+.price{
+  color: white;
+  margin-bottom: 8px;
+}
 
 @media only screen and (max-width: 1024px) {
   body {
@@ -923,3 +929,4 @@ input[type="file"] {
   .hr3 {
     border-top: solid 3px #E74C3C;
     margin: .5rem 0; } }
+

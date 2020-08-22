@@ -378,8 +378,9 @@
                         </div>
                         <div class="payment-2">
                             <div class="payment-left">
-                                <h4>Upload Payment Receipt</h4>
-                                <div class="flex-col d-flex ">
+                                <h4>Early Bird Offer</h4>
+                                <div class=price>Rp50.000 only!</div>
+                                <div class="flex-row d-flex ">
                                     <img class="payment-time" src="{{asset('assets/img/user-dashboard/time-left-w.png')}}">
                                     <div class="payment-time-content" id="countdown">
                                         23:59:45 left
@@ -420,9 +421,9 @@
                                     <div>
                                     Status: 
                                     <span id="file-status">
-                                        @if($user->payment_status == 0)
+                                        @if($user->payment_verified == 0)
                                         Verification on progress
-                                        @elseif($user->payment_status == 2)
+                                        @elseif($user->payment_verified == 2)
                                         Rejected
                                         @else
                                         Verified
