@@ -62,13 +62,17 @@
                     <span>|</span>
                     <div class="editgroup-cv">Your ID</div>
                 </div>
-                <button class="editgroup-view" onclick="view('{{asset('storage/cv/'.$data->cv)}}')">View ID</button>
+                <button class="editgroup-view" onclick="view('{{asset('storage/id_card/'.$data->id_card)}}')">View ID</button>
             </div>
         </div>
         @endforeach
-        <form action="">    
+        @if($user->is_binusian == 1 && $user->role != 1)
+        <form action="{{route('admin.identity')}}" method="post">
+                @csrf 
+            <input type="hidden" name="identity_id" value="{{$user->id}}">
             <button id="verif-button" type="submit">Verify</button>
         </form>
+        @endif
     </div>
 </div>
 @endsection
