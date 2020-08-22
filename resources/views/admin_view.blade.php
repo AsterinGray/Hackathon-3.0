@@ -56,8 +56,19 @@
                 </div>
                 <button class="editgroup-view" onclick="view('{{asset('storage/cv/'.$data->cv)}}')">View CV</button>
             </div>
+            <div class="editgroup-cv-c mt-3">
+                <div class="editgroup-cv-left">
+                    <img src="{{asset('assets/img/admin-panel/folder_red.png')}}">
+                    <span>|</span>
+                    <div class="editgroup-cv">Your ID</div>
+                </div>
+                <button class="editgroup-view" onclick="view('{{asset('storage/cv/'.$data->cv)}}')">View ID</button>
+            </div>
         </div>
         @endforeach
+        <form action="">    
+            <button id="verif-button" type="submit">Verify</button>
+        </form>
     </div>
 </div>
 @endsection
