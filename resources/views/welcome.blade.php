@@ -123,9 +123,9 @@
               alt="Networking"
             />
             <div class="why-left-container">
-              <h2 id="why-active-heading">Networking</h2>
+              <h2 id="why-active-heading"><br>Networking</h2>
               <p id="why-active-par">
-                <br> Peserta akan mendapatkan kesempatan untuk networking dengan peserta lain, mentor, dan juri Hackathon 3.0.
+                 <br> Peserta akan mendapatkan kesempatan untuk networking dengan peserta lain, mentor, dan juri Hackathon 3.0.
               </p>
             </div>
           </div>
