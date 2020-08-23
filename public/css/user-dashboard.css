@@ -165,15 +165,18 @@ hr {
   .timeline > h1 {
     text-align: center; }
   .timeline-wrapper {
+    width: 100%;
+    z-index: 2; }
+  .timeline-icons {
     width: 100%; }
-  .timeline-icons > div {
-    width: 100rem;
-    display: flex;
-    justify-content: center;
-    align-items: center; }
-  .timeline-icons img {
-    display: block;
-    width: 5rem; }
+    .timeline-icons > div {
+      width: 100rem;
+      display: flex;
+      justify-content: center;
+      align-items: center; }
+    .timeline-icons img {
+      display: block;
+      width: 5rem; }
   .timeline-line {
     width: 75%;
     height: 5px;
@@ -193,7 +196,8 @@ hr {
     justify-content: center;
     align-items: center;
     color: white;
-    font: 1.5rem CircularStd; }
+    font: 1.5rem CircularStd;
+    z-index: 3; }
 
 #content {
   width: 85%;
@@ -799,6 +803,22 @@ input[type="file"] {
   .hr3 {
     border-top: solid 3px #E74C3C;
     margin: .5rem 0; } }
+
+.timeline {
+    display: flex; }
+    .timeline-wrapper {
+      overflow: auto;
+      width: 80rem; }
+      .timeline-wrapper::-webkit-scrollbar {
+        display: none; }
+    .timeline-line {
+      width: 45rem; }
+    .timeline-icons {
+      width: 60rem; }
+    .timeline-dot {
+      width: 45rem; }
+    .timeline-contents {
+      width: 60rem; }
 
 @media only screen and (max-width: 768px) {
   body {
