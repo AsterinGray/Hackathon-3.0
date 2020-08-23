@@ -46,9 +46,9 @@
             <li class="nav-item">
               <a class="text-light nav-link" href="/#about">About</a>
             </li>
-            <li class="nav-item">
+            <!-- <li class="nav-item">
               <a class="text-light nav-link" href="/#faq">FAQ</a>
-            </li>
+            </li> -->
             <li class="nav-item">
               <a class="text-light nav-link" href="/#sponsor">Sponsor</a>
             </li>
