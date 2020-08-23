@@ -2,7 +2,7 @@
 
 @section('content')
 <div id=editgroup>
-    <h1 class="editgroup-name">Group Name A</h1>
+    <h1 class="editgroup-name">{{$user->name}}</h1>
     <div class="editgroup-content">
         @foreach($data as $data)
         <form action="{{url('update/'.$data->id)}}" method="post">
@@ -58,6 +58,14 @@
                     <div class="editgroup-cv">Your CV</div>
                 </div>
                 <button class="editgroup-view" onclick="view('{{asset('storage/cv/'.$data->cv)}}')" type="button">View CV</button>
+            </div>
+            <div class="editgroup-cv-c mt-3">
+                <div class="editgroup-cv-left">
+                    <img src="{{asset('assets/img/admin-panel/folder_red.png')}}">
+                    <span>|</span>
+                    <div class="editgroup-cv">Your ID Card</div>
+                </div>
+                <button class="editgroup-view" onclick="view('{{asset('storage/id_card/'.$data->id_card)}}')" type="button">View ID Card</button>
             </div>
             <hr class="hr3">
             <button class="editgroup-submit" type="submit">Submit</button>

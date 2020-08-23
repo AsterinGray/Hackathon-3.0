@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="{{asset('assets/lib/bootstrap/css/slick-theme.css')}}">
     <link rel="stylesheet" href="{{asset('css/admin-panel.css')}}">
 </head>
-<body onload="defaultToggle()">
+<body>
     
     <div id="display-c" style="display:none">
         <img id="display-image" src="{{asset('assets/img/admin-panel/Receipt-CROP.jpg')}}">
@@ -37,15 +37,7 @@
                         payment
                     </div>
                 </div>
-                <div class="navbar-content" onclick="switchToggle2(this,'identity')">
-                    <div class=navbar-icon-c>
-                        <img class=navbar-icon src="{{asset('assets/img/admin-panel/Account_Verification.svg')}}">
-                    </div>
-                    <div class="navbar-caption">
-                        identity
-                    </div>
-                </div>
-                <div class="navbar-content" onclick="switchToggle2(this,'participant')">
+                <div class="navbar-content active" onclick="switchToggle2(this,'participant')">
                     <div class=navbar-icon-c>
                         <img class=navbar-icon src="{{asset('assets/img/admin-panel/participant.png')}}">
                     </div>
