@@ -253,24 +253,31 @@ body {
       bottom: 0;
       height: 20%;
       transition: 0.5s ease;
-      padding: .2rem; }
+      padding: 0 .5rem; }
       .why-card-content > h5 {
         margin: .6rem 0; }
       .why-card-content:hover {
         cursor: pointer;
-        height: 45%; }
+        height: 50%; }
       .why-card-content-heading {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: auto;
         text-align: center;
         font-size: 1.3rem; }
       .why-card-content-par-container {
-        height: 45%;
-        overflow: hidden;
-        margin-bottom: 5px; }
+        height: inherit;
+        margin: .5rem 0 }
+        .why-card-content-par {
+          height: 65%;
+          overflow: hidden; }  
+      .why-card-content-par-container::after{
+        content: "Click to enlarge";
+        color: #e74c3c;
+      }
       .why-card-content-content-par {
         font-size: 0.78em; }
-    .why-card span {
-      color: red;
-      font-size: 0.78em; }
 
 #why-active-heading {
   color: #e74c3c;

@@ -14,7 +14,7 @@
           <h1>Transform ideas, <wbr>Code Your Solution</h1>
           <p>will be coming at</p>
           <p>10th - 12th October 2020</p>
-          <div class="home-text-guide">
+          <!-- <div class="home-text-guide">
             <p>Get your guide book here!!</p>
             <button>
               <a
@@ -23,7 +23,7 @@
                 >DOWNLOAD</a
               >
             </button>
-          </div>
+          </div> -->
         </div>
         <img
           src="{{asset('assets/img/home/1stSection_image-min.png')}}"
@@ -138,13 +138,13 @@
               alt="Mentoring"
             />
             <div class="why-card-content card-body">
-              <h5 class="why-card-content-heading">Mentoring with Experts</h5>
+              <div class="why-card-content-heading">Mentoring with Experts</div>
               <div class="why-card-content-par-container">
                 <p class="why-card-content-par">
                   Peserta akan mendapatkan kesempatan untuk mentoring bisnis, desain, dan teknologi secara langsung dari orang-orang yang berpengalaman di bidang IT yang akan memberikan input mengenai project peserta.
                 </p>
               </div>
-              <span class="click-to-enlarge">Click to enlarge</span>
+              <!-- <span class="click-to-enlarge">Click to enlarge</span> -->
             </div>
           </div>
           <div class="why-card card" onclick="replace(this)">
@@ -154,18 +154,18 @@
               alt="Seminar"
             />
             <div class="why-card-content card-body">
-              <h5 class="why-card-content-heading">Chance of Job Interview</h5>
+              <div class="why-card-content-heading">Chance of Job Interview</div>
               <div class="why-card-content-par-container">
                 <p class="why-card-content-par">
                   CV dari para pemenang Hackathon 3.0 akan disalurkan ke perusahaan sponsor dari Hackathon 3.0.
                 </p>
               </div>
-              <span class="click-to-enlarge">Click to enlarge</span>
+              <!-- <span class="click-to-enlarge">Click to enlarge</span> -->
             </div>
           </div>
       </div>
     </section>
-    <section class="faq" id="faq">
+    <!-- <section class="faq" id="faq">
       <h1 class="heading">FAQ</h1>
       <div class="faq-content row justify-content-center">
         <div class="faq-left col-md-12 col-lg-6 w-100">
@@ -349,7 +349,7 @@
           </div>
         </div>
       </div>
-    </section>
+    </section> -->
     <section class="timeline">
       <img src="{{asset('assets/img/timeline/Object2.png')}}" alt="Decoration" id="object3" />
       <img src="{{asset('assets/img/timeline/Object3.png')}}" alt="Decoration" id="object4" />
