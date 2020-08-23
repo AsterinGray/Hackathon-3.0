@@ -28,6 +28,7 @@
         <img
           src="{{asset('assets/img/home/1stSection_image-min.png')}}"
           class="col-lg-6 col-md-12"
+          id="hackathon-laptop"
           alt="Laptop Coding Illustration"
         />
       </div>

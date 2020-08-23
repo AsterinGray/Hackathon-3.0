@@ -62,13 +62,22 @@ body {
     background-color: #e74c3c; }
 
 #hackathon-logo {
+  max-width: 100%;
   width: 50%;
+  height: auto;
+  align-items: flex-start;
   display: none; }
+
+#hackathon-laptop {
+  max-width: 100%;
+  width: 50%;
+  height: auto; } 
 
 .home {
   background: url("../assets/img/home/BG_Home_1920-min.png") no-repeat;
   background-size: cover;
   position: relative;
+  overflow-x: hidden;
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -499,7 +508,8 @@ body {
   .about, .why, .faq, .contact, .foot, .socmed {
     padding: 3rem 1rem; }
   .home {
-    padding: 0; }
+    padding: 0;
+    margin-top: 5.5rem; }
     .home-text {
       padding: 0; }
   .home-content {
@@ -580,8 +590,9 @@ body {
           color: #e74c3c;
           font-size: 1rem; }
   #hackathon-logo {
-    display: flex;
+    display: block;
     align-self: center;
+    max-width: 100%;
     width: 50%; }
   .copyright {
     display: flex;
