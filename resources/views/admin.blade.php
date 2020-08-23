@@ -47,50 +47,6 @@
         </div>
     </div>
 
-    <div id="identity">
-        <h1>
-            Binusian Confirmation
-        </h1>
-        <div class="payment-content">
-        @foreach($users as $team)
-            @if($team->name!="BNCC" && $team->is_binusian!=$team->role)
-            <div class="payment-col">
-                <div class="payment-col-content">
-                    <h4 class=group-name>{{$team->name}}</h4>
-                    <hr class="hr2">
-                    <div class="payment-date payment-insider">
-                        <div class="payment-insider-left">Regis </div>
-                        <div>:</div>
-                        <div class="payment-date-content payment-insider-right">
-                            @if($team->is_binusian == 0)
-                            Public
-                            @else
-                            Binusian
-                            @endif
-                        </div>
-                    </div>
-                    <div class="payment-status payment-insider">
-                        <div class="payment-insider-left">Role </div>
-                        <div>:</div>
-                        <div class="payment-status-content payment-insider-right">
-                        @if($team->role == 0)
-                        Public
-                        @elseif($team->role == 1)
-                        Binusian
-                        @endif
-                        </div>
-                    </div>
-                    <div class="payment-col-button">
-                        <button class="payment-verify" data-identityname="{{$team->name}}" data-identityid="{{$team->id}}" type="button" data-toggle="modal" data-target="#identity-modal">Verify</button>
-                        <button class="payment-view"  onclick="view('{{asset('storage/payment_image/'.$team->payment_image)}}')">View</button>
-                    </div>
-                </div>
-            </div>
-            @endif
-        @endforeach
-        </div>
-    </div>
-
     <div id="participant">
         <h1>
             Participant Data

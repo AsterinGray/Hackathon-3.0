@@ -19,19 +19,13 @@ var x = setInterval(function () {
   var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
   var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
   var seconds = Math.floor((distance % (1000 * 60)) / 1000);
-  const variabel =  document.getElementById("countdown");
+  const variabel =  document.getElementById("early-bird");
   document.getElementById("countdown").innerHTML = hours + ":"
     + minutes + ":" + seconds + " left";
-  if (distance < 0) {
+  if (distance != 0) {
     clearInterval(x);
     variabel.style = "display:none";
-    $(".price").html("Rp100.000");
-    $(".price").css({
-      "margin":"0",
-      "margin-top":"8px"
-    });
-    $(".payment-left").children("h4").html('Non-Binusian');
-    $(".payment-time").css("display","none");
+    document.getElementById("general").style = "display:flex";
   }
 }, 1000);
 
@@ -698,3 +692,16 @@ $(window).scroll(() => {
     explode(offset.left, offset.top);
   }
 });
+
+changeFile = (e) => {
+  var fileName = e.files[0].name;
+  $('label[for="' + e.id + '"]').html(fileName);
+
+  if (fileName.includes(".jpg") || fileName.includes(".jpeg") || fileName.includes(".pdf") || fileName.includes(".png")) {
+    $(e).prev("p").text("");
+    $(e)[0].setCustomValidity("");
+  } else {
+    $(e).prev("p").text("Invalid File Extension");
+    $(e)[0].setCustomValidity("Invalid File Extension");
+  }
+}
