@@ -140,9 +140,9 @@
             <div class="why-card-content card-body">
               <div class="why-card-content-heading">Mentoring with Experts</div>
               <div class="why-card-content-par-container">
-                <p class="why-card-content-par">
+                <div class="why-card-content-par">
                   Peserta akan mendapatkan kesempatan untuk mentoring bisnis, desain, dan teknologi secara langsung dari orang-orang yang berpengalaman di bidang IT yang akan memberikan input mengenai project peserta.
-                </p>
+                </div>
               </div>
               <!-- <span class="click-to-enlarge">Click to enlarge</span> -->
             </div>
@@ -156,9 +156,9 @@
             <div class="why-card-content card-body">
               <div class="why-card-content-heading">Chance of Job Interview</div>
               <div class="why-card-content-par-container">
-                <p class="why-card-content-par">
+                <div class="why-card-content-par">
                   CV dari para pemenang Hackathon 3.0 akan disalurkan ke perusahaan sponsor dari Hackathon 3.0.
-                </p>
+                </div>
               </div>
               <!-- <span class="click-to-enlarge">Click to enlarge</span> -->
             </div>
