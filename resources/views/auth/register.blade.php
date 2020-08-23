@@ -21,7 +21,6 @@
             placeholder="Group Name"
             name="name" 
             value="{{ old('name') }}"
-            onchange="validateName(this)"
             required
             autocomplete="name" 
             autofocus
