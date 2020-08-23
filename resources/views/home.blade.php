@@ -506,7 +506,7 @@
                     </h1>
                     <div class="content-x">
                         <div class="timeline-wrapper d-flex row justify-content-center align-items-center flex-column my-5">
-                            <div class="timeline-icons d-flex justify-content-around my-3 w-100">
+                            <div class="timeline-icons d-flex justify-content-around my-3">
                                 <div><img src="{{asset('assets/img/timeline/open-registration.svg')}}" alt=""></div>
                                 <div><img src="{{asset('assets/img/timeline/close-registration.svg')}}" alt=""></div>
                                 <div><img src="{{asset('assets/img/timeline/technical-meeting.svg')}}" alt=""></div>
@@ -519,7 +519,7 @@
                                 <div></div>
                                 <div></div>
                             </div>
-                            <div class="timeline-contents d-flex justify-content-around w-100 my-3">
+                            <div class="timeline-contents d-flex justify-content-around my-3">
                                 <div class="timeline-content">
                                     <span>Open Registration</span>
                                     <span>24 Agustus 2020</span>
