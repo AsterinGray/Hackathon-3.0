@@ -2,7 +2,7 @@
 
 @section('content')
 <div id=editgroup>
-    <h1 class="editgroup-name">Group Name A</h1>
+    <h1 class="editgroup-name">{{$user->name}}</h1>
     <div class="editgroup-content">
         @foreach($data as $data)
         <div class="editgroup-col">
@@ -56,8 +56,23 @@
                 </div>
                 <button class="editgroup-view" onclick="view('{{asset('storage/cv/'.$data->cv)}}')">View CV</button>
             </div>
+            <div class="editgroup-cv-c mt-3">
+                <div class="editgroup-cv-left">
+                    <img src="{{asset('assets/img/admin-panel/folder_red.png')}}">
+                    <span>|</span>
+                    <div class="editgroup-cv">Your ID</div>
+                </div>
+                <button class="editgroup-view" onclick="view('{{asset('storage/id_card/'.$data->id_card)}}')">View ID</button>
+            </div>
         </div>
         @endforeach
+        @if($user->is_binusian == 1 && $user->role != 1)
+        <form action="{{route('admin.identity')}}" method="post" class="mb-3">
+                @csrf 
+            <input type="hidden" name="identity_id" value="{{$user->id}}">
+            <button id="verif-button" type="submit">Verify as Binusian</button>
+        </form>
+        @endif
     </div>
 </div>
 @endsection

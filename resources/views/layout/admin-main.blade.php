@@ -58,29 +58,7 @@
             </div>
             </div>
     </div>
-    <div class="modal fade" id="identity-modal" data-backdrop="static" tabindex="-1" role="dialog" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-            <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                <h5 class="modal-title" id="staticBackdropLabel">Verify Binusian</h5>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                </button>
-                </div>
-                <div class="modal-body">
-                <form action="{{route('admin.identity')}}" method="post">
-                @csrf
-                <p>Verify <span id=groupName>group A</span> as Binusian?</p>
-                <input type="hidden" name="identity_id" id="identity_id" value="">
-                </div>
-                <div class="modal-footer">
-                <button type="submit" class="btn btn-primary">Yes</button>
-                <button type="button" class="btn btn-secondary" data-dismiss="modal">No</button>
-                </form>
-                </div>
-            </div>
-            </div>
-    </div>
+    
     <div id="display-c" style="display:none">
         <img id="display-image" src="{{asset('assets/img/admin-panel/Receipt-CROP.jpg')}}">
     </div>
@@ -104,14 +82,6 @@
                     </div>
                     <div class="navbar-caption">
                         payment
-                    </div>
-                </div>
-                <div class="navbar-content" onclick="switchToggle(this,'identity')">
-                    <div class=navbar-icon-c>
-                        <img class=navbar-icon src="{{asset('assets/img/admin-panel/Account_Verification.svg')}}">
-                    </div>
-                    <div class="navbar-caption">
-                        identity
                     </div>
                 </div>
                 <div class="navbar-content" onclick="switchToggle(this,'participant')">

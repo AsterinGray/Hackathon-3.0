@@ -245,7 +245,7 @@ body {
       bottom: 0;
       height: 20%;
       transition: 0.5s ease;
-      padding: 1rem; }
+      padding: .2rem; }
       .why-card-content > h5 {
         margin: .6rem 0; }
       .why-card-content:hover {

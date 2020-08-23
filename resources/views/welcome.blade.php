@@ -13,7 +13,7 @@
           <h3>BNCC HACKTHON 3.0</h3>
           <h1>Transform ideas, <wbr>Code Your Solution</h1>
           <p>will be coming at</p>
-          <p>11th-13th July 2020</p>
+          <p>10th - 12th October 2020</p>
           <div class="home-text-guide">
             <p>Get your guide book here!!</p>
             <button>
@@ -137,7 +137,7 @@
               alt="Mentoring"
             />
             <div class="why-card-content card-body">
-              <h5 class="why-card-content-heading">Mentoring</h5>
+              <h5 class="why-card-content-heading">Mentoring with Experts</h5>
               <div class="why-card-content-par-container">
                 <p class="why-card-content-par">
                   Peserta akan mendapatkan kesempatan untuk mentoring bisnis, desain, dan teknologi secara langsung dari orang-orang yang berpengalaman di bidang IT yang akan memberikan input mengenai project peserta.
@@ -153,7 +153,7 @@
               alt="Seminar"
             />
             <div class="why-card-content card-body">
-              <h5 class="why-card-content-heading">Job Interview</h5>
+              <h5 class="why-card-content-heading">Chance of Job Interview</h5>
               <div class="why-card-content-par-container">
                 <p class="why-card-content-par">
                   CV dari para pemenang Hackathon 3.0 akan disalurkan ke perusahaan sponsor dari Hackathon 3.0.
@@ -370,20 +370,6 @@
             <img src="{{asset('assets/img/timeline/competition-day.svg')}}" alt="Competition Day Icon" />
           </div>
         </div>
-        <div class="timeline-path d-flex row justify-content-between">
-          <div class="timeline-path-line">
-            <span>30 days</span>
-            <img src="{{asset('assets/img/timeline/path.svg')}}" alt="Path" />
-          </div>
-          <div class="timeline-path-line">
-            <span>2 days</span>
-            <img src="{{asset('assets/img/timeline/path.svg')}}" alt="Path" />
-          </div>
-          <div class="timeline-path-line">
-            <span>5 days</span>
-            <img src="{{asset('assets/img/timeline/path.svg')}}" alt="Path" />
-          </div>
-        </div>
         <div class="timeline-line"></div>
         <div class="timeline-dot row d-flex justify-content-between">
           <div id="dot-active"></div>
@@ -394,7 +380,7 @@
         <div class="timeline-contents d-flex justify-content-around w-100 my-3">
           <div class="timeline-content">
             <span>Open Registration</span>
-            <span>24 Agustus 2020</span>
+            <span>24 August 2020</span>
           </div>
           <div class="timeline-content">
             <span>Close Registration</span>
@@ -402,11 +388,11 @@
           </div>
           <div class="timeline-content">
             <span>Technical Meeting</span>
-            <span>Coming Soon</span>
+            <span>7 Ocotober 2020</span>
           </div>
           <div class="timeline-content">
             <span>Competition Day</span>
-            <span>Coming Soon</span>
+            <span>10 - 12 October 2020</span>
           </div>
         </div>
       </div>
@@ -533,7 +519,7 @@
         <div class="socmed py-3">
             <a href="http://line.me/ti/p/~@joy0117j" target="_blank" class="socmed-item">
                 <img src="{{asset('assets/img/footer/line.svg')}}" alt="Line Icon">
-                <span>@joy0117</span>
+                <span>@joy0117j</span>
             </a>
             <a href="mailto:technoscape@bncc.net" target="_blank" class="socmed-item">
                 <img src="{{asset('assets/img/footer/mail.svg')}}" alt="E-Mail Icon">
@@ -544,7 +530,7 @@
             </a>
             <a href="https://www.instagram.com/technoscapebncc/" target="_blank" class="socmed-item">
                 <img src="{{asset('assets/img/footer/instagram.svg')}}" alt="Instagram Icon">
-                <span>technoscape</span>
+                <span>technoscapebncc</span>
             </a>
         </div>
         <div class="foot vh-20 d-flex align-items-center justify-content-between">

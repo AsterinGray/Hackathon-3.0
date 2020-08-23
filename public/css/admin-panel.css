@@ -538,3 +538,11 @@ form {
       width: 100%; }
   .editgroup-col {
     width: 100%; } }
+
+    #verif-button{
+      color: white;
+      background-color: #E74C3C;
+      border: none;
+      padding: .5rem 2rem;
+      border-radius: 3rem;
+    }

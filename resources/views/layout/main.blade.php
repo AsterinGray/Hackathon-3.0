@@ -3,11 +3,12 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Hackathon 3.0</title>
+    <title>BNCC Hackathon 3.0 - Transform ideas, Code Your Solution</title>
+    <meta name="title" content="BNCC Hackathon 3.0 - Transform ideas, Code Your Solution">
     <meta name="theme-color" content="#1d2134">
     <meta name="keywords" content="Hackathon, BNCC, Technoscape, Lomba Coding, Event Coding, Coding Competition">
     <meta name="robots" content="all">
-    <meta name="description" content="Hackathon merupakan lomba coding selama 24 jam di mana setiap tim ditantang memberikan solusi atas suatu permasalahan dengan menghasilkan produk berupa aplikasi ataupun website.">
+    <meta name="description" content="BNCC Hackathon merupakan lomba coding selama 24 jam di mana setiap tim ditantang memberikan solusi atas suatu permasalahan dengan menghasilkan produk berupa aplikasi ataupun website.">
     <link rel="icon" href="{{asset('assets/img/Hackathon-logo.png')}}" />
     <link rel="stylesheet" href="{{asset('assets/lib/bootstrap/css/bootstrap.min.css')}}" />
     @yield('css')

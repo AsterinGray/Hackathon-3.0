@@ -29,13 +29,13 @@
                         <img class=navbar-icon src="{{asset('assets/img/admin-panel/Group 990.png')}}">
                     </div>
                     <div class="navbar-caption display-none">
-                        BNCC Hackathon 2.0
+                        BNCC Hackathon 3.0
                     </div>
                 </div>
                 <hr class="line">
                 <div class="navbar-header navbar-header-special">
                     <div class=navbar-icon-c>
-                        <img id=navbar-hackathon-logo class="navbar-icon" src="{{asset('assets/img/Hackathon-logo.png')}}">
+                        <a href="/"><img id=navbar-hackathon-logo class="navbar-icon" src="{{asset('assets/img/Hackathon-logo.png')}}"></a>
                     </div>
                     <div class="navbar-caption-special">
                         <div>Welcome,</div>
@@ -149,6 +149,14 @@
                                     <div class="editgroup-cv">Your CV</div>
                                 </div>
                                 <button type="button" class="editgroup-view" data-toggle="modal" data-target="#exampleModalCenter" data-whatever="{{asset('storage/cv/'.$member->cv)}}">View CV</button>
+                            </div>
+                            <div class="editgroup-cv-c mt-3">
+                                <div class="editgroup-cv-left">
+                                    <img src="{{asset('assets/img/admin-panel/folder.png')}}">
+                                    <span>|</span>
+                                    <div class="editgroup-cv">Your ID Card</div>
+                                </div>
+                                <button type="button" class="editgroup-view" data-toggle="modal" data-target="#exampleModalCenter" data-whatever="{{asset('storage/id_card/'.$member->id_card)}}">View ID Card</button>
                             </div>
                         </div>
                         @endforeach
@@ -273,15 +281,15 @@
                                         @error('id_card')
                                             <p class="invalid">{{$message}}</p>
                                         @enderror
-                                        <input type="file" id="idcard-leader" class="@error('id_card') is-invalid @enderror" name="id_card" onchange="changeFile(this)" />
+                                        <input type="file" id="idcard-leader" class="@error('id_card') is-invalid @enderror" name="id_card" onchange="changeFile(this)" required/>
                                     </div>
                                     <div class="editgroup-info-right">
                                         <label for="cv-leader" class="inp-file editgroup-info-input">Upload CV</label>
                                         <p class="invalid"></p>
-                                        @error('id_card')
+                                        @error('cv')
                                             <p class="invalid">{{$message}}</p>
                                         @enderror
-                                        <input type="file" id="cv-leader" class="@error('cv') is-invalid @enderror" name="cv" onchange="changeFile(this)" />
+                                        <input type="file" id="cv-leader" class="@error('cv') is-invalid @enderror" name="cv" onchange="changeFile(this)" required/>
                                     </div>
                                 </div>
                                 <hr class="hr3">
@@ -295,21 +303,21 @@
                                 Jika ada informasi yang ingin diubah, silahkan hubungi Contact Person berikut:
                             </div>
                             <div class="editgroup-contact-info">
-                                Admin_1:
+                                Muhammad Fadhil Achmadi:
                                 <div class="editgroup-contact-info-c">
-                                    <img class="editgroup-contact-icon" src="{{asset('assets/img/user-dashboard/line_dark.png')}}" alt="">Admin_1
+                                    <img class="editgroup-contact-icon" src="{{asset('assets/img/user-dashboard/line_dark.png')}}" alt="">fadhil_achmadi
                                 </div>
                                 <div class="editgroup-contact-info-c">
-                                    <img class="editgroup-contact-icon" src="{{asset('assets/img/user-dashboard/whatsapp_dark.png')}}" alt="">0812 8788 9390
+                                    <img class="editgroup-contact-icon" src="{{asset('assets/img/user-dashboard/whatsapp_dark.png')}}" alt="">0878-8717-1567
                                 </div>
                             </div>
                             <div class="editgroup-contact-info">
-                                Admin_2:
+                                Adella Gravita:
                                 <div class="editgroup-contact-info-c">
-                                    <img class="editgroup-contact-icon" src="{{asset('assets/img/user-dashboard/line_dark.png')}}" alt="">Admin_2
+                                    <img class="editgroup-contact-icon" src="{{asset('assets/img/user-dashboard/line_dark.png')}}" alt="">adellawei
                                 </div>
                                 <div class="editgroup-contact-info-c">
-                                    <img class="editgroup-contact-icon" src="{{asset('assets/img/user-dashboard/whatsapp_dark.png')}}" alt="">0812 1109 9291
+                                    <img class="editgroup-contact-icon" src="{{asset('assets/img/user-dashboard/whatsapp_dark.png')}}" alt="">0857-0568-7528
                             </div>
                         </div>
                     </div>
@@ -324,7 +332,7 @@
                             <div class="payment-content-c">
                                 <div class="payment-title-c">
                                     <div class="payment-title">
-                                        1. Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                                        1. Periode Registrasi 
                                     </div>
                                     <div class="payment-cross" data-toggle="collapse" data-target="#content1" aria-expanded="false" aria-controls="content1">
                                         <div class="horizontal position-absolute"></div>
@@ -332,17 +340,21 @@
                                     </div>
                                 </div>
                                 <div id=content1 class="payment-content collapse">
-                                    1) Lorem ipsum dolor sit, amet consectetur adipisicing elit.<br>
-                                    2) Lorem ipsum dolor sit amet, consectetur adipisicing elit.<br>
-                                    3) Lorem ipsum dolor sit amet consectetur adipisicing elit.<br>
-                                    4) Lorem ipsum dolor sit amet consectetur adipisicing elit.<br>
+                                    <ul>
+                                        <li>Early Bird (24 Agustus 2020 hingga 15 September 2020): Rp 60.000</li>
+                                        <li>General (16 September 2020 hingga 1 Oktober 2020)</li>
+                                        <ul>
+                                            <li>Binusian: Rp 80.000</li>
+                                            <li>Non-Binusian: Rp 100.000</li>
+                                        </ul>
+                                    </ul>
                                 </div>
                                 <hr class="hr4">
                             </div>
                             <div class="payment-content-c">
                                 <div class="payment-title-c">
                                     <div class="payment-title">
-                                        2. Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                                        2. Pembayaran Biaya Pendaftaran
                                     </div>
                                     <div class="payment-cross"  data-toggle="collapse" data-target="#content2" aria-expanded="false" aria-controls="content2">
                                         <div class="horizontal position-absolute"></div>
@@ -350,17 +362,18 @@
                                     </div>
                                 </div>
                                 <div id="content2" class="payment-content collapse">
-                                    1) Lorem ipsum dolor sit, amet consectetur adipisicing elit.<br>
-                                    2) Lorem ipsum dolor sit amet, consectetur adipisicing elit.<br>
-                                    3) Lorem ipsum dolor sit amet consectetur adipisicing elit.<br>
-                                    4) Lorem ipsum dolor sit amet consectetur adipisicing elit.<br>
+                                    Lakukan pembayaran biaya pendaftaran per tim ke nomor rekening berikut: <br>
+                                    Nomor Rekening : 5271675071 <br>
+                                    Bank           : BCA <br>
+                                    Atas Nama      : ANNISA VINIDYA LARASATI <br>
+                                    <img src="{{asset('assets/img/user-dashboard/mobilebank-qr.jpg')}}" alt="Mobile Banking QR" id="qr">
                                 </div>
                                 <hr class="hr4">
                             </div>
                             <div class="payment-content-c">
                                 <div class="payment-title-c">
                                     <div class="payment-title">
-                                        3. Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                                        3. Upload Bukti Pembayaran
                                     </div>
                                     <div class="payment-cross" data-toggle="collapse" data-target="#content3" aria-expanded="false" aria-controls="content3">
                                         <div class="horizontal position-absolute"></div>
@@ -368,49 +381,97 @@
                                     </div>
                                 </div>
                                 <div id=content3 class="payment-content collapse">
-                                    1) Lorem ipsum dolor sit, amet consectetur adipisicing elit.<br>
-                                    2) Lorem ipsum dolor sit amet, consectetur adipisicing elit.<br>
-                                    3) Lorem ipsum dolor sit amet consectetur adipisicing elit.<br>
-                                    4) Lorem ipsum dolor sit amet consectetur adipisicing elit.<br>
+                                    Peserta mengisi data tim dan mengunggah file dengan batas maksimum 5 mb dalam bentuk .JPG, .JPEG, .PNG, atau .PDF  yang berisi berkas – berkas berikut:
+                                    <ol type="a">
+                                        <li>Identitas peserta, berupa Kartu Tanda Penduduk (KTP) atau kartu Pelajar bagi yang belum memiliki KTP, Binusian Card bagi Binusian, ataupun berkas lain yang dapat diverifikasi identitas sebagai warga negara yang sah</li>
+                                        <li>Curriculum Vitae (CV)</li>
+                                        <li>Bukti pembayaran</li>
+                                    </ol>
+
+                                </div>
+                                <hr class="hr4">
+                            </div>
+                            <div class="payment-content-c">
+                                <div class="payment-title-c">
+                                    <div class="payment-title">
+                                        4. Verifikasi Pembayaran
+                                    </div>
+                                    <div class="payment-cross"  data-toggle="collapse" data-target="#content4" aria-expanded="false" aria-controls="content4">
+                                        <div class="horizontal position-absolute"></div>
+                                        <div class="vertical position-absolute"></div>
+                                    </div>
+                                </div>
+                                <div id="content4" class="payment-content collapse">
+                                    Tim akan segera diverifikasi oleh panitia maksimal 48 jam. Apabila tim belum diverifikasi melebihi 48 jam, tim dapat menghubungkan Contact Person. Tim yang telah terverifikasi akan dinyatakan resmi terdaftar sebagai calon peserta Hackathon 3.0.
+                                    <br><br> Note : Bagi tim yang tidak terseleksi menjadi peserta Hackathon 3.0, biaya registrasi tim tersebut akan dikembalikan.
+
                                 </div>
                                 <hr class="hr4">
                             </div>
                         </div>
                         <div class="payment-2">
-                            <div class="payment-left">
-                                <h4>Upload Payment Receipt</h4>
-                                <div class="flex-col d-flex ">
+                            <div class="payment-left" id="early-bird">
+                                <h4>Early Bird Offer</h4>
+                                <div class=price>Rp50.000 only!</div>
+                                <div class="flex-row d-flex ">
                                     <img class="payment-time" src="{{asset('assets/img/user-dashboard/time-left-w.png')}}">
                                     <div class="payment-time-content" id="countdown">
                                         23:59:45 left
                                     </div>
                                 </div>
                             </div>
-                            @if($user->payment_image == NULL)
-                            <div class="payment-right" id="payment-form">
-                                <form id="payment-form" action="{{url('/payment/upload')}}" method="post" enctype="multipart/form-data">
-                                @csrf
-                                {{ method_field('PUT') }}
-                                <div class="payment-button-left d-flex flex-column align-items-center justify-content-center mr-3">
-                                    <label for="upload-payment">Upload File</label>
-                                    <input type="file" name="payment_image" id="upload-payment" onchange="changeFile(this)">
-                                    <button type="submit">Submit</button>
-                                </div>
-                                <div class="d-flex flex-column">
-                                    <div>
-                                    File Name: <span id="file-name">No file chosen</span>
-                                    </div>
-                                    <div>
-                                    Status: <span id="file-status">Not paid</span>
-                                    </div>
-                                    @error('payment_image')
-                                        <p class="invalid">{{$message}}</p>
-                                    @enderror
-                                    <p class="invalid">
-                                    </p>
-                                </div>
-                                </form>
+                            <div class="payment-left" id="general">
+                                @if($user->role == 0)
+                                <h4 class="payment-role">Non-Binusian</h4>
+                                <div class="price">Rp100.000</div>
+                                @else
+                                <h4 class="payment-role">Binusian</h4>
+                                <div class="price">Rp80.000</div>
+                                @endif
                             </div>
+
+                            
+                            
+
+
+                            @if($user->payment_image == NULL)
+                                @if($user->is_binusian == 1 && $user->role == 0)
+                                <div class="payment-right" id="payment-form">
+                                    <div class="payment-button-left d-flex flex-column align-items-center justify-content-center mr-3">
+                                        <label for="upload-payment" disabled=true class=label-disabled>Upload File</label>
+                                        <input type="file" name="payment_image" id="upload-payment" onchange="changeFile(this)" disabled>
+                                        <button type="submit" disabled>Submit</button>
+                                    </div>
+                                    <div class="d-flex flex-column">
+                                        Please wait while our admin verify your account
+                                    </div>
+                                </div>
+                                @else
+                                <div class="payment-right" id="payment-form">
+                                    <form id="payment-form" action="{{url('/payment/upload')}}" method="post" enctype="multipart/form-data">
+                                    @csrf
+                                    {{ method_field('PUT') }}
+                                    <div class="payment-button-left d-flex flex-column align-items-center justify-content-center mr-3">
+                                        <label for="upload-payment">Upload File</label>
+                                        <input type="file" name="payment_image" id="upload-payment" onchange="changeFile(this)" rquired>
+                                        <button type="submit">Submit</button>
+                                    </div>
+                                    <div class="d-flex flex-column">
+                                        <div>
+                                        File Name: <span id="file-name">No file chosen</span>
+                                        </div>
+                                        <div>
+                                        Status: <span id="file-status">Not paid</span>
+                                        </div>
+                                        @error('payment_image')
+                                            <p class="invalid">{{$message}}</p>
+                                        @enderror
+                                        <p class="invalid">
+                                        </p>
+                                    </div>
+                                    </form>
+                                </div>
+                                @endif
                             @else
                             <div class="payment-right" id="payment-form">
                                 <div class="payment-button-left d-flex flex-column align-items-center justify-content-center mr-3">
@@ -461,19 +522,19 @@
                             <div class="timeline-contents d-flex justify-content-around w-100 my-3">
                                 <div class="timeline-content">
                                     <span>Open Registration</span>
-                                    <span>8 May 2020</span>
+                                    <span>24 Agustus 2020</span>
                                 </div>
                                 <div class="timeline-content">
                                     <span>Close Registration</span>
-                                    <span>8 June 2020</span>
+                                    <span>1 October 2020</span>
                                 </div>
                                 <div class="timeline-content">
                                     <span>Technical Meeting</span>
-                                    <span>10 June 2020</span>
+                                    <span>7 October 2020</span>
                                 </div>
                                 <div class="timeline-content">
                                     <span>Competition Day</span>
-                                    <span>15-16 June 2020</span>
+                                    <span>10-12 October 2020</span>
                                 </div>
                             </div>
                         </div>

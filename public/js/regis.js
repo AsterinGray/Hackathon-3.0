@@ -7,18 +7,6 @@ const binusChecker = (e) => {
   }
 }
 
-//Group Name Validator
-const validateName = (e) => {
-  const len = $(e).val().length;
-  if (len < 5 || len > 12) {
-    $(e)[0].setCustomValidity("Group name lenght must be between 5 and 12");
-    $(e).next("p").text("Group name lenght must be between 5 and 12");
-  } else {
-    $(e)[0].setCustomValidity("");
-    $(e).next("p").text("");
-  }
-};
-
 //Password Confirmation Validator
 const validateConfirmPass = () => {
   if ($("#password").val() === $("#confirm-password").val()) {

@@ -11,7 +11,7 @@ $('#exampleModalCenter').on('show.bs.modal', function (event) {
   modal.find('#display-image').attr('src', recipient)
 })
 
-var countDownDate = new Date("Sep 22, 2020 16:10:00").getTime();
+var countDownDate = new Date("Aug 22, 2020 16:10:00").getTime();
 var x = setInterval(function () {
   var now = new Date().getTime();
   var distance = countDownDate - now;
@@ -19,11 +19,13 @@ var x = setInterval(function () {
   var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
   var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
   var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+  const variabel =  document.getElementById("early-bird");
   document.getElementById("countdown").innerHTML = hours + ":"
     + minutes + ":" + seconds + " left";
-  if (distance < 0) {
+  if (distance != 0) {
     clearInterval(x);
-    document.getElementById("countdown").innerHTML = "EXPIRED";
+    variabel.style = "display:none";
+    document.getElementById("general").style = "display:flex";
   }
 }, 1000);
 
@@ -138,6 +140,7 @@ $(window).resize(function () {
         "visibility": "visible",
         "overflow": "visible",
         "margin-bottom": ".75rem",
+        "margin-left":"0",
         "height": "auto"
       });
       $(".navbar-caption-2").css({
@@ -148,7 +151,7 @@ $(window).resize(function () {
       });
       $(".navbar-icon-c-2").css({
         "width": "50%",
-        "padding-right": "1rem"
+        "padding-right": "0rem"
       })
       $(".navbar-footer").css({
         "visibility": "visible",
@@ -234,7 +237,7 @@ $(window).resize(function () {
       $(".navbar-caption-special").css({
         "visibility": "visible",
         "overflow": "visible",
-        "width": "55%",
+        "width": "auto",
         "height": "auto",
         "margin-left": "1rem"
       });
@@ -249,8 +252,7 @@ $(window).resize(function () {
         "width": "100%",
         "height": "auto",
         "overflow": "unset"
-      });
-    }
+      });    }
     else {
       $("#navbar").css({
         "height": "95vh",
@@ -298,6 +300,10 @@ $(window).resize(function () {
         "margin": "0",
         "overflow": "hidden"
       });
+      $(".navbar-icon-c-2").css({
+        "width": "50%",
+        "padding-right": "0rem"
+      })
 
     }
   }
@@ -420,7 +426,7 @@ $("#hamburger").click(function () {
       $(".navbar-caption-special").css({
         "visibility": "visible",
         "overflow": "visible",
-        "width": "55%",
+        "width": "auto",
         "margin-left": "1rem"
       });
       $(".navbar-caption-2").css({
@@ -482,6 +488,94 @@ $("#hamburger").click(function () {
   }
 });
 
+$(".nav-link").click(function () {
+  if (window.matchMedia("(max-width: 1024px)").matches) {
+    $("#hamburger").attr("aria-expanded", "false");
+    $("#hamburger").css({
+      "visibility": "visible",
+    })
+    $("#navbar").css({
+      "min-height": "unset",
+      "height": "auto",
+      "margin": "0"
+    });
+    $(".nav").css({
+      "height": "0",
+      "margin": "0"
+    });
+    $("#navbar-hackathon-logo").css({
+      "width": "0"
+    });
+    $(".navbar-header-special").css({
+      "visibility": "hidden",
+      "overflow": "hidden",
+      "width": "0",
+      "height": "0",
+      "margin": "0",
+      "padding": "0"
+    });
+    $(".navbar-caption").css({
+      "visibility": "hidden",
+      "overflow": "hidden",
+      "width": "0"
+    });
+    $(".navbar-caption-special").css({
+      "visibility": "hidden",
+      "overflow": "hidden",
+      "width": "0",
+      "height": "0"
+    });
+    $(".navbar-caption-2").css({
+      "visibility": "hidden",
+      "overflow": "hidden",
+      "width": "0"
+    });
+    $(".navbar-footer").css({
+      "visibility": "hidden",
+      "width": "0",
+      "height": "0",
+      "overflow": "hidden"
+    });
+  } else {
+    $("#hamburger").attr("aria-expanded", "false");
+    $("#navbar").css({
+      "height": "95vh"
+    });
+    $(".nav").css({
+      "flex-direction": "column"
+    })
+    $(".navbar-caption").css({
+      "visibility": "hidden",
+      "overflow": "hidden",
+      "width": "0",
+      "margin": "0"
+    });
+    $(".navbar-caption-special").css({
+      "visibility": "hidden",
+      "overflow": "hidden",
+      "width": "0",
+      "margin": "0"
+    });
+    $(".navbar-caption-2").css({
+      "visibility": "hidden",
+      "overflow": "hidden",
+      "width": "0",
+      "margin": "0",
+      "padding": "0"
+    });
+    $(".navbar-icon-c-2").css({
+      "width": "40%",
+      "padding-right": "0rem"
+    })
+    $(".navbar-footer").css({
+      "visibility": "hidden",
+      "width": "0%",
+      "margin": "0",
+      "overflow": "hidden"
+    });
+  }
+});
+
 const changeFile = (e) => {
   var fileName = e.files[0].name;
   $("#file-name").text(fileName);
@@ -505,5 +599,109 @@ const expandForm = (e) => {
     addMember.css({ "height": "0", "margin": "0", "padding": "0" })
     $(e).children(".plus").css({ "transform": "rotate(90deg)" });
     $(e).closest(".add-member").css({ "background-color": "#E74C3C" });
+  }
+}
+
+//Timeline Animation
+let flag = 0;
+{
+  const colors = ["#3498DB", "#E74C3C", "#463991"];
+  const bubbles = 30;
+
+  function explode(x, y) {
+    let particles = [];
+    let ratio = window.devicePixelRatio;
+    let c = document.createElement("canvas");
+    let ctx = c.getContext("2d");
+
+    c.style.position = "absolute";
+    c.style.left = x - 150 + "px";
+    c.style.top = y - 150 + "px";
+    c.style.pointerEvents = "none";
+    c.style.width = 300 + "px";
+    c.style.height = 300 + "px";
+    c.style.zIndex = 100;
+    c.width = 500 * ratio;
+    c.height = 500 * ratio;
+    document.body.appendChild(c);
+
+    for (var i = 0; i < bubbles; i++) {
+      particles.push({
+        x: c.width / 2,
+        y: c.height / 2,
+        radius: r(20, 30),
+        color: colors[Math.floor(Math.random() * colors.length)],
+        rotation: r(0, 360, true),
+        speed: r(0, 15),
+        friction: 1,
+        opacity: r(0.5, 1, true),
+        yVel: 0,
+        gravity: 0,
+      });
+    }
+
+    render(particles, ctx, c.width, c.height);
+    setTimeout(() => document.body.removeChild(c), 1000).then((flag = 1));
+  }
+
+  function render(particles, ctx, width, height) {
+    requestAnimationFrame(() => render(particles, ctx, width, height));
+    ctx.clearRect(0, 0, width, height);
+
+    particles.forEach((p, i) => {
+      p.x += p.speed * Math.cos((p.rotation * Math.PI) / 180);
+      p.y += p.speed * Math.sin((p.rotation * Math.PI) / 180);
+
+      p.opacity -= 0.01;
+      p.speed *= p.friction;
+      p.radius *= p.friction;
+      p.yVel += p.gravity;
+      p.y += p.yVel;
+
+      if (p.opacity < 0 || p.radius < 0) return;
+
+      ctx.beginPath();
+      ctx.globalAlpha = p.opacity;
+      ctx.fillStyle = p.color;
+      ctx.arc(p.x, p.y, p.radius, 0, 2 * Math.PI, false);
+      ctx.fill();
+    });
+
+    return ctx;
+  }
+
+  const r = (a, b, c) =>
+    parseFloat(
+      (Math.random() * ((a ? a : 1) - (b ? b : 0)) + (b ? b : 0)).toFixed(
+        c ? c : 0
+      )
+    );
+}
+
+$(window).scroll(() => {
+  const dot = $("#dot-active");
+  const offset = dot.offset();
+
+  const scrollTop = $(this).scrollTop();
+  const windowHeight = $(window).height();
+  const outerHeight = $(dot).outerHeight();
+  const offsetTop = $(dot).offset().top;
+  const target = offsetTop + outerHeight - windowHeight;
+
+  if (scrollTop > target && flag == 0) {
+    explode(offset.left, offset.top);
+  }
+});
+
+changeFile = (e) => {
+  var fileName = e.files[0].name;
+  $('label[for="' + e.id + '"]').html(fileName);
+
+  if (fileName.includes(".jpg") || fileName.includes(".jpeg") || fileName.includes(".pdf") || fileName.includes(".png")) {
+    $(e).prev("p").text("");
+    $(e)[0].setCustomValidity("");
+  } else {
+    $(e).prev("p").text("Invalid File Extension");
+    $(e)[0].setCustomValidity("Invalid File Extension");
   }
 }
