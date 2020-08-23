@@ -150,6 +150,14 @@
                                 </div>
                                 <button type="button" class="editgroup-view" data-toggle="modal" data-target="#exampleModalCenter" data-whatever="{{asset('storage/cv/'.$member->cv)}}">View CV</button>
                             </div>
+                            <div class="editgroup-cv-c mt-3">
+                                <div class="editgroup-cv-left">
+                                    <img src="{{asset('assets/img/admin-panel/folder.png')}}">
+                                    <span>|</span>
+                                    <div class="editgroup-cv">Your ID Card</div>
+                                </div>
+                                <button type="button" class="editgroup-view" data-toggle="modal" data-target="#exampleModalCenter" data-whatever="{{asset('storage/id_card/'.$member->id_card)}}">View ID Card</button>
+                            </div>
                         </div>
                         @endforeach
 
@@ -377,7 +385,7 @@
                             </div>
                         </div>
                         <div class="payment-2">
-                            <div class="payment-left">
+                            <div class="payment-left" id="early-bird">
                                 <h4>Early Bird Offer</h4>
                                 <div class=price>Rp50.000 only!</div>
                                 <div class="flex-row d-flex ">
@@ -387,47 +395,58 @@
                                     </div>
                                 </div>
                             </div>
+                            <div class="payment-left" id="general">
+                                @if($user->role == 0)
+                                <h4 class="payment-role">Non-Binusian</h4>
+                                <div class="price">Rp100.000</div>
+                                @else
+                                <h4 class="payment-role">Binusian</h4>
+                                <div class="price">Rp80.000</div>
+                                @endif
+                            </div>
 
                             
-                            <!-- <div class="payment-right" id="payment-form">
-                                <form id="payment-form" action="{{url('/payment/upload')}}" method="post" enctype="multipart/form-data">
-                                <div class="payment-button-left d-flex flex-column align-items-center justify-content-center mr-3">
-                                    <label for="upload-payment" disabled=true class=label-disabled>Upload File</label>
-                                    <input type="file" name="payment_image" id="upload-payment" onchange="changeFile(this)" disabled>
-                                    <button type="submit" disabled>Submit</button>
-                                </div>
-                                <div class="d-flex flex-column">
-                                    Please wait while our admin verify your account
-                                </div>
-                                </form>
-                            </div> -->
+                            
 
 
                             @if($user->payment_image == NULL)
-                            <div class="payment-right" id="payment-form">
-                                <form id="payment-form" action="{{url('/payment/upload')}}" method="post" enctype="multipart/form-data">
-                                @csrf
-                                {{ method_field('PUT') }}
-                                <div class="payment-button-left d-flex flex-column align-items-center justify-content-center mr-3">
-                                    <label for="upload-payment">Upload File</label>
-                                    <input type="file" name="payment_image" id="upload-payment" onchange="changeFile(this)">
-                                    <button type="submit">Submit</button>
-                                </div>
-                                <div class="d-flex flex-column">
-                                    <div>
-                                    File Name: <span id="file-name">No file chosen</span>
+                                @if($user->is_binusian == 1 && $user->role == 0)
+                                <div class="payment-right" id="payment-form">
+                                    <div class="payment-button-left d-flex flex-column align-items-center justify-content-center mr-3">
+                                        <label for="upload-payment" disabled=true class=label-disabled>Upload File</label>
+                                        <input type="file" name="payment_image" id="upload-payment" onchange="changeFile(this)" disabled>
+                                        <button type="submit" disabled>Submit</button>
                                     </div>
-                                    <div>
-                                    Status: <span id="file-status">Not paid</span>
+                                    <div class="d-flex flex-column">
+                                        Please wait while our admin verify your account
                                     </div>
-                                    @error('payment_image')
-                                        <p class="invalid">{{$message}}</p>
-                                    @enderror
-                                    <p class="invalid">
-                                    </p>
                                 </div>
-                                </form>
-                            </div>
+                                @else
+                                <div class="payment-right" id="payment-form">
+                                    <form id="payment-form" action="{{url('/payment/upload')}}" method="post" enctype="multipart/form-data">
+                                    @csrf
+                                    {{ method_field('PUT') }}
+                                    <div class="payment-button-left d-flex flex-column align-items-center justify-content-center mr-3">
+                                        <label for="upload-payment">Upload File</label>
+                                        <input type="file" name="payment_image" id="upload-payment" onchange="changeFile(this)">
+                                        <button type="submit">Submit</button>
+                                    </div>
+                                    <div class="d-flex flex-column">
+                                        <div>
+                                        File Name: <span id="file-name">No file chosen</span>
+                                        </div>
+                                        <div>
+                                        Status: <span id="file-status">Not paid</span>
+                                        </div>
+                                        @error('payment_image')
+                                            <p class="invalid">{{$message}}</p>
+                                        @enderror
+                                        <p class="invalid">
+                                        </p>
+                                    </div>
+                                    </form>
+                                </div>
+                                @endif
                             @else
                             <div class="payment-right" id="payment-form">
                                 <div class="payment-button-left d-flex flex-column align-items-center justify-content-center mr-3">
