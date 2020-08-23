@@ -29,13 +29,13 @@
                         <img class=navbar-icon src="{{asset('assets/img/admin-panel/Group 990.png')}}">
                     </div>
                     <div class="navbar-caption display-none">
-                        BNCC Hackathon 2.0
+                        BNCC Hackathon 3.0
                     </div>
                 </div>
                 <hr class="line">
                 <div class="navbar-header navbar-header-special">
                     <div class=navbar-icon-c>
-                        <img id=navbar-hackathon-logo class="navbar-icon" src="{{asset('assets/img/Hackathon-logo.png')}}">
+                        <a href="/"><img id=navbar-hackathon-logo class="navbar-icon" src="{{asset('assets/img/Hackathon-logo.png')}}"></a>
                     </div>
                     <div class="navbar-caption-special">
                         <div>Welcome,</div>
@@ -303,21 +303,21 @@
                                 Jika ada informasi yang ingin diubah, silahkan hubungi Contact Person berikut:
                             </div>
                             <div class="editgroup-contact-info">
-                                Admin_1:
+                                Muhammad Fadhil Achmadi:
                                 <div class="editgroup-contact-info-c">
-                                    <img class="editgroup-contact-icon" src="{{asset('assets/img/user-dashboard/line_dark.png')}}" alt="">Admin_1
+                                    <img class="editgroup-contact-icon" src="{{asset('assets/img/user-dashboard/line_dark.png')}}" alt="">fadhil_achmadi
                                 </div>
                                 <div class="editgroup-contact-info-c">
-                                    <img class="editgroup-contact-icon" src="{{asset('assets/img/user-dashboard/whatsapp_dark.png')}}" alt="">0812 8788 9390
+                                    <img class="editgroup-contact-icon" src="{{asset('assets/img/user-dashboard/whatsapp_dark.png')}}" alt="">0878-8717-1567
                                 </div>
                             </div>
                             <div class="editgroup-contact-info">
-                                Admin_2:
+                                Adella Gravita:
                                 <div class="editgroup-contact-info-c">
-                                    <img class="editgroup-contact-icon" src="{{asset('assets/img/user-dashboard/line_dark.png')}}" alt="">Admin_2
+                                    <img class="editgroup-contact-icon" src="{{asset('assets/img/user-dashboard/line_dark.png')}}" alt="">adellawei
                                 </div>
                                 <div class="editgroup-contact-info-c">
-                                    <img class="editgroup-contact-icon" src="{{asset('assets/img/user-dashboard/whatsapp_dark.png')}}" alt="">0812 1109 9291
+                                    <img class="editgroup-contact-icon" src="{{asset('assets/img/user-dashboard/whatsapp_dark.png')}}" alt="">0857-0568-7528
                             </div>
                         </div>
                     </div>
@@ -332,7 +332,7 @@
                             <div class="payment-content-c">
                                 <div class="payment-title-c">
                                     <div class="payment-title">
-                                        1. Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                                        1. Periode Registrasi 
                                     </div>
                                     <div class="payment-cross" data-toggle="collapse" data-target="#content1" aria-expanded="false" aria-controls="content1">
                                         <div class="horizontal position-absolute"></div>
@@ -340,17 +340,21 @@
                                     </div>
                                 </div>
                                 <div id=content1 class="payment-content collapse">
-                                    1) Lorem ipsum dolor sit, amet consectetur adipisicing elit.<br>
-                                    2) Lorem ipsum dolor sit amet, consectetur adipisicing elit.<br>
-                                    3) Lorem ipsum dolor sit amet consectetur adipisicing elit.<br>
-                                    4) Lorem ipsum dolor sit amet consectetur adipisicing elit.<br>
+                                    <ul>
+                                        <li>Early Bird (24 Agustus 2020 hingga 15 September 2020): Rp 60.000</li>
+                                        <li>General (16 September 2020 hingga 1 Oktober 2020)</li>
+                                        <ul>
+                                            <li>Binusian: Rp 80.000</li>
+                                            <li>Non-Binusian: Rp 100.000</li>
+                                        </ul>
+                                    </ul>
                                 </div>
                                 <hr class="hr4">
                             </div>
                             <div class="payment-content-c">
                                 <div class="payment-title-c">
                                     <div class="payment-title">
-                                        2. Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                                        2. Pembayaran Biaya Pendaftaran
                                     </div>
                                     <div class="payment-cross"  data-toggle="collapse" data-target="#content2" aria-expanded="false" aria-controls="content2">
                                         <div class="horizontal position-absolute"></div>
@@ -358,17 +362,18 @@
                                     </div>
                                 </div>
                                 <div id="content2" class="payment-content collapse">
-                                    1) Lorem ipsum dolor sit, amet consectetur adipisicing elit.<br>
-                                    2) Lorem ipsum dolor sit amet, consectetur adipisicing elit.<br>
-                                    3) Lorem ipsum dolor sit amet consectetur adipisicing elit.<br>
-                                    4) Lorem ipsum dolor sit amet consectetur adipisicing elit.<br>
+                                    Lakukan pembayaran biaya pendaftaran per tim ke nomor rekening berikut: <br>
+                                    Nomor Rekening : 5271675071 <br>
+                                    Bank           : BCA <br>
+                                    Atas Nama      : ANNISA VINIDYA LARASATI <br>
+                                    <img src="{{asset('assets/img/user-dashboard/mobilebank-qr.jpg')}}" alt="Mobile Banking QR" id="qr">
                                 </div>
                                 <hr class="hr4">
                             </div>
                             <div class="payment-content-c">
                                 <div class="payment-title-c">
                                     <div class="payment-title">
-                                        3. Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                                        3. Upload Bukti Pembayaran
                                     </div>
                                     <div class="payment-cross" data-toggle="collapse" data-target="#content3" aria-expanded="false" aria-controls="content3">
                                         <div class="horizontal position-absolute"></div>
@@ -376,10 +381,30 @@
                                     </div>
                                 </div>
                                 <div id=content3 class="payment-content collapse">
-                                    1) Lorem ipsum dolor sit, amet consectetur adipisicing elit.<br>
-                                    2) Lorem ipsum dolor sit amet, consectetur adipisicing elit.<br>
-                                    3) Lorem ipsum dolor sit amet consectetur adipisicing elit.<br>
-                                    4) Lorem ipsum dolor sit amet consectetur adipisicing elit.<br>
+                                    Peserta mengisi data tim dan mengunggah file dengan batas maksimum 5 mb dalam bentuk .JPG, .JPEG, .PNG, atau .PDF  yang berisi berkas – berkas berikut:
+                                    <ol type="a">
+                                        <li>Identitas peserta, berupa Kartu Tanda Penduduk (KTP) atau kartu Pelajar bagi yang belum memiliki KTP, Binusian Card bagi Binusian, ataupun berkas lain yang dapat diverifikasi identitas sebagai warga negara yang sah</li>
+                                        <li>Curriculum Vitae (CV)</li>
+                                        <li>Bukti pembayaran</li>
+                                    </ol>
+
+                                </div>
+                                <hr class="hr4">
+                            </div>
+                            <div class="payment-content-c">
+                                <div class="payment-title-c">
+                                    <div class="payment-title">
+                                        4. Verifikasi Pembayaran
+                                    </div>
+                                    <div class="payment-cross"  data-toggle="collapse" data-target="#content4" aria-expanded="false" aria-controls="content4">
+                                        <div class="horizontal position-absolute"></div>
+                                        <div class="vertical position-absolute"></div>
+                                    </div>
+                                </div>
+                                <div id="content4" class="payment-content collapse">
+                                    Tim akan segera diverifikasi oleh panitia maksimal 48 jam. Apabila tim belum diverifikasi melebihi 48 jam, tim dapat menghubungkan Contact Person. Tim yang telah terverifikasi akan dinyatakan resmi terdaftar sebagai calon peserta Hackathon 3.0.
+                                    <br><br> Note : Bagi tim yang tidak terseleksi menjadi peserta Hackathon 3.0, biaya registrasi tim tersebut akan dikembalikan.
+
                                 </div>
                                 <hr class="hr4">
                             </div>
@@ -497,19 +522,19 @@
                             <div class="timeline-contents d-flex justify-content-around w-100 my-3">
                                 <div class="timeline-content">
                                     <span>Open Registration</span>
-                                    <span>8 May 2020</span>
+                                    <span>24 Agustus 2020</span>
                                 </div>
                                 <div class="timeline-content">
                                     <span>Close Registration</span>
-                                    <span>8 June 2020</span>
+                                    <span>1 October 2020</span>
                                 </div>
                                 <div class="timeline-content">
                                     <span>Technical Meeting</span>
-                                    <span>10 June 2020</span>
+                                    <span>7 October 2020</span>
                                 </div>
                                 <div class="timeline-content">
                                     <span>Competition Day</span>
-                                    <span>15-16 June 2020</span>
+                                    <span>10-12 October 2020</span>
                                 </div>
                             </div>
                         </div>

@@ -613,6 +613,11 @@ h1 {
 input[type="file"] {
   display: none; }
 
+#qr{
+  width: 50%;
+  margin: 1rem;
+}
+
 @keyframes showExpand {
   0% {
     display: none; }
