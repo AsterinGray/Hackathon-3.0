@@ -281,15 +281,15 @@
                                         @error('id_card')
                                             <p class="invalid">{{$message}}</p>
                                         @enderror
-                                        <input type="file" id="idcard-leader" class="@error('id_card') is-invalid @enderror" name="id_card" onchange="changeFile(this)" />
+                                        <input type="file" id="idcard-leader" class="@error('id_card') is-invalid @enderror" name="id_card" onchange="changeFile(this)" required/>
                                     </div>
                                     <div class="editgroup-info-right">
                                         <label for="cv-leader" class="inp-file editgroup-info-input">Upload CV</label>
                                         <p class="invalid"></p>
-                                        @error('id_card')
+                                        @error('cv')
                                             <p class="invalid">{{$message}}</p>
                                         @enderror
-                                        <input type="file" id="cv-leader" class="@error('cv') is-invalid @enderror" name="cv" onchange="changeFile(this)" />
+                                        <input type="file" id="cv-leader" class="@error('cv') is-invalid @enderror" name="cv" onchange="changeFile(this)" required/>
                                     </div>
                                 </div>
                                 <hr class="hr3">
@@ -428,7 +428,7 @@
                                     {{ method_field('PUT') }}
                                     <div class="payment-button-left d-flex flex-column align-items-center justify-content-center mr-3">
                                         <label for="upload-payment">Upload File</label>
-                                        <input type="file" name="payment_image" id="upload-payment" onchange="changeFile(this)">
+                                        <input type="file" name="payment_image" id="upload-payment" onchange="changeFile(this)" rquired>
                                         <button type="submit">Submit</button>
                                     </div>
                                     <div class="d-flex flex-column">

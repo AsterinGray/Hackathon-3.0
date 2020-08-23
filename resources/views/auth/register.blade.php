@@ -26,10 +26,8 @@
             autocomplete="name" 
             autofocus
           />
-          <p class="invalid"></p>
-            @error('name')
-                <p class="invalid">{{ $message }}</p>
-            @enderror
+          <p class="invalid">@error('name') {{ $message }} @enderror</p>
+            
           <input
             type="password"
             id="password"
@@ -41,10 +39,8 @@
             minlength="8"
             autocomplete="new-password"
           />
-          <p class="invalid" id="pass-feedback"></p>
-            @error('password')
-                <p class="invalid">{{ $message }}</p>
-            @enderror
+          <p class="invalid" id="pass-feedback">@error('password') {{ $message }} @enderror</p>
+            
           <input
             type="password"
             id="confirm-password"
@@ -92,10 +88,8 @@
               onchange="validateEmail(this)"
               required
             />
-            <p class="invalid"></p>
-            @error('member1_email')
-                <p class="invalid">{{ $message }}</p>
-            @enderror
+            <p class="invalid">@error('member1_email') {{ $message }} @enderror</p>
+            
             <input
               type="number"
               class="form-control my-2 @error('member1_phone_number') is-invalid @enderror"
@@ -155,13 +149,13 @@
             @enderror
             <label for="idcard-leader" class="form-control inp-file">Upload ID Card</label>
             <p class="invalid"></p>
-            <input type="file" id="idcard-leader" class="inp-file @error('member1_id_card') is-invalid @enderror" name="member1_id_card" value="{{ old('member1_id_card') }}" onchange="changeFile(this)" />
+            <input type="file" id="idcard-leader" class="inp-file @error('member1_id_card') is-invalid @enderror" name="member1_id_card" value="{{ old('member1_id_card') }}" onchange="changeFile(this)" required/>
             @error('member1_id_card')
                 <p class="invalid">{{ $message }}</p>
             @enderror
             <label for="cv-leader" class="form-control inp-file">Upload CV</label>
             <p class="invalid"></p>
-            <input type="file" id="cv-leader" class="inp-file @error('member1_cv') is-invalid @enderror" name="member1_cv" value="{{ old('member1_cv') }}" onchange="changeFile(this)" />
+            <input type="file" id="cv-leader" class="inp-file @error('member1_cv') is-invalid @enderror" name="member1_cv" value="{{ old('member1_cv') }}" onchange="changeFile(this)" required/>
             @error('member1_cv')
                 <p class="invalid">{{ $message }}</p>
             @enderror

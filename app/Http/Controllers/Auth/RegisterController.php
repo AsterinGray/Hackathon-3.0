@@ -50,20 +50,33 @@ class RegisterController extends Controller
      */
     protected function validator(array $data)
     {
-        // dd($data);
+        $messages = [
+            
+        ];
+        $customAttributes = [
+            'member1_name' => 'name',
+            'member1_email' => 'email address',
+            'member1_phone_number' => 'number',
+            'member1_line_id' => 'line ID',
+            'member1_git_id' => 'git ID',
+            'member1_place_of_birth' => 'place of birth',
+            'member1_date_of_birth' => 'date of birth',
+            'member1_id_card' => 'ID Card',
+            'member1_cv' => 'CV',
+        ];
         return Validator::make($data, [
-            'name' => ['required', 'string', 'max:255', 'unique:users'],
-            'password' => ['required', 'string', 'min:8', 'confirmed'],
+            'name' => ['required', 'string', 'unique:users'],
+            'password' => ['required', 'string', 'min:8', 'confirmed', 'alpha_num'],
             'member1_name' => ['required'],
-            'member1_email' => ['required'],
-            'member1_phone_number' => ['required'],
+            'member1_email' => ['required','email','unique:members,email'],
+            'member1_phone_number' => ['required','numeric','digits_between:10,14'],
             'member1_line_id' => ['required'],
             'member1_git_id' => ['required'],
             'member1_place_of_birth' => ['required'],
             'member1_date_of_birth' => ['required'],
-            'member1_id_card' => ['required'],
-            'member1_cv' => ['required'],
-        ]);
+            'member1_id_card' => ['required','file','max:5120','mimes:jpg,jpeg,pdf,png'],
+            'member1_cv' => ['required','file','max:5120','mimes:jpg,jpeg,pdf,png'],
+        ], $messages, $customAttributes);
     }
 
     /**
