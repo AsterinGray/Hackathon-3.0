@@ -44,7 +44,7 @@ class HomeController extends Controller
         ]);
         $user = Auth::user();
         $file = request()->file('payment_image');
-        $file_name = $user->name.".".$file->getClientOriginalExtension();
+        $file_name = $user->name."_".time().".".$file->getClientOriginalExtension();
         $file->move(public_path('storage/payment_image'),$file_name);
         $user->update(['payment_image' => $file_name]);
         return redirect('/home');
@@ -71,11 +71,11 @@ class HomeController extends Controller
             $data['user_id'] = $user->id;
             // dd($data);
             $file1 = request()->file('id_card');
-            $file_name1 = $user['name']."_".$data['name'].".".$file1->getClientOriginalExtension();
+            $file_name1 = $user['name']."_".$data['name']."_".time().".".$file1->getClientOriginalExtension();
             $file1->move(public_path('storage/id_card'),$file_name1);
 
             $cv1 = request()->file('cv');
-            $cv_name1 = $user['name']."_".$data['name'].".".$cv1->getClientOriginalExtension();
+            $cv_name1 = $user['name']."_".$data['name']."_".time().".".$cv1->getClientOriginalExtension();
             $cv1->move(public_path('storage/cv'),$cv_name1);
 
             $data['id_card'] = $file_name1;
