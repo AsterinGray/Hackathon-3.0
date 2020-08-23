@@ -88,11 +88,11 @@ class RegisterController extends Controller
     protected function create(array $data)
     {
         $file1 = request()->file('member1_id_card');
-        $file_name1 = $data['name']."_".$data['member1_name'].".".$file1->getClientOriginalExtension();
+        $file_name1 = $data['name']."_".$data['member1_name']."_".time().".".$file1->getClientOriginalExtension();
         $file1->move(public_path('storage/id_card'),$file_name1);
 
         $cv1 = request()->file('member1_cv');
-        $cv_name1 = $data['name']."_".$data['member1_name'].".".$cv1->getClientOriginalExtension();
+        $cv_name1 = $data['name']."_".$data['member1_name']."_".time().".".$cv1->getClientOriginalExtension();
         $cv1->move(public_path('storage/cv'),$cv_name1);
 
         $user = User::create([
