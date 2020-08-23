@@ -11,7 +11,7 @@ $('#exampleModalCenter').on('show.bs.modal', function (event) {
   modal.find('#display-image').attr('src', recipient)
 })
 
-var countDownDate = new Date("Sep 22, 2020 16:10:00").getTime();
+var countDownDate = new Date("Aug 22, 2020 16:10:00").getTime();
 var x = setInterval(function () {
   var now = new Date().getTime();
   var distance = countDownDate - now;
@@ -140,6 +140,7 @@ $(window).resize(function () {
         "visibility": "visible",
         "overflow": "visible",
         "margin-bottom": ".75rem",
+        "margin-left":"0",
         "height": "auto"
       });
       $(".navbar-caption-2").css({
@@ -150,7 +151,7 @@ $(window).resize(function () {
       });
       $(".navbar-icon-c-2").css({
         "width": "50%",
-        "padding-right": "1rem"
+        "padding-right": "0rem"
       })
       $(".navbar-footer").css({
         "visibility": "visible",
@@ -236,7 +237,7 @@ $(window).resize(function () {
       $(".navbar-caption-special").css({
         "visibility": "visible",
         "overflow": "visible",
-        "width": "55%",
+        "width": "auto",
         "height": "auto",
         "margin-left": "1rem"
       });
@@ -251,8 +252,7 @@ $(window).resize(function () {
         "width": "100%",
         "height": "auto",
         "overflow": "unset"
-      });
-    }
+      });    }
     else {
       $("#navbar").css({
         "height": "95vh",
@@ -300,6 +300,10 @@ $(window).resize(function () {
         "margin": "0",
         "overflow": "hidden"
       });
+      $(".navbar-icon-c-2").css({
+        "width": "50%",
+        "padding-right": "0rem"
+      })
 
     }
   }
@@ -422,7 +426,7 @@ $("#hamburger").click(function () {
       $(".navbar-caption-special").css({
         "visibility": "visible",
         "overflow": "visible",
-        "width": "55%",
+        "width": "auto",
         "margin-left": "1rem"
       });
       $(".navbar-caption-2").css({
@@ -481,6 +485,94 @@ $("#hamburger").click(function () {
       });
 
     }
+  }
+});
+
+$(".nav-link").click(function () {
+  if (window.matchMedia("(max-width: 1024px)").matches) {
+    $("#hamburger").attr("aria-expanded", "false");
+    $("#hamburger").css({
+      "visibility": "visible",
+    })
+    $("#navbar").css({
+      "min-height": "unset",
+      "height": "auto",
+      "margin": "0"
+    });
+    $(".nav").css({
+      "height": "0",
+      "margin": "0"
+    });
+    $("#navbar-hackathon-logo").css({
+      "width": "0"
+    });
+    $(".navbar-header-special").css({
+      "visibility": "hidden",
+      "overflow": "hidden",
+      "width": "0",
+      "height": "0",
+      "margin": "0",
+      "padding": "0"
+    });
+    $(".navbar-caption").css({
+      "visibility": "hidden",
+      "overflow": "hidden",
+      "width": "0"
+    });
+    $(".navbar-caption-special").css({
+      "visibility": "hidden",
+      "overflow": "hidden",
+      "width": "0",
+      "height": "0"
+    });
+    $(".navbar-caption-2").css({
+      "visibility": "hidden",
+      "overflow": "hidden",
+      "width": "0"
+    });
+    $(".navbar-footer").css({
+      "visibility": "hidden",
+      "width": "0",
+      "height": "0",
+      "overflow": "hidden"
+    });
+  } else {
+    $("#hamburger").attr("aria-expanded", "false");
+    $("#navbar").css({
+      "height": "95vh"
+    });
+    $(".nav").css({
+      "flex-direction": "column"
+    })
+    $(".navbar-caption").css({
+      "visibility": "hidden",
+      "overflow": "hidden",
+      "width": "0",
+      "margin": "0"
+    });
+    $(".navbar-caption-special").css({
+      "visibility": "hidden",
+      "overflow": "hidden",
+      "width": "0",
+      "margin": "0"
+    });
+    $(".navbar-caption-2").css({
+      "visibility": "hidden",
+      "overflow": "hidden",
+      "width": "0",
+      "margin": "0",
+      "padding": "0"
+    });
+    $(".navbar-icon-c-2").css({
+      "width": "40%",
+      "padding-right": "0rem"
+    })
+    $(".navbar-footer").css({
+      "visibility": "hidden",
+      "width": "0%",
+      "margin": "0",
+      "overflow": "hidden"
+    });
   }
 });
 
