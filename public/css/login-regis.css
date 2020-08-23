@@ -1,3 +1,13 @@
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
 ::-webkit-scrollbar{
   width: 10px;
 }
@@ -30,7 +40,8 @@
         color: #e74c3c; }
     .login > form input {
       background-color: #2C3044;
-      border-color: white; }
+      border-color: white;
+      color: white }
       .login > form input::placeholder {
         color: gainsboro; }
       .login > form input:focus {
