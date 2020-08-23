@@ -358,7 +358,7 @@
                                     Nomor Rekening : 5271675071 <br>
                                     Bank           : BCA <br>
                                     Atas Nama      : ANNISA VINIDYA LARASATI <br>
-                                    <img src="" alt="">
+                                    <img src="{{asset('assets/img/user-dashboard/mobilebank-qr.jpg')}}" alt="Mobile Banking QR" id="qr">
                                 </div>
                                 <hr class="hr4">
                             </div>
