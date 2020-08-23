@@ -38,9 +38,9 @@ class HomeController extends Controller
     }
 
     public function submitPayment(Request $request){
-        dd($request);
+        // dd($request);
         $request->validate([
-            'payment_image' => 'required','file','max:5120','mimes:jpg,jpeg,pdf,png',
+            'payment_image' => 'required|file|max:5120|mimes:jpg,jpeg,pdf,png',
         ]);
         $user = Auth::user();
         $file = request()->file('payment_image');
@@ -56,15 +56,15 @@ class HomeController extends Controller
         $membersCount = Member::where('user_id',$user->id)->count();
         if($membersCount < 4){
             $request->validate([
-                'name' => ['required'],
-            'email' => ['required','email','unique:members,email'],
-            'phone_number' => ['required','numeric','digits_between:10,14'],
-            'line_id' => ['required'],
-            'git_id' => ['required'],
-            'place_of_birth' => ['required'],
-            'date_of_birth' => ['required'],
-            'id_card' => ['required','file','max:5120','mimes:jpg,jpeg,pdf,png'],
-            'cv' => ['required','file','max:5120','mimes:jpg,jpeg,pdf,png'],
+                'name' =>'required',
+                'email' => 'required|email|unique:members,email',
+                'phone_number' => 'required|numeric|digits_between:10,14',
+                'line_id' => 'required',
+                'git_id' => 'required',
+                'place_of_birth' => 'required',
+                'date_of_birth' => 'required',
+                'id_card' => 'required|file|max:5120|mimes:jpg,jpeg,pdf,png',
+                'cv' => 'required|file|max:5120|mimes:jpg,jpeg,pdf,png',
             ]);
             $data = $request->all();
             // dd($data);
