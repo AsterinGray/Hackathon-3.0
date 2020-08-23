@@ -387,6 +387,22 @@
                                     </div>
                                 </div>
                             </div>
+
+                            
+                            <!-- <div class="payment-right" id="payment-form">
+                                <form id="payment-form" action="{{url('/payment/upload')}}" method="post" enctype="multipart/form-data">
+                                <div class="payment-button-left d-flex flex-column align-items-center justify-content-center mr-3">
+                                    <label for="upload-payment" disabled=true class=label-disabled>Upload File</label>
+                                    <input type="file" name="payment_image" id="upload-payment" onchange="changeFile(this)" disabled>
+                                    <button type="submit" disabled>Submit</button>
+                                </div>
+                                <div class="d-flex flex-column">
+                                    Please wait while our admin verify your account
+                                </div>
+                                </form>
+                            </div> -->
+
+
                             @if($user->payment_image == NULL)
                             <div class="payment-right" id="payment-form">
                                 <form id="payment-form" action="{{url('/payment/upload')}}" method="post" enctype="multipart/form-data">
