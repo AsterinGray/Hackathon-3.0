@@ -108,7 +108,7 @@
       <div class="about-right col-md-12 col-lg-5">
         <h1 class="heading">About BNCC Hackathon</h1>
         <p class="paragraf">
-          Hackathon merupakan lomba coding selama 24 jam di mana setiap tim ditantang memberikan solusi atas suatu permasalahan dengan menghasilkan produk berupa aplikasi ataupun website.
+          Hackathon merupakan lomba coding selama 48 jam di mana setiap tim ditantang memberikan solusi atas suatu permasalahan dengan menghasilkan produk berupa aplikasi ataupun website.
         </p>
       </div>
     </section>
@@ -182,7 +182,7 @@
               </div>
             </div>
             <div class="faq-ans">
-              Hackathon 3.0 adalah event Hackathon ke-3 yang akan diadakan oleh BNCC. Di event ini, peserta akan ditantang untuk menyelesaikan case-case yang berhubungan dengan dunia IT dalam waktu 24 jam dalam bentuk website atau aplikasi.
+              Hackathon 3.0 adalah event Hackathon ke-3 yang akan diadakan oleh BNCC. Di event ini, peserta akan ditantang untuk menyelesaikan case-case yang berhubungan dengan dunia IT dalam waktu 48 jam dalam bentuk website atau aplikasi.
             </div>
           </div>
           <div class="faq-content">
