@@ -46,12 +46,15 @@
             <li class="nav-item">
               <a class="text-light nav-link" href="/#about">About</a>
             </li>
-            <!-- <li class="nav-item">
-              <a class="text-light nav-link" href="/#faq">FAQ</a>
-            </li> -->
             <li class="nav-item">
-              <a class="text-light nav-link" href="/#sponsor">Sponsor</a>
+              <a class="text-light nav-link" href="/#faq">FAQ</a>
             </li>
+            <li class="nav-item">
+              <a href="/#timeline" class="text-light nav-link">Timeline</a>
+            </li>
+            <!-- <li class="nav-item">
+              <a class="text-light nav-link" href="/#sponsor">Sponsor</a>
+            </li> -->
             <li class="nav-item">
               <a class="text-light nav-link" href="/#contact">Contact</a>
             </li>
@@ -73,15 +76,6 @@
                 @endif
             @endauth
           @endif
-            <!-- <li class="nav-item">
-                <a class="text-light nav-link" href="/ login">Login</a>
-            </li>
-            <li class="nav-item">
-                <a class="text-light nav-link" id="register" href="/register">Register</a>
-            </li> -->
-            <!-- <li class="nav-item">
-                <span class="text-light nav-link" id="register">Coming Soon</span>
-            </li> -->
           </ul>
         </div>
       </div>

@@ -374,7 +374,7 @@
         </div>
       </div>
     </section>
-    <section class="timeline">
+    <section class="timeline" id="timeline">
       <img src="{{asset('assets/img/timeline/Object2.png')}}" alt="Decoration" id="object3" />
       <img src="{{asset('assets/img/timeline/Object3.png')}}" alt="Decoration" id="object4" />
       <h1 class="my-5">Timeline</h1>
