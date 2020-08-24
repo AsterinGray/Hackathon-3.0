@@ -412,7 +412,7 @@
                         <div class="payment-2">
                             <div class="payment-left" id="early-bird">
                                 <h4>Early Bird Offer</h4>
-                                <div class=price>Rp50.000 only!</div>
+                                <div class=price>Rp60.000 only!</div>
                                 <div class="flex-row d-flex ">
                                     <img class="payment-time" src="{{asset('assets/img/user-dashboard/time-left-w.png')}}">
                                     <div class="payment-time-content" id="countdown">
