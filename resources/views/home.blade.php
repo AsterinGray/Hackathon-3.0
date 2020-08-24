@@ -276,20 +276,20 @@
                                 <hr class="hr3">
                                 <div class="editgroup-info">
                                     <div class="editgroup-info-left">
-                                        <label for="idcard-leader" class="inp-file editgroup-info-input">Upload ID Card</label>
+                                        <label for="idcard-member" class="inp-file editgroup-info-input">Upload ID Card</label>
                                         <p class="invalid"></p>
                                         @error('id_card')
                                             <p class="invalid">{{$message}}</p>
                                         @enderror
-                                        <input type="file" id="idcard-leader" class="@error('id_card') is-invalid @enderror" name="id_card" onchange="changeFile(this)" required/>
+                                        <input type="file" id="idcard-member" class="@error('id_card') is-invalid @enderror" name="id_card" onchange="submitFile(this)" required/>
                                     </div>
                                     <div class="editgroup-info-right">
-                                        <label for="cv-leader" class="inp-file editgroup-info-input">Upload CV</label>
+                                        <label for="cv-member" class="inp-file editgroup-info-input">Upload CV</label>
                                         <p class="invalid"></p>
                                         @error('cv')
                                             <p class="invalid">{{$message}}</p>
                                         @enderror
-                                        <input type="file" id="cv-leader" class="@error('cv') is-invalid @enderror" name="cv" onchange="changeFile(this)" required/>
+                                        <input type="file" id="cv-member" class="@error('cv') is-invalid @enderror" name="cv" onchange="submitFile(this)" required/>
                                     </div>
                                 </div>
                                 <hr class="hr3">

@@ -696,7 +696,7 @@ $(window).scroll(() => {
   }
 });
 
-changeFile = (e) => {
+const submitFile = (e) => {
   var fileName = e.files[0].name;
   $('label[for="' + e.id + '"]').html(fileName);
 
@@ -706,5 +706,19 @@ changeFile = (e) => {
   } else {
     $(e).prev("p").text("Invalid File Extension");
     $(e)[0].setCustomValidity("Invalid File Extension");
+  }
+}
+
+
+const changeFile = (e) => {
+  var fileName = e.files[0].name;
+  $("#file-name").text(fileName);
+  $("#file-status").text("Pending");
+  if (fileName.includes(".jpg") || fileName.includes(".png")) {
+    setTimeout(function () { $("#payment-form").submit() }, 500)
+    $(e).next("p").text("");
+  } else {
+    console.log($(e).find("p"));
+    $(e).next("p").text("File extension must be png or jpg");
   }
 }
