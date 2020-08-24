@@ -71,7 +71,8 @@ body {
 #hackathon-laptop {
   width: 50%;
   max-width: 50%;
-  height: 70vh
+  height: 70vh;
+  z-index: 2;
  } 
 
 .home {
@@ -83,7 +84,8 @@ body {
   justify-content: center;
   flex-direction: column;
   padding: 0 10vw;
-  padding-top: 10vh; }
+  padding-top: 10vh;
+  margin-top: 1rem; }
   .home img {
     width: 50%; }
   .home-text {
