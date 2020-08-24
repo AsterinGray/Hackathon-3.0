@@ -12,14 +12,14 @@
 </head>
 <body>
     
-    <div id="display-c" style="display:none">
+    <div id="display-c">
         <img id="display-image" src="{{asset('assets/img/admin-panel/Receipt-CROP.jpg')}}">
     </div>
     <div id="barrier" style="display:none"></div>
     
     <div id="container">
         <section id=navbar class="navbar">
-            <div class="navbar-header">
+            <div class="navbar-header navbar-header-special">
                 <div class=navbar-icon-c id=hamburger aria-expanded="false">
                     <img class=navbar-icon src="{{asset('assets/img/admin-panel/Group 990.png')}}">
                 </div>

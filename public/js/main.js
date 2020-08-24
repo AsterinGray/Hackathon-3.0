@@ -154,7 +154,8 @@ let flag = 0;
     }
 
     render(particles, ctx, c.width, c.height);
-    setTimeout(() => document.body.removeChild(c), 1000).then((flag = 1));
+    let wait = ms => new Promise(resolve => setTimeout(resolve, ms));
+    wait(1000).then(() => document.body.removeChild(c)).then(flag=1);
   }
 
   function render(particles, ctx, width, height) {
@@ -205,3 +206,10 @@ $(window).scroll(() => {
     explode(offset.left, offset.top);
   }
 });
+
+$(".why-card-content").hover(function(){
+  $(this).children(".why-card-content-heading").css("height","auto");
+})
+$(".why-card-content").mouseleave(function(){
+  $(this).children(".why-card-content-heading").css("height","-webkit-fill-available");
+})
