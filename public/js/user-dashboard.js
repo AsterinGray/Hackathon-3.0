@@ -576,7 +576,7 @@ $(".nav-link").click(function () {
   }
 });
 
-const changeFile = (e) => {
+let changeFile = (e) => {
   var fileName = e.files[0].name;
   $("#file-name").text(fileName);
   $("#file-status").text("Pending");
@@ -641,7 +641,10 @@ let flag = 0;
     }
 
     render(particles, ctx, c.width, c.height);
-    setTimeout(() => document.body.removeChild(c), 1000).then((flag = 1));
+    let wait = ms => new Promise(resolve => setTimeout(resolve, ms));
+
+    wait(1000).then(() => document.body.removeChild(c)).then(flag=1);
+    // setTimeout(() => document.body.removeChild(c), 1000).then((flag = 1));
   }
 
   function render(particles, ctx, width, height) {
@@ -688,7 +691,7 @@ $(window).scroll(() => {
   const offsetTop = $(dot).offset().top;
   const target = offsetTop + outerHeight - windowHeight;
 
-  if (scrollTop > target && flag == 0) {
+  if (scrollTop > target && flag == 0 && $("#v-pills-messages-tab").hasClass("active")) {
     explode(offset.left, offset.top);
   }
 });
