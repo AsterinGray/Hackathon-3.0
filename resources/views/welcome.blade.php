@@ -165,7 +165,7 @@
           </div>
       </div>
     </section>
-    <!-- <section class="faq" id="faq">
+    <section class="faq" id="faq">
       <h1 class="heading">FAQ</h1>
       <div class="faq-content row justify-content-center">
         <div class="faq-left col-md-12 col-lg-6 w-100">
@@ -189,7 +189,7 @@
             <div
               class="faq-question justify-content-between align-items-center"
             >
-              <div>Berapa jumlah peserta dalam satu tim?</div>
+              <div>Apakah Hackathon 3.0 akan diadakan secara online?</div>
               <div
                 class="circle d-flex justify-content-center align-items-center"
               >
@@ -198,7 +198,7 @@
               </div>
             </div>
             <div class="faq-ans">
-              Satu tim terdiri dari 3-4 orang.
+              Ya, Hackathon 3.0 ini akan diadakan full secara online. 
             </div>
           </div>
           <div class="faq-content">
@@ -214,16 +214,19 @@
               </div>
             </div>
             <div class="faq-ans">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam,
-              quas officiis! Veritatis dolorem molestias illo, eaque beatae
-              accusantium odio! Velit?
+              Event Hackathon 3.0  ini dipungut biaya dan memiliki 3 paket:
+              <ol type="A">
+                <li>Paket 1: Early Bird (24 September - 15 September 2020) dikenakan biaya Rp 60.000/ tim</li>
+                <li>Paket 2: Normal Price Binusian (16 September - 1 Oktober 2020) dikenakan biaya Rp 80.000/ tim</li>
+                <li>Paket 3: Normal Price Umum (16 September - 1 Oktober 2020) dikenakan biaya Rp. 100.000/ tim</li>
+              </ol>
             </div>
           </div>
           <div class="faq-content">
             <div
               class="faq-question justify-content-between align-items-center"
             >
-              <div>Lorem ipsum dolor sit amet consectetur adipisicing ?</div>
+              <div>Apa saja hal yang diperlukan untuk mendaftar sebagai peserta?</div>
               <div
                 class="circle d-flex justify-content-center align-items-center"
               >
@@ -232,16 +235,14 @@
               </div>
             </div>
             <div class="faq-ans">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam,
-              quas officiis! Veritatis dolorem molestias illo, eaque beatae
-              accusantium odio! Velit?
+              Peserta harus melakukan registrasi tim di website hackathon.bncc.net, lalu mensubmit dokumen dokumen yang diperlukan seperti KTP, CV, dan Kartu Tanda Mahasiswa(Khusus untuk Binusian).
             </div>
           </div>
           <div class="faq-content">
             <div
               class="faq-question justify-content-between align-items-center"
             >
-              <div>Lorem ipsum dolor sit amet consectetur adipisicing ?</div>
+              <div>Apa yang saya dapatkan jika memenangkan kompetisi ini?</div>
               <div
                 class="circle d-flex justify-content-center align-items-center"
               >
@@ -250,9 +251,28 @@
               </div>
             </div>
             <div class="faq-ans">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam,
-              quas officiis! Veritatis dolorem molestias illo, eaque beatae
-              accusantium odio! Velit?
+              Bila memenangkan kompetisi ini akan mendapatkan uang dan sertifikat dengan rincian:
+              <ol type="A">
+                <li>Juara 1 mendapat uang senilai Rp 4.000.000 + Sertifikat</li>
+                <li>Juara 2 mendapat uang senilai Rp 2.000.000 + Sertifikat</li>
+                <li>Juara 3 mendapat uang senilai Rp 1.000.000 + Sertifikat</li>
+              </ol>
+            </div>
+          </div>
+          <div class="faq-content">
+            <div
+              class="faq-question justify-content-between align-items-center"
+            >
+              <div>Apa saja persyaratan untuk menjadi peserta dalam Hackathon 3.0 ini?</div>
+              <div
+                class="circle d-flex justify-content-center align-items-center"
+              >
+                <div class="horizontal position-absolute"></div>
+                <div class="vertical position-absolute"></div>
+              </div>
+            </div>
+            <div class="faq-ans">
+              Untuk mengikuti Hackathon 3.0 ini, peserta dapat tim yang maksimal terdiri dari 3-4 orang dengan rentang usia 18-25 tahun. Setiap peserta diwajibkan untuk mengirimkan CV pada dashboard masing-masing tim. Setiap tim juga diwajibkan sudah melakukan pembayaran biaya lomba bila berminat mengikuti Hackathon 3.0 ini.
             </div>
           </div>
         </div>
@@ -261,7 +281,7 @@
             <div
               class="faq-question justify-content-between align-items-center"
             >
-              <div>Lorem ipsum dolor sit amet consectetur adipisicing ?</div>
+              <div>Apakah peserta diwajibkan untuk membentuk tim saat mengikuti Hackathon 3.0?</div>
               <div
                 class="circle d-flex justify-content-center align-items-center"
               >
@@ -270,16 +290,14 @@
               </div>
             </div>
             <div class="faq-ans">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam,
-              quas officiis! Veritatis dolorem molestias illo, eaque beatae
-              accusantium odio! Velit?
+              Peserta tidak diwajibkan untuk membentuk tim dan diperbolehkan untuk mengikuti event ini secara individu bila berminat. 
             </div>
           </div>
           <div class="faq-content">
             <div
               class="faq-question justify-content-between align-items-center"
             >
-              <div>Lorem ipsum dolor sit amet consectetur adipisicing ?</div>
+              <div>Apakah peserta diperbolehkan untuk terdaftar di 2 tim?</div>
               <div
                 class="circle d-flex justify-content-center align-items-center"
               >
@@ -288,16 +306,14 @@
               </div>
             </div>
             <div class="faq-ans">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam,
-              quas officiis! Veritatis dolorem molestias illo, eaque beatae
-              accusantium odio! Velit?
+              Peserta tidak diperbolehkan mendaftar di lebih dari satu tim.
             </div>
           </div>
           <div class="faq-content">
             <div
               class="faq-question justify-content-between align-items-center"
             >
-              <div>Lorem ipsum dolor sit amet consectetur adipisicing ?</div>
+              <div>Bagaimana jika saat event ini berlangsung, saya ada kepentingan lain yang harus dilakukan?</div>
               <div
                 class="circle d-flex justify-content-center align-items-center"
               >
@@ -306,16 +322,14 @@
               </div>
             </div>
             <div class="faq-ans">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam,
-              quas officiis! Veritatis dolorem molestias illo, eaque beatae
-              accusantium odio! Velit?
+              Bila ada kepentingan lain saat event ini berlangsung, maka peserta wajib untuk memberikan info kepada panitia minimal H-2 dari event.
             </div>
           </div>
           <div class="faq-content">
             <div
               class="faq-question justify-content-between align-items-center"
             >
-              <div>Lorem ipsum dolor sit amet consectetur adipisicing ?</div>
+              <div>Kapan pendaftaran ditutup?</div>
               <div
                 class="circle d-flex justify-content-center align-items-center"
               >
@@ -324,16 +338,13 @@
               </div>
             </div>
             <div class="faq-ans">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam,
-              quas officiis! Veritatis dolorem molestias illo, eaque beatae
-              accusantium odio! Velit?
+              Pendaftaran ditutup pada 1 Oktober 2020, jam 21:00 WIB.
             </div>
-          </div>
-          <div class="faq-content">
+          </div><div class="faq-content">
             <div
               class="faq-question justify-content-between align-items-center"
             >
-              <div>Lorem ipsum dolor sit amet consectetur adipisicing ?</div>
+              <div>Bagaimana jika peserta sudah menyiapkan sebagian source code sebelum event dimulai?</div>
               <div
                 class="circle d-flex justify-content-center align-items-center"
               >
@@ -342,14 +353,27 @@
               </div>
             </div>
             <div class="faq-ans">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam,
-              quas officiis! Veritatis dolorem molestias illo, eaque beatae
-              accusantium odio! Velit?
+              Menyiapkan source code sebelum event dimulai, melanjutkan dan melombakan lagi project yang pernah dibuat merupakan pelanggaran. Apabila peserta terbukti melakukan pelanggaran maka akan didiskualifikasi.
+            </div>
+          </div><div class="faq-content">
+            <div
+              class="faq-question justify-content-between align-items-center"
+            >
+              <div>Bila saya tidak memiliki basic coding maupun design, apakah saya masih boleh ikut?</div>
+              <div
+                class="circle d-flex justify-content-center align-items-center"
+              >
+                <div class="horizontal position-absolute"></div>
+                <div class="vertical position-absolute"></div>
+              </div>
+            </div>
+            <div class="faq-ans">
+              Peserta yang tidak memiliki basic coding tetap diperbolehkan mengikuti Hackathon 3.0. Namun, nantinya akan ada seleksi untuk menentukan tim mana yang bisa berpartisipasi di hari H Hackathon.
             </div>
           </div>
         </div>
       </div>
-    </section> -->
+    </section>
     <section class="timeline">
       <img src="{{asset('assets/img/timeline/Object2.png')}}" alt="Decoration" id="object3" />
       <img src="{{asset('assets/img/timeline/Object3.png')}}" alt="Decoration" id="object4" />
