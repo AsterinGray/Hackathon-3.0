@@ -22,7 +22,7 @@ var x = setInterval(function () {
   const variabel =  document.getElementById("early-bird");
   document.getElementById("countdown").innerHTML = hours + ":"
     + minutes + ":" + seconds + " left";
-  if (distance != 0) {
+  if (distance < 0) {
     clearInterval(x);
     variabel.style = "display:none";
     document.getElementById("general").style = "display:flex";
@@ -706,19 +706,5 @@ const submitFile = (e) => {
   } else {
     $(e).prev("p").text("Invalid File Extension");
     $(e)[0].setCustomValidity("Invalid File Extension");
-  }
-}
-
-
-const changeFile = (e) => {
-  var fileName = e.files[0].name;
-  $("#file-name").text(fileName);
-  $("#file-status").text("Pending");
-  if (fileName.includes(".jpg") || fileName.includes(".png")) {
-    setTimeout(function () { $("#payment-form").submit() }, 500)
-    $(e).next("p").text("");
-  } else {
-    console.log($(e).find("p"));
-    $(e).next("p").text("File extension must be png or jpg");
   }
 }
