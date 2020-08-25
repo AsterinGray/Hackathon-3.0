@@ -31,7 +31,7 @@ body {
   top: 0;
   background-color: #1d2134;
   z-index: 5;
-  padding: 0 10vw;
+  padding: 0 5rem;
   transition: top 1s; }
   .nav-img {
     width: 5.5rem; }
@@ -135,16 +135,22 @@ body {
   position: relative;
   padding: 10rem 5rem;
   display: flex;
+  margin: 0;
   align-items: center; }
   .about-left {
-    z-index: 3; }
+    z-index: 3;
+    padding-left: 0; }
   .about-right {
     padding-left: 3rem;
+    padding-right: 0;
     text-align: center; }
     .about-right > p {
       font-size: 1.5rem;
       display: flex;
       align-items: center; }
+    .slick-slider{
+      margin-left: 50px;
+    }
 
 .carousel-content {
   text-align: center;
@@ -217,14 +223,14 @@ body {
     display: flex;
     justify-content: center;
     height: 20em;
-    margin: 2rem 0;
+    margin: 2rem 1rem 2rem 0rem;
     padding: 0; }
   .why-left {
     background-color: rgba(255, 255, 255, 0.1);
     border-radius: 1em 0px 0px 1em;
     padding: 2em;
     height: 100%;
-    width: 50%; }
+    width: 55%; }
     .why-left img {
       width: 8rem;
       margin-right: 2em; }
@@ -232,7 +238,7 @@ body {
     background-color: #556e88;
     border-radius: 0px 1em 1em 0;
     height: 100%;
-    width: 40%;
+    width: 45%;
     padding: 0 1rem; }
     .why-right-img {
       width: 6.67em;
@@ -255,29 +261,33 @@ body {
       width: 100%;
       bottom: 0;
       height: 20%;
-      transition: 0.5s ease;
+      transition: all 0.5s ease;
       padding: 0 .5rem; }
       .why-card-content > h5 {
         margin: .6rem 0; }
       .why-card-content:hover {
         cursor: pointer;
-        height: 50%; }
+        height: 40%; }
       .why-card-content-heading {
         display: flex;
         justify-content: center;
         align-items: center;
         height: -webkit-fill-available;
+        transition: all 0.5 ease;
         text-align: center;
         font-size: 1.3rem; }
       .why-card-content-par-container {
         height: inherit;
-        margin: .5rem 0 }
+        margin: .5rem 0;
+        text-align: center; }
         .why-card-content-par {
-          height: 75%;
+          height: 0;
           overflow: hidden;
           margin-bottom: .5rem; }  
       .why-card-content-par-container::after{
         content: "Click to enlarge";
+        position: relative;
+        bottom: .5rem;
         color: #e74c3c;
       }
       .why-card-content-content-par {
@@ -352,7 +362,7 @@ body {
 .timeline {
   display: flex;
   justify-content: center;
-  padding: 3rem 0rem;
+  padding: 3rem 5rem;
   flex-direction: column;
   position: relative;
   color: #e74c3c; }
@@ -407,7 +417,7 @@ body {
     justify-content: center;
     align-items: center;
     color: white;
-    font: 1.5rem CircularStd;
+    font: 1.3rem CircularStd;
     z-index: 3; }
 
 .sponsor {
@@ -478,7 +488,7 @@ body {
   border: none; }
 
 .socmed {
-  padding: 0 3rem;
+  padding: 0 5rem;
   background-color: #484e65;
   display: flex;
   justify-content: space-between;
