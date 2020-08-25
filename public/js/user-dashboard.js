@@ -11,7 +11,7 @@ $('#exampleModalCenter').on('show.bs.modal', function (event) {
   modal.find('#display-image').attr('src', recipient)
 })
 
-var countDownDate = new Date("Aug 22, 2020 16:10:00").getTime();
+var countDownDate = new Date("Sep 15, 2020 23:59:59").getTime();
 var x = setInterval(function () {
   var now = new Date().getTime();
   var distance = countDownDate - now;
@@ -20,7 +20,8 @@ var x = setInterval(function () {
   var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
   var seconds = Math.floor((distance % (1000 * 60)) / 1000);
   const variabel =  document.getElementById("early-bird");
-  document.getElementById("countdown").innerHTML = hours + ":"
+  hours += days*24;
+  document.getElementById("countdown").innerHTML = + hours + ":"
     + minutes + ":" + seconds + " left";
   if (distance < 0) {
     clearInterval(x);
