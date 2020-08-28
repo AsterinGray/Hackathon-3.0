@@ -66,7 +66,7 @@
     
     <div id="container">
         <section id=navbar class="navbar">
-            <div class="navbar-header">
+            <div class="navbar-header navbar-header-special">
                 <div class=navbar-icon-c id=hamburger aria-expanded="false">
                     <img class=navbar-icon src="{{asset('assets/img/admin-panel/Group 990.png')}}">
                 </div>

@@ -11,7 +11,7 @@ $('#exampleModalCenter').on('show.bs.modal', function (event) {
   modal.find('#display-image').attr('src', recipient)
 })
 
-var countDownDate = new Date("Aug 22, 2020 16:10:00").getTime();
+var countDownDate = new Date("Sep 15, 2020 23:59:59").getTime();
 var x = setInterval(function () {
   var now = new Date().getTime();
   var distance = countDownDate - now;
@@ -20,9 +20,10 @@ var x = setInterval(function () {
   var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
   var seconds = Math.floor((distance % (1000 * 60)) / 1000);
   const variabel =  document.getElementById("early-bird");
-  document.getElementById("countdown").innerHTML = hours + ":"
+  hours += days*24;
+  document.getElementById("countdown").innerHTML = + hours + ":"
     + minutes + ":" + seconds + " left";
-  if (distance != 0) {
+  if (distance < 0) {
     clearInterval(x);
     variabel.style = "display:none";
     document.getElementById("general").style = "display:flex";
@@ -576,6 +577,19 @@ $(".nav-link").click(function () {
   }
 });
 
+let changeFile = (e) => {
+  var fileName = e.files[0].name;
+  $("#file-name").text(fileName);
+  $("#file-status").text("Pending");
+  if (fileName.includes(".jpg") || fileName.includes(".png")) {
+    setTimeout(function () { $("#payment-form").submit() }, 500)
+    $(e).next("p").text("");
+  } else {
+    console.log($(e).find("p"));
+    $(e).next("p").text("File extension must be png or jpg");
+  }
+}
+
 const expandForm = (e) => {
   const addMember = $("#memberform");
   if (addMember.height() == 0) {
@@ -628,7 +642,10 @@ let flag = 0;
     }
 
     render(particles, ctx, c.width, c.height);
-    setTimeout(() => document.body.removeChild(c), 1000).then((flag = 1));
+    let wait = ms => new Promise(resolve => setTimeout(resolve, ms));
+
+    wait(1000).then(() => document.body.removeChild(c)).then(flag=1);
+    // setTimeout(() => document.body.removeChild(c), 1000).then((flag = 1));
   }
 
   function render(particles, ctx, width, height) {
@@ -675,7 +692,7 @@ $(window).scroll(() => {
   const offsetTop = $(dot).offset().top;
   const target = offsetTop + outerHeight - windowHeight;
 
-  if (scrollTop > target && flag == 0) {
+  if (scrollTop > target && flag == 0 && $("#v-pills-messages-tab").hasClass("active")) {
     explode(offset.left, offset.top);
   }
 });
@@ -690,19 +707,5 @@ const submitFile = (e) => {
   } else {
     $(e).prev("p").text("Invalid File Extension");
     $(e)[0].setCustomValidity("Invalid File Extension");
-  }
-}
-
-
-const changeFile = (e) => {
-  var fileName = e.files[0].name;
-  $("#file-name").text(fileName);
-  $("#file-status").text("Pending");
-  if (fileName.includes(".jpg") || fileName.includes(".png")) {
-    setTimeout(function () { $("#payment-form").submit() }, 500)
-    $(e).next("p").text("");
-  } else {
-    console.log($(e).find("p"));
-    $(e).next("p").text("File extension must be png or jpg");
   }
 }

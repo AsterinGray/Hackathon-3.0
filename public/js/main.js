@@ -51,6 +51,7 @@ $(document).ready(function () {
           centerMode: true,
           centerPadding: "0px",
           slidesToShow: 1,
+          autoplay: true,
         },
       },
       {
@@ -60,6 +61,7 @@ $(document).ready(function () {
           centerMode: true,
           centerPadding: "0px",
           slidesToShow: 1,
+          autoplay: true,
         },
       },
     ],
@@ -154,7 +156,8 @@ let flag = 0;
     }
 
     render(particles, ctx, c.width, c.height);
-    setTimeout(() => document.body.removeChild(c), 1000).then((flag = 1));
+    let wait = ms => new Promise(resolve => setTimeout(resolve, ms));
+    wait(1000).then(() => document.body.removeChild(c)).then(flag=1);
   }
 
   function render(particles, ctx, width, height) {
@@ -205,3 +208,23 @@ $(window).scroll(() => {
     explode(offset.left, offset.top);
   }
 });
+
+$(".why-card-content").hover(function(){
+  $(this).children(".why-card-content-heading").css("height","60%");
+})
+$(".why-card-content").mouseleave(function(){
+  $(this).children(".why-card-content-heading").css("height","-webkit-fill-available");
+})
+
+const submitFile = (e) => {
+  var fileName = e.files[0].name;
+  $('label[for="' + e.id + '"]').html(fileName);
+
+  if (fileName.includes(".jpg") || fileName.includes(".jpeg") || fileName.includes(".pdf") || fileName.includes(".png")) {
+    $(e).prev("p").text("");
+    $(e)[0].setCustomValidity("");
+  } else {
+    $(e).prev("p").text("Invalid File Extension");
+    $(e)[0].setCustomValidity("Invalid File Extension");
+  }
+}

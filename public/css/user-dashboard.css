@@ -12,6 +12,14 @@ body {
   font-family: "CircularStd";
   overflow-x: hidden; }
 
+button:active{
+  outline: none;
+}
+
+button:focus{
+  outline: none;
+} 
+  
 @font-face {
   font-family: "CircularStd";
   src: url("../assets/fonts/CircularStd-Medium.otf"); }
@@ -130,7 +138,7 @@ hr {
   padding: 0; }
 
 #display-image {
-  width: 25vw; }
+  max-width: 100%; }
 
 #container {
   height: 100%;
@@ -190,6 +198,9 @@ hr {
       width: 15px;
       height: 15px;
       background-color: #3498db; }
+    #dot-active{
+      background-color: #E74c3c;
+    }
   .timeline-content {
     display: flex;
     flex-direction: column;
@@ -219,6 +230,7 @@ h1 {
   display: flex;
   align-items: center;
   justify-content: center;
+  min-height:60vh;
   width: 100%;
   margin: 5rem 0; }
 
@@ -620,6 +632,10 @@ input[type="file"] {
 #qr{
   width: 50%;
   margin: 1rem;
+}
+
+.modal-dialog-centered{
+  justify-content: center;
 }
 
 @keyframes showExpand {

@@ -78,6 +78,25 @@ $("#hamburger").click(function () {
     }
 });
 
+$(".navbar-content").click(function () {
+    if (window.matchMedia("(max-width: 1024px)").matches) {
+            $("#hamburger").attr("aria-expanded", "false");
+            $(".navbar-caption").css({ "display": "none" });
+            $(".navbar-content").css({
+                "height": "0px",
+                "visibility": "hidden"
+            });
+            $(".navbar-content-c").css({
+                "height": "0px"
+            });
+    }
+    else {
+            $("#hamburger").attr("aria-expanded", "false");
+            $(".navbar-caption").css({ "display": "none" });
+            $(".navbar-caption-2").css({ "display": "none" });
+    }
+});
+
 $(window).resize(function () {
     if (window.matchMedia("(max-width: 1024px)").matches) {
         if ($(this).attr("aria-expanded") == "true") {
