@@ -39,7 +39,7 @@
         </a>
       </div>
     </section>
-    <section class="about container-fluid row" id="about">
+    <section class="about container-fluid" id="about">
       <img src="{{asset('assets/img/about/Object1-min.png')}}" id="object1" />
       <div class="about-left col-md-12 col-lg-7">
         <div class="center autoplay lazy">
@@ -123,9 +123,9 @@
               alt="Networking"
             />
             <div class="why-left-container">
-              <h2 id="why-active-heading"><br>Networking</h2>
+              <h2 id="why-active-heading">Networking</h2>
               <p id="why-active-par">
-                 <br> Peserta akan mendapatkan kesempatan untuk networking dengan peserta lain, mentor, dan juri Hackathon 3.0.
+                 Peserta akan mendapatkan kesempatan untuk networking dengan peserta lain, mentor, dan juri Hackathon 3.0.
               </p>
             </div>
           </div>
