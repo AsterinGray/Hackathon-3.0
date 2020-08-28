@@ -21,6 +21,14 @@ input[type=number] {
   background-color: #252a41;
 }
 
+button:active{
+  outline: none;
+}
+
+button:focus{
+  outline: none;
+}
+
 .login {
   background-color: #2C3044;
   border-radius: 30px;

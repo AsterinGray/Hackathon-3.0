@@ -46,7 +46,7 @@
             class="form-control my-2"
             placeholder="Confirm Password"
             name="password_confirmation"
-            onchange="validateConfirmPass()"
+            oninput="validateConfirmPass()"
             required
             minlength="8"
             autocomplete="new-password"
