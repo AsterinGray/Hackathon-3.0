@@ -480,15 +480,13 @@
                                 <div class="d-flex flex-column">
                                     <div>
                                     Status: 
-                                    <span id="file-status">
-                                        @if($user->payment_verified == 0)
-                                        Verification on progress
-                                        @elseif($user->payment_verified == 2)
-                                        Rejected
-                                        @else
-                                        Verified
-                                        @endif
-                                    </span>
+                                    @if($user->payment_status == 0)
+                                    <span id="file-status">Verification on progress</span>
+                                    @elseif($user->payment_status == 2)
+                                    <span id="file-status" class="red-text">Rejected</span>
+                                    @else
+                                    <span id="file-status" class="green-text">Verified</span>
+                                    @endif
                                     </div>
                                     <p class="invalid">
                                        

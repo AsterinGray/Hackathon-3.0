@@ -185,6 +185,14 @@ hr {
   color: white;
   margin: 0 5px; }
 
+.green-text{
+  color: #E74C3C !important;
+}
+
+.red-text{
+  color: grey !important;
+}
+
 h1 {
   font-size: 2.0rem;
   margin-top: 30px; }
