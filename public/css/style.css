@@ -92,7 +92,8 @@ body {
   justify-content: center;
   flex-direction: column;
   padding: 0 10vw;
-  padding-top: 7.5rem; }
+  margin-top: 3.25rem;
+  }
   .home img {
     width: 50%; }
   .home-text {
@@ -136,7 +137,10 @@ body {
     color: white;
     font-size: 1.5rem; }
     .home-more-info img {
-      width: 50px; }
+      width: 50px;
+      animation: MoveUpDown 1s linear infinite;
+      position: relative;
+      bottom: 0px;}
 
 .about {
   position: relative;
@@ -148,8 +152,7 @@ body {
   .about-left {
     z-index: 3; }
   .about-right {
-    padding-left: 4rem;
-    text-align: center; }
+    padding-left: 4.5rem; }
     .about-right > p {
       font-size: 1.2rem;
       line-height: 27.5px;
@@ -533,6 +536,15 @@ body {
   100% {
     background: radial-gradient(circle at center, #252a41 99%, #252a41 100%, #252a41 100%); } }
 
+  @keyframes MoveUpDown {
+    0%, 100% {
+      bottom: 0px;
+    }
+    50% {
+      bottom: 10px;
+    }
+  }
+
 @media only screen and (max-width: 1024px) {
   .about, .why, .faq, .contact, .foot, .socmed {
     padding: 3rem 1rem; }
@@ -665,6 +677,9 @@ body {
         border: none; }
   .navbar-brand img {
     width: 0; }
+  .home{
+    margin-top: 0;
+  }
   .about{
     justify-content: center;
   }
@@ -676,7 +691,8 @@ body {
   }
   .about-right {
     padding: 0;
-  padding-top: 3rem; }
+    padding-top: 3rem;
+    text-align: center; }
   .timeline {
     display: flex;
     overflow-x: auto; }
