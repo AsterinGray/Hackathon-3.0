@@ -422,15 +422,15 @@
         </div>
       </div>
     </section>
-    <!-- <section class="sponsor" id="sponsor">
+    <section class="sponsor" id="sponsor">
       <div class="sponsor-table col-lg-12 col-md-12 mt-5">
         <div class="sponsor-table-head"><h1>Sponsor</h1></div>
         <div class="sponsor-table-content">
           <div class="sponsor-table-subhead"><h1>Platinum Sponsor</h1></div>
           <div class="sponsor-img platinum">
-            <img src="assets/img/sponsor/sponsors.jpg" alt="" />
+            <img src="{{asset('assets/img/sponsor/tiket.png')}}" class="w-100" alt="Tiket.com Logo" />
           </div>
-          <div class="sponsor-table-subhead">
+          <!-- <div class="sponsor-table-subhead">
             <h1>Gold Sponsor</h1>
           </div>
           <div class="sponsor-img gold">
@@ -452,7 +452,7 @@
                 <img src="assets/img/sponsor/sponsors.jpg" alt="" />
                 <img src="assets/img/sponsor/sponsors.jpg" alt="" />
             </div>
-          </div>
+          </div> -->
         </div>
       </div>
       <div class="sponsor-table col-lg-12 col-md-12">
@@ -460,24 +460,38 @@
         <div class="sponsor-table-content">
           <div class="sponsor-img">
             <div class="sponsor-img">
-                <img src="assets/img/sponsor/sponsors.jpg" alt="" />
-                <img src="assets/img/sponsor/sponsors.jpg" alt="" />
-                <img src="assets/img/sponsor/sponsors.jpg" alt="" />
+                <img src="{{asset('assets/img/sponsor/Dailysocial.png')}}" alt="Dailysocial.id Logo" />
+                <img src="{{asset('assets/img/sponsor/Geekhunter.png')}}" alt="Geekhunter Logo" />
+                <img src="{{asset('assets/img/sponsor/Himatif.png')}}" alt="Himatif Logo" />
             </div>
             <div class="sponsor-img">
-                <img src="assets/img/sponsor/sponsors.jpg" alt="" />
-                <img src="assets/img/sponsor/sponsors.jpg" alt="" />
-                <img src="assets/img/sponsor/sponsors.jpg" alt="" />
+                <img src="{{asset('assets/img/sponsor/HMTI.png')}}" alt="HMTI Logo" />
+                <img src="{{asset('assets/img/sponsor/Karir.com.png')}}" alt="Karir.com Logo" />
+                <img src="{{asset('assets/img/sponsor/FiveTV.png')}}" alt="FIVETV Logo" />
             </div>
             <div class="sponsor-img">   
-                <img src="assets/img/sponsor/sponsors.jpg" alt="" />
-                <img src="assets/img/sponsor/sponsors.jpg" alt="" />
-                <img src="assets/img/sponsor/sponsors.jpg" alt="" />
+                <img src="{{asset('assets/img/sponsor/Lu Kan Anak IT.png')}}" alt="Lu Kan Anak IT Logo" />
+                <img src="{{asset('assets/img/sponsor/Radio 2.png')}}" alt="Biems Radio" />
+                <img src="{{asset('assets/img/sponsor/Bahaso.png')}}" alt="Bahaso" />
+            </div>
+            <div class="sponsor-img">   
+                <img src="{{asset('assets/img/sponsor/FOURTYFIVE RADIO.png')}}" alt="Forty Five Logo" />
+                <img src="{{asset('assets/img/sponsor/Logo ziliun_bg putih.png')}}" alt="Ziliun Logo" />
+                <img src="{{asset('assets/img/sponsor/Logo_Tri Cyber Founder.png')}}" alt="Tri Cyber Logo" />
+            </div>
+            <div class="sponsor-img">   
+                <img src="{{asset('assets/img/sponsor/Logo_HMPTI Kristen Satya Wacana.jpg')}}" alt="HMPTI Logo" />
+                <img src="{{asset('assets/img/sponsor/logo-phpid-putih.png')}}" alt="PHPID Logo" />
+                <img src="{{asset('assets/img/sponsor/WhatsApp Image 2020-08-25 at 14.33.03 (1).jpeg')}}" alt="Agile Circles Logo" />
+            </div>
+            <div class="sponsor-img">   
+                <img src="{{asset('assets/img/sponsor/Logo MK baru PNG.png')}}" alt="LPM Progress Logo" />
+                <img src="{{asset('assets/img/sponsor/Female Geek.png')}}" alt="Female Geek Logo" />
             </div>
           </div>
         </div>
       </div>
-    </section> -->
+    </section>
     <section class="contact" id="contact">
       <div class="location col-lg-7 col-md-12">
         <h2>Location</h2>
