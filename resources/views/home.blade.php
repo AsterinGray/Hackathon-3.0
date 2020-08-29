@@ -276,7 +276,11 @@
                                 <hr class="hr3">
                                 <div class="editgroup-info">
                                     <div class="editgroup-info-left">
+                                        @if($user->is_binusian == 1)
+                                        <label for="idcard-member" class="inp-file editgroup-info-input">Upload Flazz Card</label>
+                                        @else
                                         <label for="idcard-member" class="inp-file editgroup-info-input">Upload ID Card</label>
+                                        @endif
                                         <p class="invalid"></p>
                                         @error('id_card')
                                             <p class="invalid">{{$message}}</p>
@@ -480,15 +484,13 @@
                                 <div class="d-flex flex-column">
                                     <div>
                                     Status: 
-                                    <span id="file-status">
-                                        @if($user->payment_verified == 0)
-                                        Verification on progress
-                                        @elseif($user->payment_verified == 2)
-                                        Rejected
-                                        @else
-                                        Verified
-                                        @endif
-                                    </span>
+                                    @if($user->payment_status == 0)
+                                    <span id="file-status">Verification on progress</span>
+                                    @elseif($user->payment_status == 2)
+                                    <span id="file-status" class="red-text">Rejected</span>
+                                    @else
+                                    <span id="file-status" class="green-text">Verified</span>
+                                    @endif
                                     </div>
                                     <p class="invalid">
                                        

@@ -511,6 +511,14 @@ h1 {
     display: none;
   }
 
+.green-text{
+  color: #6ae73c !important;
+}
+
+.red-text{
+  color: #E74C3C !important;
+}
+
 .invalid {
   text-align: left;
   color: red;

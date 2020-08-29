@@ -13,7 +13,7 @@ const validateConfirmPass = () => {
     $("#confirm-password")[0].setCustomValidity("");
     $("#confirm-password").next(".invalid").text("");
   } else {
-    $("#confirm-password")[0].setCustomValidity("Passowrd must match");
+    $("#confirm-password")[0].setCustomValidity("Password must match");
     $("#confirm-feedback").text("Password doesn't match");
   }
 };
@@ -23,8 +23,6 @@ const validatePass = () => {
   const regex = new RegExp(
     "^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.{8,})"
   );
-
-  console.log($("#password").val())
   if (!$("#password").val().match(regex)) {
     $("#password")[0].setCustomValidity(
       "Password must contain at least 8 characters, including uppercase, lowercase and number"
@@ -35,6 +33,10 @@ const validatePass = () => {
   } else {
     $("#password")[0].setCustomValidity("");
     $("#pass-feedback").text("");
+    if ($("#password").val() === $("#confirm-password").val()){
+      $("#confirm-password")[0].setCustomValidity("");
+    $("#confirm-password").next(".invalid").text("")
+    }
   }
 };
 
