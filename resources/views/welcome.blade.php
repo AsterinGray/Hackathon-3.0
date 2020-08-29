@@ -428,7 +428,9 @@
         <div class="sponsor-table-content">
           <div class="sponsor-table-subhead"><h1>Platinum Sponsor</h1></div>
           <div class="sponsor-img platinum">
-            <img src="{{asset('assets/img/sponsor/tiket.png')}}" class="w-100" alt="Tiket.com Logo" />
+                <a href="https://www.tiket.com/careers/" target="_blank" rel="noopener noreferrer">
+                  <img src="{{asset('assets/img/sponsor/tiket.png')}}" class="w-100" alt="Tiket.com Logo" />
+                </a>
           </div>
           <!-- <div class="sponsor-table-subhead">
             <h1>Gold Sponsor</h1>
