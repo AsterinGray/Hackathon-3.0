@@ -487,6 +487,7 @@
             <div class="sponsor-img">   
                 <img src="{{asset('assets/img/sponsor/Logo MK baru PNG.png')}}" alt="LPM Progress Logo" />
                 <img src="{{asset('assets/img/sponsor/Female Geek.png')}}" alt="Female Geek Logo" />
+                <img src="{{asset('assets/img/sponsor/Bvoice.png')}}" alt="Bvoice Logo" />
             </div>
           </div>
         </div>
