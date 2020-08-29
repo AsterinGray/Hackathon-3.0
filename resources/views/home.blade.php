@@ -276,7 +276,11 @@
                                 <hr class="hr3">
                                 <div class="editgroup-info">
                                     <div class="editgroup-info-left">
+                                        @if($user->is_binusian == 1)
+                                        <label for="idcard-member" class="inp-file editgroup-info-input">Upload Flazz Card</label>
+                                        @else
                                         <label for="idcard-member" class="inp-file editgroup-info-input">Upload ID Card</label>
+                                        @endif
                                         <p class="invalid"></p>
                                         @error('id_card')
                                             <p class="invalid">{{$message}}</p>
