@@ -465,18 +465,14 @@
                 <img src="{{asset('assets/img/sponsor/Dailysocial.png')}}" alt="Dailysocial.id Logo" />
                 <img src="{{asset('assets/img/sponsor/Geekhunter.png')}}" alt="Geekhunter Logo" />
                 <img src="{{asset('assets/img/sponsor/Himatif.png')}}" alt="Himatif Logo" />
-            </div>
-            <div class="sponsor-img">
                 <img src="{{asset('assets/img/sponsor/HMTI.png')}}" alt="HMTI Logo" />
                 <img src="{{asset('assets/img/sponsor/Karir.com.png')}}" alt="Karir.com Logo" />
                 <img src="{{asset('assets/img/sponsor/FiveTV.png')}}" alt="FIVETV Logo" />
             </div>
-            <div class="sponsor-img">   
+            <div class="sponsor-img">
                 <img src="{{asset('assets/img/sponsor/Lu Kan Anak IT.png')}}" alt="Lu Kan Anak IT Logo" />
                 <img src="{{asset('assets/img/sponsor/Radio 2.png')}}" alt="Biems Radio" />
                 <img src="{{asset('assets/img/sponsor/Bahaso.png')}}" alt="Bahaso" />
-            </div>
-            <div class="sponsor-img">   
                 <img src="{{asset('assets/img/sponsor/FOURTYFIVE RADIO.png')}}" alt="Forty Five Logo" />
                 <img src="{{asset('assets/img/sponsor/Logo ziliun_bg putih.png')}}" alt="Ziliun Logo" />
                 <img src="{{asset('assets/img/sponsor/Logo_Tri Cyber Founder.png')}}" alt="Tri Cyber Logo" />
@@ -485,11 +481,28 @@
                 <img src="{{asset('assets/img/sponsor/Logo_HMPTI Kristen Satya Wacana.jpg')}}" alt="HMPTI Logo" />
                 <img src="{{asset('assets/img/sponsor/logo-phpid-putih.png')}}" alt="PHPID Logo" />
                 <img src="{{asset('assets/img/sponsor/WhatsApp Image 2020-08-25 at 14.33.03 (1).jpeg')}}" alt="Agile Circles Logo" />
-            </div>
-            <div class="sponsor-img">   
                 <img src="{{asset('assets/img/sponsor/Logo MK baru PNG.png')}}" alt="LPM Progress Logo" />
                 <img src="{{asset('assets/img/sponsor/Female Geek.png')}}" alt="Female Geek Logo" />
                 <img src="{{asset('assets/img/sponsor/Bvoice.png')}}" alt="Bvoice Logo" />
+            </div>
+            <div class="sponsor-img">   
+                <img src="{{asset('assets/img/sponsor/logo act.png')}}" alt="ACT Logo" />
+                <img src="{{asset('assets/img/sponsor/1.png')}}" alt="Opini id Logo" />
+                <img src="{{asset('assets/img/sponsor/Logo Acara Mahasiswa.png')}}" alt="Acara Mahasiswa Logo" />
+                <img src="{{asset('assets/img/sponsor/girlskode.jpeg')}}" alt="Girlskode Logo" />
+                <img src="{{asset('assets/img/sponsor/logoHMSI.png')}}" alt="HMSI Logo" />
+                <img src="{{asset('assets/img/sponsor/image0.png')}}" alt="UMN radio Logo" />
+            </div>
+            <div class="sponsor-img">   
+                <img src="{{asset('assets/img/sponsor/CodingBee.png')}}" alt="Coding bee Logo" />
+                <img src="{{asset('assets/img/sponsor/Deeptech.png')}}" alt="Deeptech Logo" />
+                <img src="{{asset('assets/img/sponsor/Jobhun.png')}}" alt="Jobhun Logo" />
+                <img src="{{asset('assets/img/sponsor/Seminarhunter.png')}}" alt="Seminar hunter Logo" />
+                <img src="{{asset('assets/img/sponsor/Stui.png')}}" alt="Stui Logo" />
+                <img src="{{asset('assets/img/sponsor/Radio ITB.jpg')}}" alt="Radio ITB Logo" />
+            </div>
+            <div class="sponsor-img">
+              <img src="{{asset('assets/img/sponsor/Ultimagz.png')}}" alt="Ultimagz Logo" />
             </div>
           </div>
         </div>
