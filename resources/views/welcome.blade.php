@@ -14,16 +14,16 @@
           <h1>Transform ideas, <wbr>Code Your Solution</h1>
           <p>will be coming at</p>
           <p>10th - 12th October 2020</p>
-          <!-- <div class="home-text-guide">
+          <div class="home-text-guide">
             <p>Get your guide book here!!</p>
             <button>
               <a
-                href="{{asset('assets/img/Hackathon-logo.png')}}"
-                download="Hackathon- logo.png"
+                href="{{asset('assets/Hackathon 3.0 Guide Book.pdf')}}"
+                download="Hackathon 3.0 Guide Book"
                 >DOWNLOAD</a
               >
             </button>
-          </div> -->
+          </div>
         </div>
         <img
           src="{{asset('assets/img/home/1stSection_image-min.png')}}"
@@ -503,6 +503,8 @@
             </div>
             <div class="sponsor-img">
               <img src="{{asset('assets/img/sponsor/Ultimagz.png')}}" alt="Ultimagz Logo" />
+              <img src="{{asset('assets/img/sponsor/Logo Info Seminar Color Black.png')}}" alt="Info Seminar">
+              <img src="{{asset('assets/img/sponsor/IMG_1668.png')}}" alt="Palembang Digital">
             </div>
           </div>
         </div>
