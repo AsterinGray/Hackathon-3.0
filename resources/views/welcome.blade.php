@@ -217,8 +217,8 @@
               Event Hackathon 3.0  ini dipungut biaya dan memiliki 3 paket:
               <ol type="A">
                 <li>Paket 1: Early Bird (24 September - 15 September 2020) dikenakan biaya Rp 60.000/ tim</li>
-                <li>Paket 2: Normal Price Binusian (16 September - 1 Oktober 2020) dikenakan biaya Rp 80.000/ tim</li>
-                <li>Paket 3: Normal Price Umum (16 September - 1 Oktober 2020) dikenakan biaya Rp. 100.000/ tim</li>
+                <li>Paket 2: Normal Price Binusian (16 September - 3 Oktober 2020) dikenakan biaya Rp 80.000/ tim</li>
+                <li>Paket 3: Normal Price Umum (16 September - 3 Oktober 2020) dikenakan biaya Rp. 100.000/ tim</li>
               </ol>
             </div>
           </div>
