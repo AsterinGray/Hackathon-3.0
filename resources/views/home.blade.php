@@ -346,7 +346,7 @@
                                 <div id=content1 class="payment-content collapse">
                                     <ul>
                                         <li>Early Bird (24 Agustus 2020 hingga 15 September 2020): Rp 60.000</li>
-                                        <li>General (16 September 2020 hingga 1 Oktober 2020)</li>
+                                        <li>General (16 September 2020 hingga 3 Oktober 2020)</li>
                                         <ul>
                                             <li>Binusian: Rp 80.000</li>
                                             <li>Non-Binusian: Rp 100.000</li>

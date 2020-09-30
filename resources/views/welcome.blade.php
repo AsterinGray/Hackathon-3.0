@@ -338,7 +338,7 @@
               </div>
             </div>
             <div class="faq-ans">
-              Pendaftaran ditutup pada 1 Oktober 2020, jam 21:00 WIB.
+              Pendaftaran ditutup pada 3 Oktober 2020, jam 21:00 WIB.
             </div>
           </div><div class="faq-content">
             <div
