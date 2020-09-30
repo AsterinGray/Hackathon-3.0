@@ -437,10 +437,10 @@
           </div>
           <div class="sponsor-img gold">
             <a href="http://www.mokapos.com/" target="_blank" class="w-50" rel="noopener noreferrer">
-              <img src="{{asset('assets/img/sponsor/Color.png')}}" class="w-50" alt="Moka Logo"/>
+              <img src="{{asset('assets/img/sponsor/Color.png')}}" class="w-100" alt="Moka Logo"/>
             </a>
             <a href="https://www.blibli.com/" target="_blank" class="w-50" rel="noopener noreferrer">
-              <img src="{{asset('assets/img/sponsor/blibli.png')}}" class="w-50" alt="Blibli Logo"/>
+              <img src="{{asset('assets/img/sponsor/blibli.png')}}" class="w-100" alt="Blibli Logo"/>
             </a>
           </div>
           <!-- <div class="sponsor-table-subhead">
