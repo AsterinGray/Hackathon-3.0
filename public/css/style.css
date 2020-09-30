@@ -547,6 +547,7 @@ button:focus {
 }
 
 .sponsor-img.platinum {
+    display: flex;
     justify-content: center;
     align-items: center;
 }
