@@ -528,7 +528,7 @@
                                 </div>
                                 <div class="timeline-content">
                                     <span>Close Registration</span>
-                                    <span>1 October 2020</span>
+                                    <span>3 October 2020</span>
                                 </div>
                                 <div class="timeline-content">
                                     <span>Technical Meeting</span>
