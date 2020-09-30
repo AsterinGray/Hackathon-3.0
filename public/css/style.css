@@ -555,6 +555,12 @@ button:focus {
     width: 60%;
 }
 
+.sponsor-img.platinum a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .sponsor-img.platinum {
     display: flex;
     flex-direction: row;
