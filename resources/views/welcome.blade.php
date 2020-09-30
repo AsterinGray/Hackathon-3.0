@@ -426,7 +426,7 @@
       <div class="sponsor-table col-lg-12 col-md-12 mt-5">
         <div class="sponsor-table-head"><h1>Sponsor</h1></div>
         <div class="sponsor-table-content">
-          <div class="sponsor-table-subhead"><h1>Platinum Sponsor</h1></div>
+          <!-- <div class="sponsor-table-subhead"><h1>Platinum Sponsor</h1></div>
           <div class="sponsor-img platinum">
             <a href="https://www.tiket.com/careers/" target="_blank" rel="noopener noreferrer">
               <img src="{{asset('assets/img/sponsor/tiket.png')}}" alt="Tiket.com Logo" />
@@ -442,7 +442,7 @@
             <a href="" target="_blank" rel="noopener noreferrer">
               <img src="{{asset('assets/img/sponsor/blibli.png')}}" alt="Blibli Logo" />
             </a>
-          </div>
+          </div> -->
           <!-- <div class="sponsor-table-subhead">
             <h1>Silver Sponsor</h1>
           </div>
