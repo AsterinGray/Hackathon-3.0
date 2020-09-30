@@ -439,6 +439,14 @@ button:focus {
     transform: rotate(90deg);
 }
 
+#tiket {
+    width: 80%;
+}
+
+#collab {
+    width: 50%;
+}
+
 .timeline {
     display: flex;
     justify-content: center;

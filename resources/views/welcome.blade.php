@@ -429,18 +429,18 @@
           <div class="sponsor-table-subhead"><h1>Platinum Sponsor</h1></div>
           <div class="sponsor-img platinum">
             <a href="https://www.tiket.com/careers/" target="_blank" rel="noopener noreferrer">
-              <img src="{{asset('assets/img/sponsor/tiket.png')}}" alt="Tiket.com Logo" />
+              <img src="{{asset('assets/img/sponsor/tiket.png')}}" alt="Tiket.com Logo" id="tiket"/>
             </a>
           </div>
           <div class="sponsor-table-subhead">
-            <h1>Gold Sponsor</h1>
+            <h1>Collab Sponsor</h1>
           </div>
           <div class="sponsor-img gold">
             <a href="http://www.mokapos.com/" target="_blank" rel="noopener noreferrer">
-              <img src="{{asset('assets/img/sponsor/Color.png')}}" alt="Moka Logo" />
+              <img src="{{asset('assets/img/sponsor/Color.png')}}" alt="Moka Logo" id="collab"/>
             </a>
-            <a href="" target="_blank" rel="noopener noreferrer">
-              <img src="{{asset('assets/img/sponsor/blibli.png')}}" alt="Blibli Logo" />
+            <a href="https://www.blibli.com/" target="_blank" rel="noopener noreferrer">
+              <img src="{{asset('assets/img/sponsor/blibli.png')}}" alt="Blibli Logo" id="collab" />
             </a>
           </div>
           <!-- <div class="sponsor-table-subhead">
