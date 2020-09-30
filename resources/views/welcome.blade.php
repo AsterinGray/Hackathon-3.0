@@ -19,7 +19,6 @@
             <button>
               <a
                 href="{{asset('assets/Hackathon 3.0 Guide Book.pdf')}}"
-                download="Hackathon 3.0 Guide Book"
                 >DOWNLOAD</a
               >
             </button>
