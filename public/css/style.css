@@ -546,36 +546,36 @@ button:focus {
     flex-wrap: wrap;
 }
 
-.sponsor-img.platinum {
+.sponsor-img .platinum {
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.sponsor-img.platinum img {
+.sponsor-img .platinum img {
     width: 60%;
 }
 
-.sponsor-img.platinum a {
+.sponsor-img .platinum a {
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.sponsor-img.platinum {
+.sponsor-img .platinum {
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
 }
 
-.sponsor-img.gold a {
+.sponsor-img .gold a {
     display: flex;
     justify-content: center;
     width: 50%;
 }
 
-.sponsor-img.gold img {
+.sponsor-img .gold img {
     width: inherit;
 }
 
