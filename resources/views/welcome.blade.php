@@ -397,8 +397,8 @@
         </div>
         <div class="timeline-line"></div>
         <div class="timeline-dot row d-flex justify-content-between">
-          <div id="dot-active"></div>
           <div></div>
+          <div id="dot-active" ></div>
           <div></div>
           <div></div>
         </div>

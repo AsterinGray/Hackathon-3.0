@@ -6,8 +6,8 @@
 
 @section('content')
   <section
-      class="home container-fluid min-vh-100 d-flex flex-column justify-content-center align-items-center py-5"
-      id="home"
+      class="home container-fluid min-vh-100 d-flex flex-column justify-content-center align-items-center"
+      id="regis"
     >
     <a
         href="/welcome"
