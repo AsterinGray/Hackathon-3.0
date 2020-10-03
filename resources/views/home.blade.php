@@ -139,7 +139,7 @@
                                         <div class="editgroup-info-input" id="editgroup-info-birthdate">{{$member->date_of_birth}}</div>
                                     </div>
                                 </div>
-            
+
                             </div>
                             <hr class="hr3">
                             <div class="editgroup-cv-c">
@@ -161,7 +161,7 @@
                         </div>
                         @endforeach
 
-                        @if($membersCount < 4)
+                        {{-- @if($membersCount < 4)
                         <div class="editgroup-col add-member">
                             <div class="add-member-head">
                                 <header>Add Member</header>
@@ -170,7 +170,7 @@
                                     <div class="plus"></div>
                                 </div>
                             </div>
-                            
+
                         </div>
                         <div id=memberform class="editgroup-col">
                             <header>New Member</header>
@@ -179,10 +179,10 @@
                             @csrf
                                 <div class="editgroup-info">
                                     <div class="editgroup-info-left">
-                                        <input type="text" 
-                                        class="editgroup-info-input my-2 @error('name') is-invalid @enderror" 
-                                        placeholder="Full Name" 
-                                        name="name" 
+                                        <input type="text"
+                                        class="editgroup-info-input my-2 @error('name') is-invalid @enderror"
+                                        placeholder="Full Name"
+                                        name="name"
                                         value="{{ old('name') }}"
                                         required
                                         autofocus/>
@@ -190,11 +190,11 @@
                                         @error('name')
                                             <p class="invalid">{{$message}}</p>
                                         @enderror
-                                    
-                                        <input type="email" 
-                                        class="editgroup-info-input my-2 @error('email') is-invalid @enderror" 
-                                        placeholder="Email" 
-                                        name="email" 
+
+                                        <input type="email"
+                                        class="editgroup-info-input my-2 @error('email') is-invalid @enderror"
+                                        placeholder="Email"
+                                        name="email"
                                         value="{{ old('email') }}"
                                         onchange="validateEmail(this)"
                                         required/>
@@ -203,12 +203,12 @@
                                         @error('email')
                                             <p class="invalid">{{$message}}</p>
                                         @enderror
-    
+
                                         <input
                                         type="text"
                                         class="editgroup-info-input my-2 @error('place_of_birth') is-invalid @enderror"
                                         placeholder="Birth Place"
-                                        name="place_of_birth" 
+                                        name="place_of_birth"
                                         value="{{ old('place_of_birth') }}"
                                         required
                                         />
@@ -217,27 +217,27 @@
                                             <p class="invalid">{{$message}}</p>
                                         @enderror
 
-                                        <input type="number" 
-                                        class="editgroup-info-input my-2 @error('phone_number') is-invalid @enderror" 
-                                        placeholder="Whatsapp Number" 
-                                        name="phone_number" 
+                                        <input type="number"
+                                        class="editgroup-info-input my-2 @error('phone_number') is-invalid @enderror"
+                                        placeholder="Whatsapp Number"
+                                        name="phone_number"
                                         value="{{ old('phone_number') }}"
-                                        onchange="validatePhone(this)" 
+                                        onchange="validatePhone(this)"
                                         required/>
                                         <p class="invalid"></p>
 
                                         @error('phone_number')
                                             <p class="invalid">{{$message}}</p>
                                         @enderror
-    
+
                                     </div>
                                     <div class="editgroup-info-right">
-    
+
                                         <input
                                         type="text"
                                         class="editgroup-info-input my-2 @error('line_id') is-invalid @enderror"
                                         placeholder="LINE ID"
-                                        name="line_id" 
+                                        name="line_id"
                                         value="{{ old('line_id') }}"
                                         required
                                         />
@@ -245,12 +245,12 @@
                                         @error('line_id')
                                             <p class="invalid">{{$message}}</p>
                                         @enderror
-    
+
                                         <input
                                         type="text"
                                         class="editgroup-info-input my-2 @error('git_id') is-invalid @enderror"
                                         placeholder="Github/Gitlab ID"
-                                        name="git_id" 
+                                        name="git_id"
                                         value="{{ old('git_id') }}"
                                         required
                                         />
@@ -258,12 +258,12 @@
                                         @error('git_id')
                                             <p class="invalid">{{$message}}</p>
                                         @enderror
-    
+
                                         <input
                                         type="date"
                                         class="editgroup-info-input my-2 inp-date form-control @error('date_of_birth') is-invalid @enderror"
                                         placeholder="DD/MM/YYYY"
-                                        name="date_of_birth" 
+                                        name="date_of_birth"
                                         value="{{ old('date_of_birth') }}"
                                         required
                                         />
@@ -300,8 +300,8 @@
                                 <button class="submit" type="submit">Submit</button>
                             </form>
                         </div>
-                        @endif
-                        
+                        @endif --}}
+
                         <div class="editgroup-col flex-row">
                             <div class="editgroup-contact-content">
                                 Jika ada informasi yang ingin diubah, silahkan hubungi Contact Person berikut:
@@ -336,7 +336,7 @@
                             <div class="payment-content-c">
                                 <div class="payment-title-c">
                                     <div class="payment-title">
-                                        1. Periode Registrasi 
+                                        1. Periode Registrasi
                                     </div>
                                     <div class="payment-cross" data-toggle="collapse" data-target="#content1" aria-expanded="false" aria-controls="content1">
                                         <div class="horizontal position-absolute"></div>
@@ -434,8 +434,8 @@
                                 @endif
                             </div>
 
-                            
-                            
+
+
 
 
                             @if($user->payment_image == NULL)
@@ -483,7 +483,7 @@
                                 </div>
                                 <div class="d-flex flex-column">
                                     <div>
-                                    Status: 
+                                    Status:
                                     @if($user->payment_status == 0)
                                     <span id="file-status">Verification on progress</span>
                                     @elseif($user->payment_status == 2)
@@ -493,7 +493,7 @@
                                     @endif
                                     </div>
                                     <p class="invalid">
-                                       
+
                                     </p>
                                 </div>
                             </div>
@@ -545,7 +545,7 @@
 
               </div>
         </section>
-          
+
     </div>
     <script src="{{asset('assets/lib/jquery.js')}}"></script>
     <script src="{{asset('assets/lib/bootstrap/js/bootstrap.min.js')}}"></script>

@@ -10,8 +10,8 @@
       id="regis"
     >
     <a
-        href="/welcome"
-        class="d-flex justify-content-center align-items-center"
+        href="/"
+        class="d-flex justify-content-center align-items-center mt-4"
         id="home"
       >
         <img id="logo" src="{{asset('assets/img/Hackathon-logo.png')}}" alt="Hackathon logo" />
@@ -23,17 +23,17 @@
       <div class="regis col-lg-5 col-md-12 px-5 text-center">
         <h1>Registration</h1>
         <p class="pt-3">
-          Hi Tech Enthusiact! We want to inform you that the registration period
+          Hi Tech Enthusiast! We want to inform you that the registration period
           for Hackthon 3.0 has ended!
         </p>
         <p>
-          Thankyou for your interest in this event! Please kindly check our next
-          upcoming event blow or you can check our social media on instagram
+          Thank you for your interest in this event! Please kindly check our next
+          upcoming event blow or you can check our social media on Instagram
           <a id="link" href="https://www.instagram.com/technoscapebncc/"
             >@technoscapebncc</a
           >
         </p>
-        <a href="/welcome" id="back">Back to Homepage</a>
+        <a href="/" id="back">Back to Homepage</a>
       </div>
     </section>
 @endsection
