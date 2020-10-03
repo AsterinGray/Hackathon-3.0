@@ -1,159 +1,231 @@
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
-  -webkit-appearance: none;
-  margin: 0;
+    -webkit-appearance: none;
+    margin: 0;
 }
 
-input[type=number] {
-  -moz-appearance: textfield;
+input[type="number"] {
+    -moz-appearance: textfield;
 }
 
-::-webkit-scrollbar{
-  width: 10px;
+::-webkit-scrollbar {
+    width: 10px;
 }
 
-::-webkit-scrollbar-thumb{
-  background-color: #e74c3c;
-  border-radius: 10px;
+::-webkit-scrollbar-thumb {
+    background-color: #e74c3c;
+    border-radius: 10px;
 }
 
-::-webkit-scrollbar-track{
-  background-color: #252a41;
+::-webkit-scrollbar-track {
+    background-color: #252a41;
 }
 
-button:active{
-  outline: none;
+button:active {
+    outline: none;
 }
 
-button:focus{
-  outline: none;
+button:focus {
+    outline: none;
 }
 
 .login {
-  background-color: #2C3044;
-  border-radius: 30px;
-  color: #e74c3c;
-  padding: 1rem; }
-  .login-head {
+    background-color: #2c3044;
+    border-radius: 30px;
+    color: #e74c3c;
+    padding: 1rem;
+}
+.login-head {
     font-size: 2rem;
     font-weight: 900;
-    margin: 1rem 0; }
-  .login > form {
+    margin: 1rem 0;
+}
+.login > form {
     width: 80%;
-    font-size: 1.2rem; }
-    .login > form > span {
-      color: grey; }
-      .login > form > span > a {
-        text-decoration: none;
-        color: #e74c3c; }
-    .login > form input {
-      background-color: #2C3044;
-      border-color: white;
-      color: white }
-      .login > form input::placeholder {
-        color: gainsboro; }
-      .login > form input:focus {
-        background-color: #2C3044;
-        border-color: white;
-        color: white; }
+    font-size: 1.2rem;
+}
+.login > form > span {
+    color: grey;
+}
+.login > form > span > a {
+    text-decoration: none;
+    color: #e74c3c;
+}
+.login > form input {
+    background-color: #2c3044;
+    border-color: white;
+    color: white;
+}
+.login > form input::placeholder {
+    color: gainsboro;
+}
+.login > form input:focus {
+    background-color: #2c3044;
+    border-color: white;
+    color: white;
+}
+
+#back {
+    background-color: #e74c3c;
+    text-decoration: none;
+    color: white;
+    margin-top: 1rem;
+    padding: 0.5rem 4rem;
+    border-radius: 2rem;
+}
+
+#link {
+    color: #e74c3c;
+    text-decoration: none;
+}
+
+#logo {
+    width: 8rem;
+    margin: 1rem;
+}
+#hackathon {
+    color: #e74c3c;
+    font: 2rem CircularStd;
+}
+#slogan {
+    color: #3498db;
+    font: 1.5rem CircularStd;
+}
+#home {
+    text-decoration: none;
+}
 
 .invalid {
-  text-align: left;
-  color: red;
-  margin: 0;
-  font-size: 0.8rem; }
+    text-align: left;
+    color: red;
+    margin: 0;
+    font-size: 0.8rem;
+}
 
 .form-check-label {
-  color: grey; }
+    color: grey;
+}
 
 .regis {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  background-color: #2C3044;
-  margin: 5rem 0;
-  padding: 3rem 0;
-  border-radius: 50px;
-  color: white; }
-  .regis input {
-    background-color: #2C3044;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #2c3044;
+    margin: 2rem 0;
+    padding: 3rem 0;
+    border-radius: 50px;
+    color: white;
+}
+.regis input {
+    background-color: #2c3044;
     border-color: white;
-    color: white; }
-    .regis input::placeholder {
-      color: gainsboro; }
-    .regis input:focus {
-      background-color: #2C3044;
-      border-color: white;
-      color: white; }
-  .regis label {
-    color: white; }
-  .regis > h1 {
+    color: white;
+}
+.regis input::placeholder {
+    color: gainsboro;
+}
+.regis input:focus {
+    background-color: #2c3044;
+    border-color: white;
+    color: white;
+}
+.regis label {
+    color: white;
+}
+.regis > h1 {
     color: #e74c3c;
     font-weight: bolder;
-    font-size: 3rem; }
-  .regis h2 {
+    font-size: 3rem;
+}
+.regis h2 {
     color: #e74c3c;
     font-weight: 500;
     font-size: 2.5rem;
-    text-align: center; }
-  .regis-group {
-    margin: 1rem 0; }
-    .regis-group > div {
-      padding: 0 2rem; }
-  .regis > hr {
+    text-align: center;
+}
+.regis-group {
+    margin: 1rem 0;
+}
+.regis-group > div {
+    padding: 0 2rem;
+}
+.regis > hr {
     background-color: #e74c3c;
     display: block;
     height: 6px;
-    width: 90%; }
-  .regis-team {
+    width: 90%;
+}
+.regis-team {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around; }
-    .regis-team-member {
-      margin: 2rem 0; }
+    justify-content: space-around;
+}
+.regis-team-member {
+    margin: 2rem 0;
+}
 
 button {
-  border-radius: 30px;
-  margin: 1rem 0;
-  padding: 0.3rem 3rem;
-  background-color: #e74c3c;
-  color: #ffffff;
-  border: none;
-  font-size: 1.2rem;
-  font-weight: 800;
-  align-self: center; }
+    border-radius: 30px;
+    margin: 1rem 0;
+    padding: 0.3rem 3rem;
+    background-color: #e74c3c;
+    color: #ffffff;
+    border: none;
+    font-size: 1.2rem;
+    font-weight: 800;
+    align-self: center;
+}
 
 #inp-date::-webkit-calendar-picker-indicator {
-  color: rgba(0, 0, 0, 0);
-  opacity: 1;
-  display: block;
-  background: url(https://mywildalberta.ca/images/GFX-MWA-Parks-Reservations.png) no-repeat center;
-  height: 10px;
-  width: 10px; }
+    color: rgba(0, 0, 0, 0);
+    opacity: 1;
+    display: block;
+    background: url(https://mywildalberta.ca/images/GFX-MWA-Parks-Reservations.png)
+        no-repeat center;
+    height: 10px;
+    width: 10px;
+}
 
 .inp-date::-webkit-calendar-picker-indicator {
-  color: rgba(0, 0, 0, 0);
-  opacity: 1;
-  display: block;
-  background: url(../assets/img/regis/ic_date_range_24px.svg) no-repeat center;
-  cursor: pointer; }
+    color: rgba(0, 0, 0, 0);
+    opacity: 1;
+    display: block;
+    background: url(../assets/img/regis/ic_date_range_24px.svg) no-repeat center;
+    cursor: pointer;
+}
 
 .inp-date::-webkit-inner-spin-button {
-  display: none; }
+    display: none;
+}
 
 .inp-file {
-  background: url(../assets/img/regis/ic_perm_media_24px.svg) no-repeat right;
-  background-origin: content-box; }
+    background: url(../assets/img/regis/ic_perm_media_24px.svg) no-repeat right;
+    background-origin: content-box;
+}
 
 label {
-  overflow: hidden; }
+    overflow: hidden;
+}
 
 input[type="file"] {
-  display: none; }
+    display: none;
+}
 
 @media only screen and (max-width: 1024px) {
-  .regis {
-    padding: 3rem 0; }
+    .regis {
+        padding: 3rem 0;
+    }
     .regis-group > div {
-      padding: 0; } }
+        padding: 0;
+    }
+
+    #home {
+        flex-direction: column;
+    }
+
+    #slogan,
+    #hackathon {
+        text-align: center;
+    }
+}
