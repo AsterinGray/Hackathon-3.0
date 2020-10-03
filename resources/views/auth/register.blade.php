@@ -24,7 +24,7 @@
         <h1>Registration</h1>
         <p class="pt-3">
           Hi Tech Enthusiast! We want to inform you that the registration period
-          for Hackthon 3.0 has ended!
+          for Hackathon 3.0 has ended!
         </p>
         <p>
           Thank you for your interest in this event! Please kindly check our next
