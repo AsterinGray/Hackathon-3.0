@@ -10,7 +10,7 @@
       <div class="home-content row">
         <div class="home-text col-lg-6 col-md-12">
           <img src="{{asset('assets/img/Hackathon-logo.png')}}" id="hackathon-logo" alt="Technoscape Hackathon Logo" />
-          <h3>BNCC HACKTHON 3.0</h3>
+          <h3>BNCC HACKATHON 3.0</h3>
           <h1>Transform ideas, <wbr>Code Your Solution</h1>
           <p>will be coming at</p>
           <p>10th - 12th October 2020</p>
@@ -399,8 +399,8 @@
         <div class="timeline-dot row d-flex justify-content-between">
           <div></div>
           <div></div>
-          <div id="dot-active"></div>
           <div></div>
+          <div id="dot-active"></div>
         </div>
         <div class="timeline-contents d-flex justify-content-around w-100 my-3">
           <div class="timeline-content">
@@ -413,7 +413,7 @@
           </div>
           <div class="timeline-content">
             <span>Technical Meeting</span>
-            <span>7 Ocotober 2020</span>
+            <span>7 October 2020</span>
           </div>
           <div class="timeline-content">
             <span>Competition Day</span>
